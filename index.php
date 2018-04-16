@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/indexstyle.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
     <link rel="icon" type="image/png" href="image/ecghanalogo.png" >
 
     <script type="text/javascript" src="myjs/js.js"></script>
@@ -153,9 +153,9 @@
 
     <div id="book_container">
          <div class="book" id="book" >
-      <form class="book_case" method="POST" action="app/detail.php?action=<?php echo $id ?>">
+      <form class="book_case" method="POST" action="app/detail.php?a=<?php echo $id ?>">
       <i id="load"></i>
-      <a href="app/detail.php?action=<?php echo $id ?>"><img src="<?php echo "./image/".$image; ?>" alt="book" id="bookimages" ></a>
+      <a href="app/detail.php?a=<?php echo $id ?>"><img src="<?php echo "./image/".$image; ?>" alt="book" id="bookimages" ></a>
       <!--<p> <textarea name="name" rows="1" cols="" class="title" readonly style="border:none"><?php echo "$title"; ?></textarea> </p>-->
       <p>
       </p>
@@ -323,6 +323,15 @@ Challenge distributes over 90% of the Bibles and Christian literature through 18
     </div>
     </div>
 </section>
+<section>
+  <div class="icon">
+  <a href="#"> <img src="icon/Facebook.png" alt="" id="icon"></a><br>
+  <a href="#"> <img src="icon/twitter-icon.png" alt="" id="icon"></a><br>
+  <a href="#"> <img src="icon/Pinterest.png" alt="" id="icon"></a><br>
+  <a href="#"> <img src="icon/instagram.png" alt="" id="icon"></a><br>
+  <a href="#"> <img src="icon/gmail-icon.png" alt="" id="icon"></a><br>
+</div>
+</section>
 <script type="text/javascript">
 $(document).ready(function(){
    $("#min").click(function(){
@@ -384,7 +393,7 @@ xhr.onreadystatechange = function(){
 
   $("#extra").click(function(){
     $(".popupclass").css('display', 'block');
-    
+
     xhr = new XMLHttpRequest();
     xhr.open("post", "json/headers.json", true);
 
@@ -396,7 +405,7 @@ xhr.onreadystatechange = function(){
     xhr.onload = function() {
 
       var response = JSON.parse(xhr.responseText);
-      
+
       $("#pagecontent").html(response.type.bookshopLocations[0].accra.contents);
       $("#popuptitle").html(response.type.bookshopLocations[0].accra.title);
     };
@@ -406,7 +415,7 @@ xhr.onreadystatechange = function(){
   $("#Tema").click(function(){
 
     $(".popupclass").css('display', 'block');
-    
+
     xhr = new XMLHttpRequest();
     xhr.open("post", "json/headers.json", true);
 
@@ -418,7 +427,7 @@ xhr.onreadystatechange = function(){
     xhr.onload = function() {
 
       var response = JSON.parse(xhr.responseText);
-      
+
       $("#pagecontent").html(response.type.bookshopLocations[0].tema.contents);
       $("#popuptitle").html(response.type.bookshopLocations[0].tema.title);
     };
@@ -428,7 +437,7 @@ xhr.onreadystatechange = function(){
   });
   $("#Abetifi").click(function(){
     $(".popupclass").css('display', 'block');
-    
+
     xhr = new XMLHttpRequest();
     xhr.open("post", "json/headers.json", true);
 
@@ -440,7 +449,7 @@ xhr.onreadystatechange = function(){
     xhr.onload = function() {
 
       var response = JSON.parse(xhr.responseText);
-      
+
       $("#pagecontent").html(response.type.bookshopLocations[0].abetifi.contents);
       $("#popuptitle").html(response.type.bookshopLocations[0].abetifi.title);
     };
@@ -449,7 +458,7 @@ xhr.onreadystatechange = function(){
   });
   $("#kumasi").click(function(){
     $(".popupclass").css('display', 'block');
-    
+
     xhr = new XMLHttpRequest();
     xhr.open("post", "json/headers.json", true);
 
@@ -461,7 +470,7 @@ xhr.onreadystatechange = function(){
     xhr.onload = function() {
 
       var response = JSON.parse(xhr.responseText);
-      
+
       $("#pagecontent").html(response.type.bookshopLocations[0].kumasi.contents);
       $("#popuptitle").html(response.type.bookshopLocations[0].kumasi.title);
     };
@@ -471,7 +480,7 @@ xhr.onreadystatechange = function(){
 
   $("#sunyani").click(function(){
     $(".popupclass").css('display', 'block');
-    
+
     xhr = new XMLHttpRequest();
     xhr.open("post", "json/headers.json", true);
 
@@ -483,7 +492,7 @@ xhr.onreadystatechange = function(){
     xhr.onload = function() {
 
       var response = JSON.parse(xhr.responseText);
-      
+
       $("#pagecontent").html(response.type.bookshopLocations[0].sunyani.contents);
       $("#popuptitle").html(response.type.bookshopLocations[0].sunyani.title);
     };
@@ -494,7 +503,7 @@ xhr.onreadystatechange = function(){
   $("#capeCoast").click(function(){
 
     $(".popupclass").css('display', 'block');
-    
+
     xhr = new XMLHttpRequest();
     xhr.open("post", "json/headers.json", true);
 
@@ -506,7 +515,7 @@ xhr.onreadystatechange = function(){
     xhr.onload = function() {
 
       var response = JSON.parse(xhr.responseText);
-      
+
       $("#pagecontent").html(response.type.bookshopLocations[0].capeCoast.contents);
       $("#popuptitle").html(response.type.bookshopLocations[0].capeCoast.title);
     };
@@ -515,7 +524,7 @@ xhr.onreadystatechange = function(){
   });
   $("#Tamale").click(function(){
     $(".popupclass").css('display', 'block');
-    
+
     xhr = new XMLHttpRequest();
     xhr.open("post", "json/headers.json", true);
 
@@ -527,7 +536,7 @@ xhr.onreadystatechange = function(){
     xhr.onload = function() {
 
       var response = JSON.parse(xhr.responseText);
-      
+
       $("#pagecontent").html(response.type.bookshopLocations[0].tamale.contents);
       $("#popuptitle").html(response.type.bookshopLocations[0].tamale.title);
     };

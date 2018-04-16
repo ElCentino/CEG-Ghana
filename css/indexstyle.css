@@ -1,9 +1,33 @@
 * {
   margin:0 auto;
   padding:  0 auto;
-  font-family: 'Nunito Sans', sans-serif;
+font-family: 'Exo', sans-serif;
+}
+  ::-webkit-scrollbar {
+    width: 12px;
 }
 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  margin-top: 25%;
+  box-shadow: 0px 0px  0px 0px ;
+}
+#icon{
+  height:30px;
+  width: 30px;
+}
 @keyframes slideInFromLeft {
   0% {
     transform: translateY(-50%);
@@ -25,18 +49,16 @@
 }
 
 #image {
-  box-sizing:border-box;
 }
 .image-slider-wrapper{
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 #image_slider{
-  position: relative;
+
   height: 50%;
   padding:0;
 }
 #image_slider li{
-  float:left;
   list-style: none;
 }
 
@@ -153,7 +175,9 @@ filter: brightness(10%);
   text-align: center;
   margin-bottom: 20px;
   font-size: 23px;
-  color: #2980b9;
+  height: 50px; line-height: 50px;
+  color: white;
+  background-color: #3498db;
 }
 #pagecontent{
   font-size: 16px;
@@ -493,17 +517,20 @@ line-height: 1.5;
   border: none;
   cursor: pointer;font-size: 15px;
 }
+
 .popupcontainer{
-  height: 625px;
-  width: 550px;
-  padding: 20px;
+  height: 580px;
+  width:600px;
+  padding: 30px 20px;
   margin: 0 auto;
-  background-color: white;
- margin-top: 10px;
+  background-color: lightgray;
+ margin-top: 70px;
  margin-bottom: 20px;
- border-radius: 5px;
+ border-radius: 1px;
  box-shadow: 1px 1px 1px 1px;
 overflow: auto;
+text-overflow: clip;
+
 }
 #fa{
   font-size: 35px;
@@ -658,7 +685,6 @@ font-size: 15px;
    background-position: center center;
    background-repeat: no-repeat;
    background-size: cover;
-   background-origin: border-box;
    object-fit: cover;
 }
 #hr{
@@ -669,17 +695,19 @@ font-size: 15px;
  box-sizing: border-box;
 }
 #bookimages{
-	height:200px;
-	width:130px;
+	height:250px;
+	width:150px;
   object-fit: fill;
   min-height: 200px;
   min-width: 130px;
   cursor: pointer;
-  box-shadow: 0px 18px 6px -6px rgba(100, 100, 100, 0.9);
+  box-shadow: 0px 0px 30px 0px rgba(100, 100, 100, 0.9);
 
 }
 #bookimages:hover{
   opacity: 0.5;
+    box-shadow: 0px 0px 50px 0px ;
+    color: lightgray;
 }
 .pagination{
 margin-bottom: 35px;
@@ -723,7 +751,7 @@ margin-top: -30px;
 
 
   }
- 
+
   .right{
     margin-left: -10px;
     margin-right: -10px;
@@ -1006,7 +1034,7 @@ text-align:left;
      background-origin: border-box;
      object-fit: cover;
   }
-  
+
   #title5{
     height: 150px;
     width: 250px;

@@ -4,26 +4,18 @@
 
 // checking if data exist
 
-    if (isset($_POST['address'])) {$address = $_POST['address'];}
-    if (isset($_POST['fullname'])) {$fullname = $_POST['fullname'];}
-    if (isset($_POST['state'])) {$state = $_POST['state'];}
-    if (isset($_POST['city'])) {$city = $_POST['city'];}
-    if (isset($_POST['phonenumber'])) {$phonenumber = $_POST['phonenumber'];}
-    if (isset($_POST['paymenttype'])) {$paymenttype = $_POST['paymenttype'];}
-    if (isset($_POST['cardnumber'])) {$cardnumber = $_POST['cardnumber'];}
-    if (isset($_POST['nameholder'])) {$holdername = $_POST['nameholder'];}
-    if (isset($_POST['cvv'])) {$cvv = $_POST['cvv'];}
-    if (isset($_POST['exp'])) {$exps = $_POST['exp'];}
+    if (isset($_POST['id'])) {$id = $_POST['id'];}
+    if (isset($_POST['image'])) {$image = $_POST['image'];}
+    if (isset($_POST['title'])) {$title = $_POST['title'];}
+    if (isset($_POST['price'])) {$price = $_POST['price'];}
+
 // create a random orderid
-   $orderid  = mt_rand();
-
-   $booktitle = "";
+//$cartitem = array('id' => $id, 'image' => $image, 'title'=> $title, 'price'=> $price);
+$cartid = rand(0, 1000000);
+if(isset($id)){
+   setcookie( $cartid, $id, time() + (86400 * 5), "/" , 'localhost/project1/CEG-ghana');
   // insert data into database
+}
+   echo "1";
 
-
-   $cart = "INSERT INTO adresse(address, fullname, state, city, phonenumber, paymenttype, carnumber, holdername, cvv, exps, orderid, booktitle)
-   VALUES('$address', '$fullname', '$state', '$city', '$phonenumber', '$paymenttype', '$cardnumber', '$holdername', '$cvv', '$exps', '$orderid', '$booktitle')";
-    if ($connect->query($cart)== TRUE) {
-      echo "$orderid";
-    }
  ?>

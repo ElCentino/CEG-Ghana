@@ -1,3 +1,6 @@
+*{
+  font-family: 'IBM Plex Serif', serif;
+}
 body{
   overflow-x: hidden;
 }
@@ -9,6 +12,109 @@ body{
   margin-left: 30px;
 
 
+}
+.addtocart{
+  position: fixed;
+  z-index: 300;
+  width: 100%;
+  height:100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+}
+.addtocartcont{
+  height: 320px;
+  width:680px;
+  padding: 30px 20px;
+  margin: 0 auto;
+  background-color: white;
+ margin-top: 17%;
+ margin-bottom: 20px;
+ border-radius: 1px;
+ box-shadow: 1px 1px 1px 1px;
+overflow: auto;
+text-overflow: clip;
+}
+.closepopup{
+  position: fixed;
+  z-index: 10;
+ text-align: left;
+
+}
+.cartcontent{
+  color: black;
+  overflow: hidden;
+}
+.close{
+  border: none;
+  cursor: pointer;font-size: 15px;
+}
+.cartleft{
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 5px;
+    overflow: hidden;
+    vertical-align: top;
+}
+.catright{
+  display: inline-block;
+    overflow: hidden;
+}
+.carttitle {
+  width: 350px;
+}
+.butt{
+  margin: 20px;
+}
+#checkout{
+  height: 35px;
+  width: 130px;
+  border: none;
+  color: white;
+  background-color: #212121;
+  cursor: pointer;
+}
+#contu{
+  color: blue;
+  text-transform: capitalize;
+}
+#justadded{
+  font-size: 20px;
+  margin-left: 20px;
+  text-align: left;
+    text-transform: uppercase;
+}
+#justadded span{
+  font-size: 12px;
+  color: blue;
+  margin-left: 60px;
+
+}
+#justadded span a{
+  text-decoration: none;
+  text-transform: capitalize;
+}
+#ct{
+ width: 350px;
+  margin-left: 57px;
+  color: black;
+  margin-top: -1px;
+
+}
+.catright img{
+  vertical-align: middle;
+  height: 35px;
+  width: 35px;
+  margin: 5px;
+  margin-left: 20px;
+}
+.cartleft img{
+  vertical-align: top;
+  height: 200px;
+  width: 130px;
 }
 #title {
     max-width: 120px;
@@ -24,10 +130,10 @@ body{
   margin-left: 50px;
 }
 .bookimage img{
- height: 350px;
- width: 200px;
- box-shadow: 2px 2px 2px 2px ;
-color: gray;
+ height: 380px;
+ width: 240px;
+box-shadow: 0px 0px 40px 0px ;
+color: lightgray;
 }
 .bookimage img:hover{
 
@@ -144,6 +250,17 @@ color: gray;
 #bookimages{
 	height:200px;
 	width:130px;
+  object-fit: fill;
+  min-height: 200px;
+  min-width: 130px;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px 0px rgba(100, 100, 100, 0.9);
+
+}
+#bookimages:hover{
+  opacity: 0.5;
+    box-shadow: 0px 0px 50px 0px ;
+    color: lightgray;
 }
 #load img{
 	height:200px;
@@ -189,24 +306,26 @@ color: gray;
   color: white;
   width: 100px;
   text-transform: capitalize;
-  border-radius: 5px;
+  border-radius: 2px;
   border-color: #e74c3c;
   background-color:#e74c3c;
   cursor: pointer;
   border: none;
+  font-size: 14px;
 
 }
 #clicks{
   margin-right: 20px;
   height: 31px;
   color: white;
-  width: 100px;
+  width: 120px;
   text-transform: capitalize;
-  border-radius: 5px;
+  border-radius: 2px;
   border-color: #e74c3c;
   background-color:#e74c3c;
   cursor: pointer;
   border: none;
+  font-size: 14px;
 
 }
 #paradescription{
@@ -241,7 +360,6 @@ display: inline-block;
 margin-left: 37px;
 margin-bottom: 60px;
 white-space : nowrap;
-border:1px solid lightgray;
 padding: 15px 25px;
 border-radius: 5px;
 animation: 2s ease-out 1s 1 slideInFromRight ;
@@ -299,7 +417,6 @@ dl{
   outline: none;
   border: none;
   border: 1px solid #26dac3;
-  border-radius: 5px;
   height: 37px;
   width: 250px;
 }
@@ -314,47 +431,11 @@ dl{
   height: 37px;
   line-height: 37px;
   background-color: #26dac3;
-  border-radius: 5px;
+  border-radius: 2px;
   color: white;
   margin-top: 3px;
 }
-.buynow{
-  display: none;
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  height:100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0,0,0,0.5);
 
-}
-.location{
-  height: 600px;
-  width: 500px;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: white;
-  margin-top: 55px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  overflow: auto;
-  overflow-x: hidden;
-
-}
-.closepopup{
-  float: right;
-  position: fixed;
-  z-index: 10;
- text-align: left;
-
-}
-.close{
-  border: none;
-  cursor: pointer;font-size: 15px;
-}
 .buynowcontent{
 margin-top: 30px;
 }

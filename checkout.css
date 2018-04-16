@@ -1,0 +1,235 @@
+*{
+  font-family: 'Noto Sans', sans-serif;
+}
+#logo{
+   vertical-align: middle;
+   margin-top: 10px;
+}
+#span{
+ font-size: 25px;
+}
+#menbar{
+
+}
+.image img{
+height: 200px;
+width: 200px;
+}
+#hr{
+  margin: 10px 0px;
+    background-color: #e6e6e6;
+   width: 100%;
+   margin-left: 30px;
+}
+#paytimage, #mobilemoney{
+ height: 50px; width: 100px;
+ margin-left: 20px;
+ margin-top: 5px;
+}
+#mobilemoney{
+
+}
+.buynowcontent{
+  display: inline-block;
+  text-align:left;
+}
+.left{
+ display: inline-block;
+ float: left;
+   width: 600px;
+}
+.right{
+ float: right;
+ height: 700px;
+ width: 500px;
+border-left: 1px solid lightgray;
+margin-top: 30px;
+
+}
+.left li{
+  list-style: none;
+  display: inline-block;
+   margin-top: -40px;
+   font-size: 14px;
+}
+.cart{
+  margin
+}
+.left p{
+  margin-left: 20px;
+
+}
+.separator{
+  text-align: center;
+  color: lightgray;
+  font-size: 15px;
+  margin: 20px;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.separator::before{
+  content: '';
+    display: inline-block;
+    height: 1px;
+    background: #e6e6e6;
+    width: 220px;
+    vertical-align: middle;
+}
+.separator::after
+{
+  content: '';
+    display: inline-block;
+    height: 1px;
+    background: #e6e6e6;
+    width: 220px;
+    vertical-align: middle;
+}
+#cti{
+  font-size: 20px; margin-right: 100px;
+  color: black;
+}
+.image::after{
+  content: '';
+    display: inline-block;
+    height: 1px;
+    background: #e6e6e6;
+    width:100%;
+}
+#email{
+  width: 95%;
+  height: 45px;
+  padding-left: 15px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+outline-color: green;
+}
+#ahad{
+  text-align: right;
+}
+#checkbox{
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#firstname, #lastname{
+  width: 47%;
+  height: 45px;
+  border: 1px solid lightgray;
+  padding-left: 10px;
+ box-sizing: border-box;
+  outline-color: green;
+}
+#address{
+  margin-top: 20px;
+  width: 65%;
+  height: 45px;
+  padding-left: 15px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+ outline-color: green;
+}
+#apt{
+  margin-top: 20px;
+  width: 30%;
+  height: 45px;
+  padding-left: 15px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+ outline-color: green;
+}
+#city{
+  width: 95%;
+  height: 45px;
+  padding-left: 15px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+outline-color: green;
+margin-top: 20px;
+}
+#state{
+  width: 95%;
+  height: 45px;
+  padding-left: 15px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  outline-color: green;
+  margin-top: 20px;
+}
+#phonenumber{
+  width: 95%;
+  height: 45px;
+  padding-left: 15px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  outline-color: green;
+  margin-top: 20px;
+}
+.return{
+  margin-top: 50px;
+}
+.return li{
+  display: inline-block;
+  list-style-type: none;
+}
+.return li a{
+  text-decoration: none;
+}
+#return{
+  text-transform: capitalize;
+  display: inline-block;
+  margin-right: 200px;
+  margin-left: 20px;
+}
+#continue{
+height: 55px;
+width: 230px;
+background-color: red;
+line-height: 55px;
+display: inline-block;
+padding-left: 15px;
+background-color: #e9d7b0;
+border: none;
+border-radius: 5px;
+color: black;
+}
+#continue:hover{
+  opacity: 0.8;
+}
+#cart{
+  color: blue;
+}
+.itemimage li{
+  display: inline-block;
+  list-style-type: none;
+}
+.itemimage img{
+  width: 50px; height: 65px;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right:50px;
+}
+#spantittle{
+margin-left: 100px;
+}
+#price{
+  margin-left: 55%;
+}
+#img::after{
+  content: '';
+    height: 1px;
+    background: #e6e6e6;
+    width:100%;
+}
+#subt, #shipping{
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+#subprice, #shprice{
+  margin-left: 70%;
+  margin-top: 20px;
+  font-size: 14px;
+}
