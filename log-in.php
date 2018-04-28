@@ -7,7 +7,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale = 1" />
 
-        <link rel="stylesheet" type="text/css" href="css/log-in.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="log-in.css" media="screen"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
 
@@ -58,10 +58,11 @@
                     <div id="container">
                         <img src="image/anyone.png" />
                         <?php include 'app/errors.php'; ?>
-                          <?php include 'app/success.php'; ?>
+                        <?php include 'app/success.php'; ?>
+                        
                         <form method="POST"action="log-in.php" name="form1">
                             <div class="form_input">
-                                <input id="mail" class="i_3" type="text" placeholder="E-mail" name="email" />
+                                <input id="mail" class="i_3" type="email" placeholder="E-mail" name="email" />
                             </div>
                             <div class="form_input">
                                 <input id="pass" class="i_3" type="password" placeholder="Password" name="password" />
@@ -75,7 +76,7 @@
                          <div class="clear"></div>
                     </div>
                     <span id="bottom_layer">
-                        <p>Don't have an account ? <span class="lil_link"><a href="signup.html">Sign Up</a></span> </p>
+                        <p>Don't have an account ? <span class="lil_link"><a href="signup.php">Sign Up</a></span> </p>
                     </span>
                 </div>
             </div>

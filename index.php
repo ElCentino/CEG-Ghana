@@ -11,11 +11,14 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="css/indexstyle.css">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
     <link rel="icon" type="image/png" href="image/ecghanalogo.png" >
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 
     <script type="text/javascript" src="myjs/js.js"></script>
 
@@ -29,7 +32,7 @@
     <div class="image">
     <div class="image-slider-wrapper">
     <ul id="image_slider">
-    <li><img src="image/2.jpg" alt="bookshop" id="image"></li>
+    <li><img src="image/2.jpg" alt="bookshop" id="image" class="img-fader"></li>
     </ul>
     </div>
     <div class="overlay" > </div>
@@ -43,7 +46,7 @@
         <div class="image1"> </div>
       </div>
       <div class="center" id="mb">
-          <ul>
+          <ul class="top-nav">
               <li><a href="">Home</a></li>
               <li><a href="#" id="min">Ministries <i class="down"></i> </a></li>
               <ul id="ministiedd" style="font-size:13px;">
@@ -190,18 +193,16 @@
    </div>
   </center>
 </section>
-<script type="text/javascript">
-</script>
 
 <!-- end of body-->
 
 <!--  start about us page-->
 
 <div class="aboutus " id="aboutus">
-<img id="aboutimage" src="image/3.jpg" alt=""  >
+<!-- <img id="aboutimage" src="image/3.jpg" alt=""  >-->
 <div class="about">
 <center>
-<p>ABOUT US</p>
+<p><h1>ABOUT US</h1></p>
 <div class="p1">
 <p class="numbers"> <b>Challenge Enterprises of GHANA </b> </p>
 <p id="para5">For the past 50 plus years, Challenge Enterprises of Ghana (CEG) has been the leading name in the distribution of Christian literature in the country of Ghana and offers the best in Christian reading.
@@ -209,7 +210,7 @@
 Challenge distributes over 90% of the Bibles and Christian literature through 18 retail shops across the country as well as through a fleet of eight "cinevans" which also function as mobile bookshops in remote villages in the 10 regions of Ghana. CEG offers all types and versions of the Bible and the widest variety and choice of Biblically balanced literature to the general public and the Christian community in particular.
  <br><br>
  In addition to books and bookstores, Challenge serves through:
-<div class="lists">
+<div class="lists">`
 <ul>
 <li>a prison ministry in eight prisons</li>
 <li>free counseling services</li>
@@ -334,19 +335,44 @@ Challenge distributes over 90% of the Bibles and Christian literature through 18
 </section>
 <script type="text/javascript">
 $(document).ready(function(){
-   $("#min").click(function(){
-    $("#ministiedd").toggle();
-   $("#bookshopdb").hide();
 
+  $("#min").on( {
+    mouseenter: function() {
+      $("#ministiedd").show();
+      $("#bookshopdb").hide();
+
+      $("#ministiedd").mouseleave(function() {
+        $(this).hide();
+      });
+    }
   });
-  $("#mins").click(function(){
-  $("#bookshopdb").toggle();
-  $("#ministiedd").hide();
-     });
-     $("#span").click(function(){
-      $(".center").toggle();
 
-   });
+  $("#mins").on({
+    mouseenter: function() {
+      $("#bookshopdb").show();
+      $("#ministiedd").hide();
+
+      $("#bookshopdb").mouseleave(function() {
+        $(this).hide();
+      });
+    }
+  });
+
+
+
+  //  $("#min").mouseenter(function(){
+  //   $("#ministiedd").toggle();
+  //  $("#bookshopdb").hide();
+
+  // });
+  // $("#mins").click(function(){
+  // $("#bookshopdb").toggle();
+  // $("#ministiedd").hide();
+  //    });
+  //    $("#span").click(function(){
+  //     $(".center").toggle();
+
+  //  });
 
    var maxTextLength = 15;
    var specialDets = document.getElementsByClassName("specialDet");
@@ -612,10 +638,27 @@ xhr.onreadystatechange = function(){
   }
 }
 
+  const images = ['image/1.jpg', 'image/2.jpg', 'image/3.jpg', 'image/4.jpg'];
+  let currentImageIndex = 3;
+
+  const slider = setInterval(function() {
+
+    if(currentImageIndex >= images.length) {
+      currentImageIndex = 0;
+    }
+
+    $(".img-fader").fadeOut('fast',function() {
+      $(this).fadeIn('slow');
+      $(this).attr("src", images[currentImageIndex++]);
+    });
+
+  }, 5000);
 });
 
 </script>
+
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="myjs/main.js"></script>
-  </body>
+
+</body>
 </html>

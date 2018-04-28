@@ -126,8 +126,8 @@ text-overflow: clip;
   height: 400px;
   width: 250px;
   display: inline-block;
-  float: left;
   margin-left: 50px;
+  float: left;
 }
 .bookimage img{
  height: 380px;
@@ -135,14 +135,10 @@ text-overflow: clip;
 box-shadow: 0px 0px 40px 0px ;
 color: lightgray;
 }
-.bookimage img:hover{
-
-}
 .descriptions{
   height: 400px;
   display: inline-block;
   margin-left: 20px;
-  float: left;
 }
 .descriptions span{
   display: inline-block;
@@ -168,6 +164,8 @@ color: lightgray;
   padding: 5px;
   width: 650px;
   line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
 
 }
 #quantity{
@@ -356,16 +354,16 @@ text-align: left;
 
 }
 .book{
-display: inline-block;
-margin-left: 37px;
-margin-bottom: 60px;
-white-space : nowrap;
-padding: 15px 25px;
-border-radius: 5px;
-animation: 2s ease-out 1s 1 slideInFromRight ;
-animation-iteration-count: infinite;
-animation-duration: 50s;
-animation-delay: 5s;
+  display: inline-block;
+  margin-left: 37px;
+  margin-bottom: 60px;
+  white-space : nowrap;
+  padding: 15px 25px;
+  border-radius: 5px;
+  animation: 2s ease-out 1s 1 slideInFromRight ;
+  animation-iteration-count: infinite;
+  animation-duration: 50s;
+  animation-delay: 5s;
 
 }
 .book img{
@@ -424,6 +422,7 @@ dl{
 #textarea{
   border: none;
   border: 1px solid #26dac3;
+  resize: none;
 }
 #rcomment{
   border: none;
@@ -567,16 +566,16 @@ display: none;
 
   }
   .book{
-  display: inline-block;
-  margin-left: 30px;
-  margin-bottom: 60px;
-  white-space : nowrap;
-  padding: 15px 25px;
-  border-radius: 5px;
-  animation: 2s ease-out 1s 1 slideInFromRight ;
-  animation-iteration-count: infinite;
-  animation-duration: 50s;
-  animation-delay: 5s;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    white-space : nowrap;
+    padding: 15px 25px;
+    border-radius: 5px;
+    animation: 2s ease-out 1s 1 slideInFromRight ;
+    animation-iteration-count: infinite;
+    animation-duration: 50s;
+    animation-delay: 5s;
 
   }
 }

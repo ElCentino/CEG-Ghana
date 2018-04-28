@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="image/ecghanalogo.png" >
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
    <script type="text/javascript" src="../myjs/js.js"> </script>
 
 
@@ -74,6 +75,23 @@
     </div>
     </div>
   </div>
+  <!-- <section>
+    <div class="popupclass">
+    <div class="popup">
+    <div class="popupcontainer">
+    <div class="closepopup">
+    <button type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="textcontent">
+    <p id="popuptitle"></p>
+    <p id="pagecontent"> </p>
 
+    </div>
+    </div>
+    </div>
+    </div>
+</section> -->
   </body>
 </html>

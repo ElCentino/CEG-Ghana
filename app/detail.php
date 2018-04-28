@@ -28,13 +28,14 @@ include "../php/header.php";
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width, initial-scale= 1">
-    <link rel="stylesheet" type="text/css" href="../css/detail.css">
+    <link rel="stylesheet" type="text/css" href="../detail.css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!--    <link rel="stylesheet" media="screen" href="../indexstyle.css" type="text/css" />-->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <script type="text/javascript" src="myjs/js.js"></script>
+      <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
     <title></title>
   </head>
   <body >
