@@ -21,10 +21,18 @@
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 
     <script type="text/javascript" src="myjs/js.js"></script>
+    <script type="text/javascript" src="js/libraries/p5.js"></script>
+    <script type="text/javascript" src="js/libraries/p5.dom.js"></script>
+    <script type="text/javascript" src="js/processor.js"></script>
 
+    <style>
+        .emph {
+           color: rgb(230, 70, 70);
+           font-style: italic;
+        }
+    </style>
 
-
-    <title> CEG GHANA </title>
+    <title> CE GHANA </title>
 </head>
 <body >
   <!-- start of top menu -->
@@ -47,7 +55,7 @@
       </div>
       <div class="center" id="mb">
           <ul class="top-nav">
-              <li><a href="">Home</a></li>
+              <li class="active-nav"><a href="" style="color:rgb(20, 21, 27)">Home</a></li>
               <li><a href="#" id="min">Ministries <i class="down"></i> </a></li>
               <ul id="ministiedd" style="font-size:13px;">
                  <li><a href="#"id="extras" >Challenge Bookshops<a/></li>
@@ -89,7 +97,7 @@
 <section>
     <div class="text">
        <p>Buy a book . Save a bundle <br>
-      <b>Buy and save up to 20%</b>  </p>
+      <b id="centerText">Welcome</b>  </p>
     </div>
 
     <div class="seache">
@@ -105,7 +113,7 @@
 <section>
   <div class="float">
     <div class="foating">
-      <div class="line">
+      <div class="line" style="text-align: center;">
 
        <p>
         <h3> <i class="fas fa-truck" id="fa"></i>Free Shiping</h3>
@@ -136,10 +144,10 @@
 <!-- end of top menu -->
 
 <!-- start of body -->
-<section>
+<section class="anim-element">
   <div class="middle">
     <div class="these">
-      <p>Featured Books</p>
+      <p class="header-blue" style="font-size: 40px;">Featured Books</p>
     </div >
     <div class="books">
           <?php
@@ -200,17 +208,17 @@
 
 <div class="aboutus " id="aboutus">
 <!-- <img id="aboutimage" src="image/3.jpg" alt=""  >-->
-<div class="about">
+<div class="about anim-element">
 <center>
-<p><h1>ABOUT US</h1></p>
-<div class="p1">
+<p><h1 class="header-blue">ABOUT US</h1></p>
+<div class="p1" style="text-align: justify;">
 <p class="numbers"> <b>Challenge Enterprises of GHANA </b> </p>
 <p id="para5">For the past 50 plus years, Challenge Enterprises of Ghana (CEG) has been the leading name in the distribution of Christian literature in the country of Ghana and offers the best in Christian reading.
   <br><br>
 Challenge distributes over 90% of the Bibles and Christian literature through 18 retail shops across the country as well as through a fleet of eight "cinevans" which also function as mobile bookshops in remote villages in the 10 regions of Ghana. CEG offers all types and versions of the Bible and the widest variety and choice of Biblically balanced literature to the general public and the Christian community in particular.
  <br><br>
  In addition to books and bookstores, Challenge serves through:
-<div class="lists">`
+<div class="lists">
 <ul>
 <li>a prison ministry in eight prisons</li>
 <li>free counseling services</li>
@@ -298,10 +306,13 @@ Challenge distributes over 90% of the Bibles and Christian literature through 18
 
   </div>
    <br><br>
-   <hr  id="hr" style="margin-top:100px;" >
-    <div class="footerimage">
-    <img src="image/ecghanalogo.png" alt="cegghana logo" ><span style="font-size:9px;">&copy; 2018 Challenge Enterprises of Ghana</span>
-    </div>
+
+   <div style="margin-top:100px" ></div>
+    
+
+   <footer class="footer-text">
+    &copy; 2018 Challenge Enterprises of Ghana
+  </footer>
 
 </div>
 
@@ -325,13 +336,14 @@ Challenge distributes over 90% of the Bibles and Christian literature through 18
     </div>
 </section>
 <section>
-  <div class="icon">
-  <a href="#"> <img src="icon/Facebook.png" alt="" id="icon"></a><br>
-  <a href="#"> <img src="icon/twitter-icon.png" alt="" id="icon"></a><br>
-  <a href="#"> <img src="icon/Pinterest.png" alt="" id="icon"></a><br>
-  <a href="#"> <img src="icon/instagram.png" alt="" id="icon"></a><br>
-  <a href="#"> <img src="icon/gmail-icon.png" alt="" id="icon"></a><br>
-</div>
+  <span id="icon-con"> </span>
+  <ul class="icon">
+    <li><a href="#"> <img src="icon/Facebook.png" alt="" id="icon"></a></li>
+    <li><a href="#"> <img src="icon/twitter-icon.png" alt="" id="icon"></a></li>
+    <li><a href="#"> <img src="icon/Pinterest.png" alt="" id="icon"></a></li>
+    <li><a href="#"> <img src="icon/instagram.png" alt="" id="icon"></a></li>
+    <li><a href="#"> <img src="icon/gmail-icon.png" alt="" id="icon"></a></li>
+  </ul>
 </section>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -657,6 +669,7 @@ xhr.onreadystatechange = function(){
 
 </script>
 
+<script type="text/javascript" src="js/interactivity.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="myjs/main.js"></script>
 

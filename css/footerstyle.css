@@ -2,7 +2,7 @@
 
  width: 100%;
   background-color: #212121;
-  height: 500px;
+  height: 300px;
 
 }
 .legswos{
@@ -40,3 +40,11 @@ color: white;
   margin-bottom: 10px;
   display: inline-block;
 }
+
+.footer-text {
+  text-align: center;
+  padding: 30px;
+  color: cyan;
+  background-color: rgb(20, 21, 27);
+}
+

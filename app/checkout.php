@@ -65,7 +65,7 @@ include '../app/db.php';
                    <div class="formcontainer">
                      <p>
                        <li id="cti">Contact Information</li>
-                       <li id="ahad">Already have and account ?<a href="login.php" style="text-decoration:none;">Login </a> </li>
+                       <li id="ahad">Already have and account ?<a href="../log-in.php" style="text-decoration:none;">Login </a> </li>
                      </p>
 
                      <form class="form1" action="index.html" method="post">
