@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/details.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Raleway|Roboto+Condensed|Ubuntu" rel="stylesheet">
 </head>
 
@@ -16,29 +17,42 @@
     <div class="top">
         <nav class="top-nav">
             <ul>
-                <li>GHC </li>
-                <li>|<i class="fas fa-lock" style="margin:0px 5px;"></i>My Account |</li>
-                <li>Login</li>
+                <li>
+                    <a href="#">10 GHC</a>
+                </li>
+                <li>|
+                    <a href="#">
+                        <i class="fas fa-lock" style="margin:0px 5px;"></i>My Account</a> |</li>
+                <li>
+                    <a href="#">Login</a>
+                </li>
             </ul>
         </nav>
     </div>
 
     <div class="search-area">
-        <br>
         <p class="header-mid">Search for Books </p>
         <input type="text" name="search" placeholder="Books....." />
-        <input type="submit" role="button" value="Search" />
+        <input class="rounded-button-sm" type="submit" role="button" value="Search" />
     </div>
 
     <!-- Body Details -->
-    <section> 
-        <div class="body-details">
+    <section>
+        <div class="body-details move-down-sm">
             <div class="detail-container">
                 <div class="preview">
                     <div class="detail-display">
-                        <img src="images/Instincts.jpg" />
+                        <div class="book-display-view">
+                            <img class="book-display" src="images/Instincts.jpg" />
+                            <div class="book-display-info">
+                                <section>
 
-                        <button type="submit" class="btn-butt" style="margin-top: 70px"><i class="far fa-hdd" style="float: left; margin-left: 20px"></i>Code Files</button>
+                                </section>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-butt rounded-button-sm" style="margin-top: 70px">
+                            <i class="far fa-hdd" style="float: left; margin-left: 20px"></i>More Details</button>
                     </div>
                 </div>
                 <div class="book-details">
@@ -46,14 +60,167 @@
                         <header class="book-header">
                             <h1 id="book-title">Instincts : The Power To Release Your Inborn Drive</h1>
                             <span id="book-author">T.D Jakes</span>
+                            <span id="book-batch" class="badges">New Release!</span>
                         </header>
+                        <figure class="info-figure">
+                            <p>An instant #1 New York Times bestseller for six weeks, Bishop T.D. Jakes's smash-hit INSTINCT
+                                shows readers how to tap into their God-given intuition to achieve ultimate success. </p>
+                        </figure>
+
+                        <button type="submit" class="btn-butt rounded-button-sm cart-button" style="margin-top: 70px">
+                            <i class="far fa-hdd" style="float: left; margin-left: 20px"></i>Add to Cart</button>
                     </article>
                 </div>
                 <div class="clear-fix"></div>
             </div>
         </div>
-    </section> 
+        <div class="clear-fix"></div>
+
+        <div class="book-info about">
+            <div class="detail-container about-books">
+                <div class="preview about-preview">
+                    <div class="detail-display about-display">
+                        <h1 class="details-header">Book Details</h1>
+                        <table class="details-table">
+                            <tr>
+                                <td>ISBN 13</td>
+                                <td>9781783554027</td>
+                            </tr>
+                            <tr>
+                                <td>Paperback</td>
+                                <td>Hard Cover</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="book-details about-details">
+                    <div class="full-details">
+                        <h1 class="details-header">Book Description</h1>
+                        <p>
+                            An instant #1 New York Times bestseller for six weeks, Bishop T.D. Jakes's smash-hit INSTINCT shows readers how to tap into
+                            their God-given intuition to achieve ultimate success. Whether you call it following your heart,
+                            a gut feeling, a hunch or intuition, instinct-the inner knowledge bubbling up from a wellspring
+                            of wisdom within-can lead to a bigger, elephant-sized life. Combining social, business and personal
+                            examples with biblical insights, in INSTINCT Bishop Jakes shows readers how to rediscover their
+                            natural aptitudes and reclaim the wisdom of their past experiences. Knowing when to close a deal,
+                            when to take a risk, and when to listen to their hearts will become possible when they're in
+                            touch with the instincts that God gave them.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+
+        <div class="clear-fix"></div>
+
+        <div class="comments-section">
+            <div class="book-info comments">
+                <div class="detail-container comments-message">
+                    <div class="preview comments-preview">
+                        <div class="detail-display comments-display">
+                            <h1 class="details-header comments-header">Leave a comment</h1>
+                            <p>
+                                Leave a comment on this book
+
+                                <h3 class="">Connect with the author on </h3>
+                                <ul class="comments-icon">
+                                        <li>
+                                            <a href="#">
+                                                <img src="../icon/Facebook.png" alt="" id="comments-icon">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="../icon/twitter-icon.png" alt="" id="comments-icon">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="../icon/Pinterest.png" alt="" id="comments-icon">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="../icon/instagram.png" alt="" id="comments-icon">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="../icon/gmail-icon.png" alt="" id="comments-icon">
+                                            </a>
+                                        </li>
+                                    </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="book-details comments-details">
+                        <div class="comments-details">
+                            <form method="GET" action="javascript::void(0)" name="commentsForm" class="comments-form">
+                                <table class="comments-table">
+                                    <tr>
+                                        <td class="comment-table-header">Name</td>
+                                        <td class="comments-input">
+                                            <input type="text" name="name" placeholder="Optional" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comment-table-header">Comment</td>
+                                        <td class="comments-input">
+                                            <textarea type="text" name="comment" placeholder="Comment...."></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+
+        <div class="clear-fix"></div>
+    </section>
     <!-- End Of Body Details -->
+
+    <section>
+        <span id="icon-con"> </span>
+        <ul class="icon">
+            <li>
+                <a href="#">
+                    <img src="../icon/Facebook.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/twitter-icon.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/Pinterest.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/instagram.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/gmail-icon.png" alt="" id="icon">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="js/interactivity.js" type="text/javascript"></script>
+    <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/libraries/p5.js"></script>
+    <script type="text/javascript" src="../js/libraries/p5.dom.js"></script>
+    <script type="text/javascript" src="../js/processor.js"></script>
 </body>
 
 </html>

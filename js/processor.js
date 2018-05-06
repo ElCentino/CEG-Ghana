@@ -9,7 +9,7 @@ function setup() {
 
 function draw() {
 
-    if(mouseX < 200 && mouseY < window.innerWidth * (50/100)) {
+    if(mouseX < 50 && mouseY < window.innerWidth * (50/100)) {
         $(".icon").fadeIn();
     } else {
         $(".icon").fadeOut();
