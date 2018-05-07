@@ -37,7 +37,7 @@
 }
 
 .top-nav li:not(:first-child) a:hover {
-    color: var(--orange);
+    color: var(--cyan);
 }
 
 a {
@@ -186,7 +186,7 @@ a {
 }
 
 .btn-butt:hover {
-    background: var(--orange);
+    background: cyan;
     cursor: pointer;
 }
 
@@ -288,6 +288,28 @@ a {
     color: rgb(102, 102, 102);
 }
 
+/*Recommended Section*/
+
+.recommended-section {
+    width: 100%;
+    padding: 100px;
+    text-align: center;
+}
+
+.recommended-section ul {
+    list-style-type: none;
+}
+
+.recommended-section ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.recommended-section img {
+    width: 290px;
+    height: 400px;
+}
+
 /*Coments section begins*/
 
 .comments-section {
@@ -354,8 +376,9 @@ a {
 
 .comments-header-icons {
     font-size: 23px;
-    margin: 20px;
+    margin: 70px;
     margin-left: inherit;
+    color: var(--cyan);
 }
 
 /** Icon Configs **/
