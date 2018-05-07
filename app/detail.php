@@ -189,7 +189,7 @@ include '../app/db.php';
                                     <tr>
                                         <td class="comment-table-header">Comment</td>
                                         <td class="comments-input">
-                                            <textarea type="text" class="input-default" name="comment" placeholder="Comment...."></textarea>
+                                            <textarea id="comment-box" type="text" class="input-default" name="comment" placeholder="Comment...."></textarea>
                                             <button type="submit" class="btn-butt rounded-button-sm" style="margin-top: 70px">Comment</button>
                                         </td>
                                     </tr>
