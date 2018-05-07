@@ -23,6 +23,11 @@
     top: 0;
 }
 
+.top-border-bottom {
+    transition: 0.2s ease-in-out;
+    border-bottom: 5px var(--orange) solid;
+}
+
 .top-nav {
     margin-right: 70px;
     float: right;
@@ -50,6 +55,7 @@ a {
     padding: 50px;
     padding-bottom: 30px;
     text-align: center;
+    border-bottom: 6px var(--orange) solid;
 }
 
 .search-area * {
@@ -86,7 +92,7 @@ a {
 }
 
 .search-area input[type=submit]:hover {
-    background-color: var(--orange);
+    background-color: cyan;
     cursor: pointer;
 }
 
@@ -311,6 +317,11 @@ a {
     height: 300px;
 }
 
+.rec-img-details ul:nth-child(2), .rec-img-details ul:nth-child(3) {
+    width: 300px;
+    height: 400px;
+}
+
 /*Coments section begins*/
 
 .comments-section {
@@ -489,6 +500,10 @@ a {
     color: var(--cyan);
 }
 
+.mid-footer h3 {
+    color: var(--cyan);
+}
+
 .sm-link:hover {
     cursor: pointer;
 }
@@ -536,4 +551,57 @@ a {
 											  rgba(255, 255, 255, .2) 75%,
 											  transparent 75%,
 											  transparent)
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .preview, .book-details {
+        width: 100%;
+    }
+
+    .preview {
+        text-align: center;
+    }
+
+    .preview img {
+        width: 500px;
+    }
+
+    .about-display {
+        text-align: left;
+        margin: 0px;
+    }
+
+    .comments-section {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .footer section, .pro-footer article {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .comments-table {
+        margin: 0;
+        padding: 0;
+    }
+
+    .cart-button {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 590px) {
+
+    .preview img {
+        width: 300px;
+    }
+
+    .comments-table td {
+        padding-left: 0px;
+    }
 }
