@@ -29,7 +29,7 @@ include '../app/db.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../details.css" />
+    <link rel="stylesheet" type="text/css" href="../css/details.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Raleway|Roboto+Condensed|Ubuntu" rel="stylesheet">
@@ -89,6 +89,9 @@ include '../app/db.php';
                             <p><?php echo nl2br($description) ?></p>
                         </figure>
 
+                        <a href="checkout.php?c=<?php echo $id ?>"><button type="submit" class="btn-butt rounded-button-sm buy-button" style="margin-top: 70px">
+                            <i class="fas fa-shopping-cart" style="float: left; margin-left: 20px"></i>Buy Now</button></a>
+
                         <button type="submit" class="btn-butt rounded-button-sm cart-button" style="margin-top: 70px">
                             <i class="fas fa-shopping-cart" style="float: left; margin-left: 20px"></i>Add to Cart</button>
                     </article>
@@ -142,7 +145,6 @@ include '../app/db.php';
                             <h1 class="details-header comments-header">Leave a comment</h1>
                             <p class="comments-text">
                                 Leave a comment on this book
-
                             </p>
 
                             <h3 class="comments-header-icons">Connect with the author on </h3>
@@ -217,13 +219,14 @@ include '../app/db.php';
             <ul>
             <?php
 
-                $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 4";
+                $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 8";
                 $result = mysqli_query($connect, $sql);
 
                 while ($rows = mysqli_fetch_array($result)) {
                     $image2 = $rows['image'];
+                    $id = $rows['id'];
                     
-                    echo "<li><a href='checkout.php?c=$id'><img src='../image/$image2'class='rec-img'/></a></li>";
+                    echo "<li><a href='detail.php?a=$id'><img src='../image/$image2'class='rec-img'/></a></li>";
 
                 }
                 ?>

@@ -24,8 +24,13 @@
 }
 
 .top-border-bottom {
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
+    background-color: rgba(46, 46, 54, 0.705);
     border-bottom: 5px var(--orange) solid;
+}
+
+.top-border-bottom:hover {
+    background-color: var(--ash);
 }
 
 .top-nav {
@@ -246,7 +251,14 @@ a {
 
 .cart-button {
     width: 200px;
-    margin-left: 70%;
+    float: right;
+    margin-right: 30px;
+}
+
+.buy-button {
+    width: 200px;
+    float: right;
+    background-color : rgb(87, 241, 164);
 }
 
 /* End of first Section */
@@ -295,6 +307,11 @@ a {
     color: rgb(102, 102, 102);
 }
 
+.full-details p {
+    padding-left: 30px;
+    border-left: 5px solid var(--cyan);
+}
+
 /*Recommended Section*/
 
 .recommended-section {
@@ -330,11 +347,12 @@ a {
 }
 .comments-header {
     color: white;
+    margin-top: 15%;
 }
 
 .comments-details {
     width: 60%;
-    padding-top: 3%;
+    padding-top: 1%;
 }
 
 .comments-preview {
@@ -382,14 +400,13 @@ a {
 }
 
 #comments-icon {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 .comments-header-icons {
-    font-size: 23px;
-    margin: 70px;
-    margin-left: inherit;
+    font-size: 18px;
+    margin-top: 70%;
     color: var(--cyan);
 }
 
@@ -576,6 +593,10 @@ a {
     .comments-section {
         text-align: center;
     }
+
+    .comments-header-icons {
+        margin-top: 10%;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -610,6 +631,12 @@ a {
         width: 20%;
         height: 22%;
     }
+    
+    .top-nav {
+        float: none;
+        margin-right: 0px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -639,6 +666,11 @@ a {
     }
 
     .search-area input[type=text] {
+        width: 100%;
+    }
+
+    .cart-button, .buy-button {
+        float: none;
         width: 100%;
     }
 }
