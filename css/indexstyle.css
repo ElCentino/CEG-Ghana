@@ -1616,8 +1616,8 @@ text-align:left;
 }
 
 .top-nav>li {
-  padding: 10px;
-  padding-left: 20px;
+  padding: 2px;
+  padding-left: 2px;
   margin: 0px;
   border-radius: 5px;
   text-align: center;
@@ -1627,13 +1627,13 @@ text-align:left;
 .top-nav>li>a {
   padding: 0px;
   margin: 0px;
-  color: black;
+  color: cyan;
 }
 
 .active-nav {
-  background: cyan;
-  color: black;
+  
 }
+
 
 .footer-text {
   text-align: center;

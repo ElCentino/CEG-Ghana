@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="indexstyle.css">
+    <link rel="stylesheet" type="text/css" href="css/indexstyle.css">
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -55,7 +55,7 @@
       </div>
       <div class="center" id="mb">
           <ul class="top-nav">
-              <li class="active-nav"><a href="" style="color:rgb(20, 21, 27)">Home</a></li>
+              <li class="active-nav"><a href="" style="color:cyan">Home</a></li>
               <li><a href="#" id="min">Ministries <i class="down"></i> </a></li>
               <ul id="ministiedd" style="font-size:13px;">
                  <li><a href="#"id="extras" >Challenge Bookshops<a/></li>

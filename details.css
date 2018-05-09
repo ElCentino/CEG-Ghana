@@ -42,6 +42,7 @@
 .top-nav li {
     display: inline-block;
     padding: 7px;
+    padding-top: 9px;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 14px;
 }
@@ -49,6 +50,19 @@
 .top-nav li:not(:first-child) a:hover {
     color: var(--cyan);
 }
+
+.arrow-left {
+    float: left;
+    vertical-align: middle;
+    padding: 7px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.arrow-left:hover {
+    color: var(--cyan);
+}
+
 
 a {
     text-decoration: none;
@@ -571,6 +585,8 @@ a {
 											  transparent)
 }
 
+/* Responsive Code begins*/
+
 
 @media screen and (max-width: 1100px) {
 
@@ -629,8 +645,8 @@ a {
     }
 
     .comments-input {
-        width: 20%;
-        height: 22%;
+        max-width: 20%;
+        max-height: 22%;
     }
     
     .top-nav {
@@ -643,8 +659,8 @@ a {
 @media screen and (max-width: 480px) {
 
     .comments-input input[type=text] {
-        width: 80%;
-        height: 22%;
+        max-width: 80%;
+        max-height: 22%;
     }
 
     .comments-input button {
@@ -664,7 +680,7 @@ a {
     }
 
     #comment-box {
-        width: 250px;
+        max-width: 250px;
     }
 
     .search-area input[type=text] {
