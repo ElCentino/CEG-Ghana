@@ -16,11 +16,11 @@ window.onload = () => {
     const shortenString = (text, length = 300, dots = 7) => text.substring(0, length) + Array(dots).fill(".").map(dot => dot).join("");
    
 
-    $(detailDisplay).hover(() => {
-        $(bookImageInfo).show();
-    }, () => {
-        $(bookImageInfo).hide();
-    });
+    // $(detailDisplay).hover(() => {
+    //     $(bookImageInfo).show();
+    // }, () => {
+    //     $(bookImageInfo).hide();
+    // });
 
     const actualFigureText = infoFigure.innerHTML;
 

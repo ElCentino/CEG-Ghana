@@ -7,16 +7,18 @@ include '../app/db.php';
     $id = $_GET['a'];
   
   }
+
    $mysli = "SELECT * FROM book WHERE id = '$id'";
    $myresult = mysqli_query($connect, $mysli);
      while ($rowse = mysqli_fetch_array($myresult)) {
-       $image = $rowse['image'];
-       $title = $rowse['title'];
-       $sbn = $rowse['sbn'];
-       $author = $rowse['author'];
-       $binding = $rowse['binding'];
-	     $price = $rowse['Price'];
-	     $description = $rowse['description'];
+
+        $image = $rowse['image'];
+        $title = $rowse['title'];
+        $sbn = $rowse['sbn'];
+        $author = $rowse['author'];
+        $binding = $rowse['binding'];
+        $price = $rowse['Price'];
+        $description = $rowse['description'];
      }
 
 ?>
@@ -27,9 +29,9 @@ include '../app/db.php';
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Store</title>
+    <title>Store - CE Ghana</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/details.css" />
+    <link rel="stylesheet" type="text/css" href="../details.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Raleway|Roboto+Condensed|Ubuntu" rel="stylesheet">
@@ -379,7 +381,7 @@ include '../app/db.php';
        
     </section>
 
-    <script src="../details-interactivity.js" type="text/javascript"></script>
+    <script src="../js/details-interactivity.js" type="text/javascript"></script>
     <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
     <script type="text/javascript" src="../js/libraries/p5.js"></script>
     <script type="text/javascript" src="../js/libraries/p5.dom.js"></script>

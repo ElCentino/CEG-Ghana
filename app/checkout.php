@@ -26,7 +26,7 @@ include '../app/db.php';
     <meta charset="utf-8">
     <link rel="stylesheet" href="../checkout.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Condensed" rel="stylesheet">
-    <title></title>
+    <title>Checkout - <?php echo $title?></title>
   </head>
   <body>
     <section>

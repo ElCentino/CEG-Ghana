@@ -1,4 +1,4 @@
-<?php include 'app/server.php'; ?>
+
 <!DOCTYPE html>
 
 <html>

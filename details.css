@@ -547,7 +547,8 @@ a {
 
 ::-webkit-scrollbar-track
 {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 }
 
@@ -659,6 +660,7 @@ a {
 
     .comment-table-header {
         font-size: 15px;
+        display: none;
     }
 
     #comment-box {
@@ -672,5 +674,12 @@ a {
     .cart-button, .buy-button {
         float: none;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    * {
+        font-size: 12px;
     }
 }
