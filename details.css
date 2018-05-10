@@ -341,16 +341,12 @@ a {
 .recommended-section ul li {
     display: inline-block;
     margin: 10px;
+    margin-left: 40px;
 }
 
 .recommended-section img {
-    width: 200px;
-    height: 300px;
-}
-
-.rec-img-details ul:nth-child(2), .rec-img-details ul:nth-child(3) {
-    width: 300px;
-    height: 400px;
+    width: 150px;
+    height: 250px;
 }
 
 /*Coments section begins*/
@@ -389,7 +385,7 @@ a {
 }
 
 .comments-table td {
-    padding: 50px;
+    padding: 10px;
     padding-left: 10px;
 }
 
@@ -407,6 +403,7 @@ a {
 .comments-icon li {
     display: inline-block;
     margin: 10px;
+    margin-left: inherit;
 }
 
 .comments-text {
@@ -414,14 +411,19 @@ a {
 }
 
 #comments-icon {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 .comments-header-icons {
     font-size: 18px;
-    margin-top: 70%;
+    margin-top: 20%;
     color: var(--cyan);
+}
+
+.comments-submit {
+    padding: 0px;
+    margin: 0px;
 }
 
 /** Icon Configs **/

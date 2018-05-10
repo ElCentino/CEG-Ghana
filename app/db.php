@@ -1,7 +1,7 @@
 <?php
  $server = 'localhost';
  $serverusername = 'root';
- $serverpassword = 'root';
+ $serverpassword = '';
  $dbname = 'project';
 
  $connect = new mysqli($server, $serverusername, $serverpassword, $dbname);
@@ -9,13 +9,13 @@
       die("Connection Fail".$connect->connect_error);
    }
 
-   //error handler function
-//function customError($errno, $errstr) {
+//    error handler function
+// function customError($errno, $errstr) {
 //  header("location:../index.php");
-//}
+// }
 
-//set error handler
-//set_error_handler("customError");
+// set error handler
+// set_error_handler("customError");
 
 
  ?>

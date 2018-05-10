@@ -86,7 +86,7 @@
       </div>
       <div class="right" >
        <ul>
-         <li id="account"><a href="#">Create Account</a></li>
+         <li id="account"><a href="signup.php">Create Account</a></li>
          <li id="login"><a href="log-in.php">Login</a></li>
        </ul>
 

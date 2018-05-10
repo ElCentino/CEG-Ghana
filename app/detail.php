@@ -153,7 +153,7 @@ include '../app/db.php';
                                 Leave a comment on this book
                             </p>
 
-                            <h3 class="comments-header-icons">Connect with the author on </h3>
+                            <h3 class="comments-header-icons">Share on social media</h3>
                             <ul class="comments-icon">
                                 <li>
                                     <a href="#">
@@ -191,14 +191,14 @@ include '../app/db.php';
                                     <tr>
                                         <td class="comment-table-header">Name</td>
                                         <td class="comments-input">
-                                            <input type="text" class="input-default" name="name" placeholder="Name... Optional" />
+                                            <input type="text" class="input-default" name="name" placeholder="Name [Optional]" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="comment-table-header">Comment</td>
                                         <td class="comments-input">
                                             <textarea id="comment-box" type="text" class="input-default" name="comment" placeholder="Comment...."></textarea>
-                                            <button type="submit" class="btn-butt rounded-button-sm" style="margin-top: 70px">Comment</button>
+                                            <button type="submit" class="btn-butt rounded-button-sm comments-submit" style="margin-top: 40px">Comment</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -225,7 +225,7 @@ include '../app/db.php';
             <ul>
             <?php
 
-                $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 8";
+                $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 4";
                 $result = mysqli_query($connect, $sql);
 
                 while ($rows = mysqli_fetch_array($result)) {
