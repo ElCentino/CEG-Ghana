@@ -35,10 +35,11 @@ body {
 }
 #login-box {
   position: relative;
+  padding: 250px;
   margin: 5% auto;
   margin-top: 10%;
   width: 700px;
-  height: 450px;
+  height: auto;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -233,6 +234,9 @@ html { width: 100%; height:100%; overflow:hidden; }
 <script type="text/javascript">
 	$(document).ready(function(){
 		// alert("this is working");
+
+
+
 		$("#full_name").focus(function(){
            $("#full_name").css('border-bottom-color', 'red');
 		});
