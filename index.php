@@ -96,7 +96,7 @@
 <!--      <hr id="hr" >-->
 <section>
     <div class="text">
-       <p>Buy a book . Save a bundle <br>
+       <p>Welcome to Challenge Enterpriese<br>
       <b id="centerText">Welcome</b>  </p>
     </div>
 

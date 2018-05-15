@@ -28,7 +28,6 @@ SET time_zone = "+00:00";
 -- Table structure for table `adresse`
 --
 
-DROP TABLE IF EXISTS `adresse`;
 CREATE TABLE IF NOT EXISTS `adresse` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `address` varchar(250) NOT NULL,
@@ -65,7 +64,6 @@ INSERT INTO `adresse` (`id`, `address`, `fullname`, `state`, `city`, `phonenumbe
 -- Table structure for table `book`
 --
 
-DROP TABLE IF EXISTS `book`;
 CREATE TABLE IF NOT EXISTS `book` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(200) NOT NULL,
