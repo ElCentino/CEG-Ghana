@@ -25,7 +25,11 @@ include '../app/db.php';
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Raleway|Roboto+Condensed|Ubuntu" rel="stylesheet">
+
     <title>Checkout - <?php echo $title?></title>
   </head>
   <body>
@@ -34,7 +38,8 @@ include '../app/db.php';
          <div class="setabe">
            <center>
            <div class="image">
-               <!--<img src="../image/logo1.jpg" alt="" id="logo" style="vertical-align:middle;"> --><span id="span">  <i class="fas fa-bars" id="menbar"></i> CE GHANA</span>
+           <a href="<?php echo "detail.php?a=".$id?>" class="arrow-left"><i class="fas fa-arrow-left"></i></a>
+            <span id="span">CE GHANA</span>
 
            </div>
          </center>
@@ -48,7 +53,7 @@ include '../app/db.php';
        <div class="buynow">
          <div class="location">
            <center>
-             <div class="buynowcontent">
+             <div class="buynowcontent container-main">
 
                  
                  <div class="right">
@@ -66,9 +71,9 @@ include '../app/db.php';
                  </div>
 
                  <div class="left">
-                 <p>
-                  <li id="cart">Cart |</p></li>
-                  <li>Customer Information |</p></li>
+                 <p class="small-nav">
+                  <li class="sm-link">Cart </p></li>
+                  <li>| Customer Information |</p></li>
                   <li>Shipping method |</p></li>
                   <li>Payment method </p></li>
                  </p>
@@ -110,11 +115,163 @@ include '../app/db.php';
              </div>
          </div>
      </section>
+
+     <section>
+        <footer class="footer">
+            <section>
+                <h3>Contact Us</h3>
+                <p class="meta-footer-text">Get in touch
+                    <span class="sm-link">here</span> if you have any queries or issues.</p>
+            </section>
+            <section>
+                <h3>Help & Support</h3>
+                <p class="meta-footer-text">Click
+                    <span class="sm-link">here</span> for FAQs, order information, T&Cs, errata and code downloads.</p>
+            </section>
+            <section>
+                <h3>Alerts & Offers</h3>
+                <p class="meta-footer-text">Sign up to our emails for regular updates, bespoke offers, exclusive discounts and great free content.</p>
+                <input class="AO-input input-default" type="text" placeholder="Email" /> <button type="submit" class="btn-butt btn-butt-sm rounded-button-sm AO" style="margin-top: 70px">Submit</button>
+            </section>
+        </footer>
+        <footer class="mid-footer">
+                <section>
+                        <ul>
+                            <h3>The Company</h3>
+                            <li>
+                                <a href="#">About Us </a>
+                            </li>
+                            <li>
+                                <a href="#">Contact us </a>
+                            </li>
+                            <li>
+                                <a href="#">Newsroom</a>
+                            </li>
+                            <li>
+                                <a href="#">Custom Rental Store</a>
+                            </li>
+                            <li>
+                                <a href="#">Affiliates</a>
+                            </li>
+                            <li>
+                                <a href="#">Customer care</a>
+                            </li>
+        
+        
+                        </ul>
+        
+                        <ul>
+                            <h3>Support</h3>
+                            <li>
+                                <a href="#">Rental Agreement</a>
+                            </li>
+                            <li>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <a href="#">How to Return</a>
+                            </li>
+                            <li>
+                                <a href="#">Extending Rentals</a>
+                            </li>
+                            <li>
+                                <a href="#">Shipping Details</a>
+                            </li>
+                            <li>
+                                <a href="#">Coupons</a>
+                            </li>
+        
+                        </ul>
+        
+        
+                        <ul>
+                            <h3>What's Hot</h3>
+                            <li>
+                                <a href="#">Popular Textbooks </a>
+                            </li>
+                            <li>
+                                <a href="#">Top Rented Textbooks</a>
+                            </li>
+                            <li>
+                                <a href="#">Rent Textbooks</a>
+                            </li>
+                            <li>
+                                <a href="#">All Categories</a>
+                            </li>
+                            <li>
+                                <a href="#">Top Searches</a>
+                            </li>
+                            <li>
+                                <a href="#">Customer Quotes</a>
+                            </li>
+        
+                        </ul>
+                    </section>
+        </footer>
+        <footer class="pro-footer">
+            
+            <article>
+                &copy; 2018 Challenge Enterprises of Ghana
+            </article>
+            <article>
+                View our
+                <span class="sm-link">Cookie Policy</span>
+            </article>
+            <article>
+                Our
+                <span class="sm-link">Privacy Policy</span>
+            </article>
+            <article>
+                Follow us on social media
+            </article>
+        </footer>
+    </section>
+    <!-- End Of Body Details -->
+
+    <section>
+        <span id="icon-con"> </span>
+        <ul class="icon">
+            <li>
+                <a href="#">
+                    <img src="../icon/Facebook.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/twitter-icon.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/Pinterest.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/instagram.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/gmail-icon.png" alt="" id="icon">
+                </a>
+            </li>
+        </ul>
+
+       
+    </section>
      <script type="text/javascript">
      var spantittle = document.getElementById('spantittle').value;
      //var n = spantittle.length;
      console.log(spantittle);
 
      </script>
+
+    <script src="../js/details-interactivity.js" type="text/javascript"></script>
+    <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/libraries/p5.js"></script>
+    <script type="text/javascript" src="../js/libraries/p5.dom.js"></script>
+    <script type="text/javascript" src="../js/processor.js"></script>
+    
   </body>
 </html>
