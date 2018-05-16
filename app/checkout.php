@@ -24,7 +24,7 @@ include '../app/db.php';
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../checkout.css">
+    <link rel="stylesheet" href="../css/checkout.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Condensed" rel="stylesheet">
     <title>Checkout - <?php echo $title?></title>
   </head>
@@ -49,6 +49,21 @@ include '../app/db.php';
          <div class="location">
            <center>
              <div class="buynowcontent">
+
+                 
+                 <div class="right">
+                    <div class="itemimage">
+
+                      <li id=""> <img src="<?php echo"../image/".$image; ?>" alt=""></li>
+                      <li id="price">Price:  <?php echo $price; ?>&#8373; </li>
+                      <li id="subt">Subtotal</li>
+                      <li id="subprice"><?php echo $price; ?>&#8373;</li><br>
+                      <li id="shipping">Shipping</li>
+                      <li id="shprice">0.0&#8373;</li>
+                      <li id="shipping">Total</li>
+                      <li id="shprice"> <small>Cedis  </small><?php echo $price; ?></li>
+                    </div>
+                 </div>
 
                  <div class="left">
                  <p>
@@ -87,21 +102,6 @@ include '../app/db.php';
                     <li> <a href="#" id="continue">Continue to Shipping methode</a></li>
                   </div>
                    </div>
-                 </div>
-                 <div class="right">
-                    <div class="itemimage">
-
-                      <li id=""> <img src="<?php echo"../image/".$image; ?>" alt=""></li>
-                      <li id="price">Price:  <?php echo $price; ?>&#8373; </li>
-                    <hr id="hr">
-                      <li id="subt">Subtotal</li>
-                      <li id="subprice"><?php echo $price; ?>&#8373;</li><br>
-                      <li id="shipping">Shipping</li>
-                      <li id="shprice">0.0&#8373;</li>
-                      <hr id="hr">
-                      <li id="shipping">Total</li>
-                      <li id="shprice"> <small>Cedis  </small><?php echo $price; ?></li>
-                    </div>
                  </div>
              </div>
 
