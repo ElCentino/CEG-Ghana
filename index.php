@@ -154,12 +154,12 @@
           $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 10";
           $result = mysqli_query($connect, $sql);
           while ($rows = mysqli_fetch_array($result)) {
-            $image = $rows['image'];
-            $title = $rows['title'];
-            $sbn = $rows['sbn'];
-            $author = $rows['author'];
-            $binding = $rows['binding'];
-            $id = $rows['id'];
+              $image = $rows['image'];
+              $title = $rows['title'];
+              $sbn = $rows['sbn'];
+              $author = $rows['author'];
+              $binding = $rows['binding'];
+              $id = $rows['id'];
             ?>
 
     <div id="book_container">

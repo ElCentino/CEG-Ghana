@@ -17,6 +17,7 @@
 .container-main {
   padding: 30px;
   margin: 80px auto;
+  background-color: seashell;
 }
 
 #logo {
@@ -463,6 +464,16 @@
   border-radius: 3px;
 }
 
+.book-details tr, .book-details th, .book-details td {
+  padding: 10px 60px;
+}
+
+.book-display img {
+  width: 150px;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+}
 
 @media only screen and (max-width:1000px) {
   .left,
@@ -480,6 +491,10 @@
   }
   .left * {
     padding: 10px;
+  }
+
+  .itemimage {
+    border-bottom: 5px var(--cyan) solid;
   }
 }
 
