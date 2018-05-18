@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 04, 2018 at 11:52 PM
+-- Generation Time: May 18, 2018 at 09:27 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -25,9 +25,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `username` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `userid`, `password`, `username`) VALUES
+(1, '90454544', '90454544', 'sam');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `adresse`
 --
 
+DROP TABLE IF EXISTS `adresse`;
 CREATE TABLE IF NOT EXISTS `adresse` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `address` varchar(250) NOT NULL,
@@ -41,22 +64,39 @@ CREATE TABLE IF NOT EXISTS `adresse` (
   `cvv` varchar(250) NOT NULL,
   `exps` varchar(250) NOT NULL,
   `orderid` varchar(250) NOT NULL,
+  `booktitle` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `adresse`
 --
 
-INSERT INTO `adresse` (`id`, `address`, `fullname`, `state`, `city`, `phonenumber`, `paymenttype`, `carnumber`, `holdername`, `cvv`, `exps`, `orderid`) VALUES
-(8, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'mobile money', '05505132398', 'bukari shamsu', '', '', ''),
-(7, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '767587767', 'debit card', '6767787877678686', 'bukari shamsu', '08/2019', '08/2019', ''),
-(6, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '767587767', 'debit card', '6767787877678686', 'bukari shamsu', '08/2019', '08/2019', ''),
-(9, 'kasoa-barier', 'alise rose', 'Greater accra', 'accra', '05540513239', 'mobile money', '0550513239', 'bukarishasmsu', '', '', ''),
-(10, 'tetegu_weija', 'bukari shamsu', 'Greater accra', 'tema', '0550513239', 'mobile money', '055051329', 'bukari shamsu', '', '', '1489103128'),
-(11, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'mobile money', '0550513239', 'bukari', '', '', '479558591'),
-(12, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'debit card', '0550513239', 'bukari shamsu', '435', '435', '1508226976'),
-(13, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'debit card', '258484285824948', 'bukarishamsu', '504540', '504540', '1846152637');
+INSERT INTO `adresse` (`id`, `address`, `fullname`, `state`, `city`, `phonenumber`, `paymenttype`, `carnumber`, `holdername`, `cvv`, `exps`, `orderid`, `booktitle`) VALUES
+(8, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'mobile money', '05505132398', 'bukari shamsu', '', '', '', ''),
+(7, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '767587767', 'debit card', '6767787877678686', 'bukari shamsu', '08/2019', '08/2019', '', ''),
+(6, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '767587767', 'debit card', '6767787877678686', 'bukari shamsu', '08/2019', '08/2019', '', ''),
+(9, 'kasoa-barier', 'alise rose', 'Greater accra', 'accra', '05540513239', 'mobile money', '0550513239', 'bukarishasmsu', '', '', '', ''),
+(10, 'tetegu_weija', 'bukari shamsu', 'Greater accra', 'tema', '0550513239', 'mobile money', '055051329', 'bukari shamsu', '', '', '1489103128', ''),
+(11, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'mobile money', '0550513239', 'bukari', '', '', '479558591', ''),
+(12, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'debit card', '0550513239', 'bukari shamsu', '435', '435', '1508226976', ''),
+(13, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'debit card', '258484285824948', 'bukarishamsu', '504540', '504540', '1846152637', ''),
+(14, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '055053239', 'mobile money', '0550513239', 'bukarishamsu', '', '', '1297372372', ''),
+(15, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '050513239', 'mobile money', '055051239', 'bukari shamsu', '', '', '2103913404', ''),
+(16, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '90454544', 'mobile money', '90454544', '90454544', '', '', '1758040180', ''),
+(17, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '90454544', 'mobile money', '054544546', 'bukari shamsu', '', '', '1267727552', ''),
+(18, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'mobile money', '0550513239', 'bukari shamsu', '', '', '259863888', ''),
+(19, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '0550513239', 'mobile money', '0550513239', 'bukari shamsu', '', '', '537993484', ''),
+(20, 'Taptop-weija', 'alise rose', 'Taptop-weija', 'Taptop-weija', '0767', 'mobile money', '055054', '8788y8y', '', '', '314039870', ''),
+(21, 'Taptop-weija', 'bukari shamsu', 'Taptop-weija', 'Taptop-weija', '8', 'mobile money', '867776767', 'bhbhhbhbh', '', '', '72822359', ''),
+(22, '', '', '', '', '', '', '', '', '', '', '2092085404', ''),
+(23, '', '', '', '', '', '', '', '', '', '', '1676257170', ''),
+(24, '', '', '', '', '', '', '', '', '', '', '714612350', ''),
+(25, '', '', '', '', '', '', '', '', '', '', '1083626111', ''),
+(26, '', '', '', '', '', '', '', '', '', '', '1810123200', ''),
+(27, '', '', '', '', '', '', '', '', '', '', '2040341920', ''),
+(28, '', '', '', '', '', '', '', '', '', '', '1672348204', ''),
+(29, '', '', '', '', '', '', '', '', '', '', '161239181', '');
 
 -- --------------------------------------------------------
 
@@ -64,6 +104,7 @@ INSERT INTO `adresse` (`id`, `address`, `fullname`, `state`, `city`, `phonenumbe
 -- Table structure for table `book`
 --
 
+DROP TABLE IF EXISTS `book`;
 CREATE TABLE IF NOT EXISTS `book` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(200) NOT NULL,
@@ -117,6 +158,35 @@ INSERT INTO `book` (`id`, `image`, `title`, `sbn`, `author`, `binding`, `Price`,
 (39, 'next.jpg', 'Next: Pastoral Succession That Works', '10: 080100571X', 'Warren Bird and William Vanderbloemen', 'Paperback', 37, 'Every church and ministry goes through changes in leadership, and the issue is far bigger than the wave of pastors from the Baby Boomer generation who are moving toward retirement. When a pastor leaves a church, ministries are disrupted and members drift away. If the church is already struggling, it can find itself suddenly in very dire straits indeed. But the outcome doesn\'t have to be that way.'),
 (40, 'on-being-a-pastor.jpg', 'On Being a Pastor: Understanding Our Calling and Work', '10: 0802431224', ' Derek J. Prime & Alistair Begg', 'Paperback', 40, 'A pastor’s responsibilities are unique, demanding that he not only nurture his own spiritual life but also the lives of those in his care. What a challenge this can be!\r\n\r\nDerek Prime and Alistair Begg provide practical advice for both the spiritual and practical aspects of pastoral ministry. They delve deep into topics such as prayer, devotional habits, preaching, studying, and specific ministry duties. The result is an essential tool for those in pastoral ministry.'),
 (41, 'brother-we-not-professionals.jpg', 'Brothers, We Are Not Professionals: A Plea to Pastors for Radical Ministry', '10: 1433678829', 'John Piper', 'Paperback', 25, 'In this revised and expanded edition of Brothers, We Are Not Professionals that includes a new introduction and select all-new chapters, best-selling author John Piper pleads through a series of thoughtful essays with fellow pastors to abandon the professionalization of the pastorate and pursue the prophetic call of the Bible for radical ministry.\r\n\r\n“We pastors are being killed by the professionalizing of the pastoral ministry,” he writes. “The mentality of the professional is not the mentality of the prophet. It is not the mentality of the slave of Christ. Professionalism has nothing to do with the essence and heart of the Christian ministry. The more professional we long to be, the more spiritual death we will leave in our wake. For there is no professional childlikeness, there is no professional tenderheartedness, there is no professional panting after God.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+DROP TABLE IF EXISTS `cart`;
+CREATE TABLE IF NOT EXISTS `cart` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `itemid` int(9) NOT NULL,
+  `image` varchar(250) NOT NULL,
+  `title` varchar(250) NOT NULL,
+  `price` varchar(250) NOT NULL,
+  `username` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `itemid`, `image`, `title`, `price`, `username`) VALUES
+(1, 38, 'five-love-language.jpg', 'The 5 Love Languages: The Secret to Love that Lasts ', '45', 'samls90'),
+(2, 38, 'five-love-language.jpg', 'The 5 Love Languages: The Secret to Love that Lasts ', '45', 'samls90'),
+(3, 38, 'five-love-language.jpg', 'The 5 Love Languages: The Secret to Love that Lasts ', '45', 'samls90'),
+(4, 38, 'five-love-language.jpg', 'The 5 Love Languages: The Secret to Love that Lasts ', '45', 'samls90'),
+(5, 38, 'five-love-language.jpg', 'The 5 Love Languages: The Secret to Love that Lasts ', '45', 'samls90'),
+(6, 38, 'five-love-language.jpg', 'The 5 Love Languages: The Secret to Love that Lasts ', '45', 'samls90');
 
 -- --------------------------------------------------------
 
@@ -179,18 +249,20 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `fullname`, `email`, `password`) VALUES
-(6, 'bukari shamsu', 'ali@gmail.com', '90454544'),
-(5, 'bukari shamsu', 'bukarishamsu@gmail.com', '90454544'),
-(7, 'bukari shamsu', 'robbensam24@gmail.com', '88f36bf60201b989384d9022f5715f0c'),
-(8, 'alise rose', 'ali2@gmail.com', '88f36bf60201b989384d9022f5715f0c'),
-(9, '', '', 'd41d8cd98f00b204e9800998ecf8427e');
+(13, 'bukari shamsu', 'alirose@gmail.com', '88f36bf60201b989384d9022f5715f0c'),
+(12, 'samls90', 'bukarishams@gmail.com', '88f36bf60201b989384d9022f5715f0c'),
+(11, 'bukari', 'sam90454544@gmail.com', '88f36bf60201b989384d9022f5715f0c'),
+(10, 'samls90', 'robbensam24@gmail.com', '88f36bf60201b989384d9022f5715f0c'),
+(14, 'bukari shamsu', 'alirose@gmail.com', '88f36bf60201b989384d9022f5715f0c'),
+(15, 'bukari shamsu', 'bukarishamsu@gmail.com', '88f36bf60201b989384d9022f5715f0c'),
+(16, 'salifou dian', 'salifoudian@gmail.com', '88f36bf60201b989384d9022f5715f0c');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
