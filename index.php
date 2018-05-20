@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/indexstyle.css">
+    <link rel="stylesheet" type="text/css" href="details.css">
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -28,26 +29,43 @@
     <style>
         .emph {
            color: rgb(230, 70, 70);
-           font-style: italic;
         }
     </style>
 
     <title> CE GHANA </title>
 </head>
+
 <body >
   <!-- start of top menu -->
 <section>
+    
+    <div class="top-contact-info">
+        <div class="leftside">
+         <span>Call us on</span> 
+         <span>+23345423256</span> 
+         <span>+233454234557</span>
+        </div>
+        <div class="rightside">
+          <span>Like us on</span>
+          <a href="#" class="sm-link">Facebook</a> 
+          <a href="#" class="sm-link">Twitter</a> 
+          <a href="#" class="sm-link">Google Plus</a> 
+          <a href="#" class="sm-link">Instagram</a>
+        </div>
+    </div>
+
     <div class="image">
     <div class="image-slider-wrapper">
     <ul id="image_slider">
-    <li><img src="image/2.jpg" alt="bookshop" id="image" class="img-fader"></li>
+    <li><img src="image/ce2.jpg" alt="bookshop" id="image" class="img-fader"></li>
     </ul>
     </div>
     <div class="overlay" > </div>
+
   </div>
       <div class="container" >
       <div class="wrapper">
-      <div class="menu-bar">
+      <div class="menu-bar" >
       <div class="left" id="mb">
 
         <img src="image/ecghanalogo.png" alt="" id="logo"><span id="span">  <i class="fas fa-bars" id="menbar"></i> EC GHANA</span>
@@ -99,7 +117,8 @@
        <p>Welcome to Challenge Enterpriese<br>
       <b id="centerText">Welcome</b>  </p>
     </div>
-
+        
+    <center style="margin-top: 10px;">
     <div class="seache">
       <div class="seachebar">
         <form class="" action="#" method="post">
@@ -109,6 +128,8 @@
       </div>
 
     </div>
+
+    </center>
 </section>
 <section>
   <div class="float">
@@ -147,7 +168,7 @@
 <section class="anim-element">
   <div class="middle">
     <div class="these">
-      <p class="header-blue" style="font-size: 40px;">Featured Books</p>
+      <p class="header-blue" style="font-size: 40px;">Trending Books</p>
     </div >
     <div class="books">
           <?php
@@ -244,7 +265,15 @@ Challenge distributes over 90% of the Bibles and Christian literature through 18
 </div>
 </div>
 
-<footer>
+<div class="locaton-area">
+<div class="header-maps">
+  <h1>Find Us</h1>
+  <button style="width: 10%" class="btn btn-butt rounded-button-sm toggle-btn">Toggle Maps</button>
+</div>
+<iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9507152381993!2d-0.21041868486156928!3d5.574305335014205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a125704f393%3A0x56b6d8b96b19f4f3!2sChallenge+Bookshop!5e0!3m2!1sen!2sgh!4v1526830655812" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+<!-- <footer>
    <div class="legone">
    <div class="legswos">
    <div class="firstf">
@@ -316,7 +345,7 @@ Challenge distributes over 90% of the Bibles and Christian literature through 18
 
 </div>
 
- <!-- pop up -->
+ 
 <section>
     <div class="popupclass">
     <div class="popup">
@@ -344,7 +373,10 @@ Challenge distributes over 90% of the Bibles and Christian literature through 18
     <li><a href="#"> <img src="icon/instagram.png" alt="" id="icon"></a></li>
     <li><a href="#"> <img src="icon/gmail-icon.png" alt="" id="icon"></a></li>
   </ul>
-</section>
+</section> -->
+
+<?php include 'php/template-footer.php'?>
+
 <script type="text/javascript">
 $(document).ready(function(){
 
@@ -650,8 +682,12 @@ xhr.onreadystatechange = function(){
   }
 }
 
-  const images = ['image/1.jpg', 'image/2.jpg', 'image/3.jpg', 'image/4.jpg'];
+  const imageBrightness = 20;
+
+  const images = ['image/ce1.jpg', 'image/ce2.jpg', 'image/ce3.jpg', 'image/ce4.jpg'];
   let currentImageIndex = 3;
+
+  $(".img-fader").css("filter", `brightness(${imageBrightness}%)`);
 
   const slider = setInterval(function() {
 
@@ -659,13 +695,36 @@ xhr.onreadystatechange = function(){
       currentImageIndex = 0;
     }
 
-    $(".img-fader").fadeOut('fast',function() {
+    $(".img-fader").fadeOut('1500',function() {
       $(this).fadeIn('slow');
       $(this).attr("src", images[currentImageIndex++]);
+      $(this).css("filter", `brightness(${imageBrightness}%)`);
     });
 
   }, 5000);
 });
+
+const slideToggler = slideToggle();
+
+$(".toggle-btn").on('click', function() {
+
+  var currentToggle = slideToggler();
+
+  if(currentToggle === true) {
+    $(".maps").slideUp();
+  } else {
+    $(".maps").slideDown();
+  }   
+});
+
+function slideToggle() {
+  var up = false;
+
+  return function() {
+    up = !up;
+    return up;
+  }
+}
 
 </script>
 
