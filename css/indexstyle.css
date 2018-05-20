@@ -5,6 +5,7 @@
   --ash-light: rgb(59, 59, 70);
   --gray: rgb(168, 167, 167);
   --cyan: rgb(37, 196, 196);
+  --redish: #ee5253;
 }
 
 * {
@@ -328,33 +329,6 @@
   margin-top: 40px;
 }
 
-.these p {
-  text-align: center;
-  font-size: 26px;
-  font-family: sans-serif;
-  text-transform: capitalize;
-  margin-bottom: 10px;
-}
-
-.books {
-  width: 90%;
-  margin-left: 8%;
-  display: inline-block;
-  text-align: left;
-  /*  padding-left: 20px;*/
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.book {
-  display: inline-block;
-  /*margin-left: 80px;*/
-  margin-bottom: 60px;
-}
-
-.book img {
-  text-align: center;
-}
 
 .det dt {
   display: inline-table;
@@ -807,15 +781,6 @@
   box-sizing: border-box;
 }
 
-#bookimages {
-  height: 200px;
-  width: 125px;
-  object-fit: fill;
-  min-height: 200px;
-  min-width: 130px;
-  cursor: pointer;
-  /* box-shadow: 0px 0px 30px 0px rgba(100, 100, 100, 0.9); */
-}
 
 #bookimages:hover {
   opacity: 0.5;
@@ -823,10 +788,6 @@
   color: lightgray;
 }
 
-.pagination {
-  margin-bottom: 35px;
-  margin-top: -30px;
-}
 
 .pagination li {
   display: inline-block;
@@ -1666,7 +1627,7 @@
 
 .maps {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   padding: 0;
   margin: 0;
 }
@@ -1675,12 +1636,55 @@
   padding: 20px;
   color: var(--milk);
   background: var(--ash);
+  border-bottom: 10px solid var(--cyan);
 }
 
 .header-maps * {
   display: inline-block;
 }
 
-.header-maps .btn {
+.header-maps *:not(:first-child) {
   float: right;
+}
+
+.book-containers {
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.book-containers img {
+  width: 100%;
+  height: 250px;
+  padding: 5px;
+}
+
+#book-trending {
+  display: inline-block;
+  width: 180px;
+  height: auto;
+  margin: 30px 30px;
+}
+
+#book-trending .btn {
+  background-color: var(--cyan);
+  margin: 15px 0;
+}
+
+#book-trending .btn-under {
+  background-color: var(--redish);
+}
+
+.btn-butt-sm {
+  width: 80%;
+}
+
+.trending-header {
+  text-align: center;
+  padding: 15px;
+  margin: 40px 30px;
+}
+
+.btn span {
+  margin-left: 10px;
 }

@@ -165,42 +165,33 @@
 <!-- end of top menu -->
 
 <!-- start of body -->
-<section class="anim-element">
-  <div class="middle">
-    <div class="these">
-      <p class="header-blue" style="font-size: 40px;">Trending Books</p>
-    </div >
-    <div class="books">
-          <?php
-          $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 10";
-          $result = mysqli_query($connect, $sql);
-          while ($rows = mysqli_fetch_array($result)) {
-              $image = $rows['image'];
-              $title = $rows['title'];
-              $sbn = $rows['sbn'];
-              $author = $rows['author'];
-              $binding = $rows['binding'];
-              $id = $rows['id'];
-            ?>
+<section class="trending-section">
+    
+  <p class="trending-header header-blue" style="font-size: 40px;">Trending Books</p>
 
-    <div id="book_container">
-         <div class="book" id="book" >
-      <form class="book_case" method="POST" action="app/detail.php?a=<?php echo $id ?>">
-      <i id="load"></i>
-      <a href="app/detail.php?a=<?php echo $id ?>"><img src="<?php echo "./image/".$image; ?>" alt="book" id="bookimages" ></a>
-      <!--<p> <textarea name="name" rows="1" cols="" class="title" readonly style="border:none"><?php echo "$title"; ?></textarea> </p>-->
-      <p>
-      </p>
-    </form>
-    </div>
-    </div>
+    <div class="book-containers">
 
     <?php
-    }
-    ?>
-  </div>
+        $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 15";
+        $result = mysqli_query($connect, $sql);
+        while ($rows = mysqli_fetch_array($result)) {
+            $image = $rows['image'];
+            $title = $rows['title'];
+            $sbn = $rows['sbn'];
+            $author = $rows['author'];
+            $binding = $rows['binding'];
+            $id = $rows['id'];
 
-  <center>
+            echo "<div id='book-trending'>";
+              echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' id='bookimages'></a>";
+              echo "<button class='btn btn-butt rounded-button .btn-butt-sm'><i class='fa fa-shopping-cart' aria-hidden='true'></i><span>Add to Cart</span></button></a>";
+              echo "<button style='margin-bottom: 0' class='btn btn-butt rounded-button'><i class='fa fa-heart' aria-hidden='true'></i><span>Add to Wishlist</span></button>";
+              echo "<a href='app/detail.php?a=$id'><button style='margin-bottom: 0' class='btn btn-butt rounded-button btn-under'><i class='fas fa-info'></i><span>About Book<span></button></a>";
+            echo "</div>";
+        }
+    ?>
+
+    <center>
     <div class="pagination">
       <li ><a href="#">&#171;</a></li>
     <?php
@@ -212,7 +203,7 @@
        for ($i=0; $i < $a ; $i++) {
         ?>
 
-          <li><a href="index.php?page=<?php echo $i ;?>" id="page"><?php echo $i; ?></a></li>
+          <li style="margin-top: 100px;"><a href="index.php?page=<?php echo $i ;?>" id="page"><?php echo $i; ?></a></li>
 
         <?php
        }
@@ -221,6 +212,10 @@
      <li><a href="#">&#187;</a></li>
    </div>
   </center>
+    </div>
+
+
+  
 </section>
 
 <!-- end of body-->
@@ -267,113 +262,12 @@ Challenge distributes over 90% of the Bibles and Christian literature through 18
 
 <div class="locaton-area">
 <div class="header-maps">
-  <h1>Find Us</h1>
+  <h1>Our Location</h1>
   <button style="width: 10%" class="btn btn-butt rounded-button-sm toggle-btn">Toggle Maps</button>
 </div>
 <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9507152381993!2d-0.21041868486156928!3d5.574305335014205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a125704f393%3A0x56b6d8b96b19f4f3!2sChallenge+Bookshop!5e0!3m2!1sen!2sgh!4v1526830655812" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
-<!-- <footer>
-   <div class="legone">
-   <div class="legswos">
-   <div class="firstf">
-     <ul>
-      <p id="title4">The Company</p>
-      <li> <a href="#">About Us </a></li>
-      <li> <a href="#">Contact us </a></li>
-      <li> <a href="#">Newsroom</a></li>
-      <li> <a href="#">Custom Rental Store</a></li>
-      <li> <a href="#">Affiliates</a></li>
-      <li> <a href="#">Customer care</a></li>
-
-
-    </ul>
-    </div>
-
-   <div class="firstf">
-    <ul>
-      <p id="title4">Support</p>
-      <li> <a href="#">Rental Agreement</a></li>
-      <li> <a href="#">Help</a> </li>
-      <li> <a href="#">How to Return</a></li>
-      <li> <a href="#">Extending Rentals</a></li>
-      <li> <a href="#">Shipping Details</a></li>
-      <li> <a href="#">Coupons</a></li>
-
-     </ul>
-   </div>
-
-   <div class="firstf">
-     <ul>
-      <p id="title4">What's Hot</p>
-      <li> <a href="#">Popular Textbooks </a></li>
-      <li> <a href="#">Top Rented Textbooks</a></li>
-      <li> <a href="#">Rent Textbooks</a></li>
-      <li> <a href="#">All Categories</a></li>
-      <li> <a href="#">Top Searches</a></li>
-      <li> <a href="#">Customer Quotes</a></li>
-
-     </ul>
-   </div>
-
-   <div class="firstf">
-     <ul>
-      <p id="title4">Follow Us</p>
-      <li> <a href="#"><i class="fab fa-facebook-f" style="font-size:15px"></i>Facebook</a></li>
-      <li> <a href="#"><i class="fab fa-facebook-f" style="font-size:15px"></i>Twitter </a></li>
-      <li> <a href="#"><i class="fas fa-facebook-f" style="font-size:15px"></i>Skype</a></li>
-      <li> <a href="#"><i class="fas fa-facebook-f" style="font-size:15px"></i>instagram</a></li>
-      <li> <a href="#"><i class="fas fa-facebook-f" style="font-size:15px"></i>Pinterest</a></li>
-      <li> <a href="#"><i class="fas fa-facebook-f" style="font-size:15px"></i>Email </a></li>
-
-   </ul>
-   </div>
-   <div class="firstf" id="title5">
-
-   </ul>
-   </div>
-
-  </div>
-   <br><br>
-
-   <div style="margin-top:100px" ></div>
-    
-
-   <footer class="footer-text">
-    &copy; 2018 Challenge Enterprises of Ghana
-  </footer>
-
-</div>
-
- 
-<section>
-    <div class="popupclass">
-    <div class="popup">
-    <div class="popupcontainer">
-    <div class="closepopup">
-    <button type="button" class="close" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-    </button>
-    </div>
-    <div class="textcontent">
-    <p id="popuptitle"></p>
-    <p id="pagecontent"> </p>
-
-    </div>
-    </div>
-    </div>
-    </div>
-</section>
-<section>
-  <span id="icon-con"> </span>
-  <ul class="icon">
-    <li><a href="#"> <img src="icon/Facebook.png" alt="" id="icon"></a></li>
-    <li><a href="#"> <img src="icon/twitter-icon.png" alt="" id="icon"></a></li>
-    <li><a href="#"> <img src="icon/Pinterest.png" alt="" id="icon"></a></li>
-    <li><a href="#"> <img src="icon/instagram.png" alt="" id="icon"></a></li>
-    <li><a href="#"> <img src="icon/gmail-icon.png" alt="" id="icon"></a></li>
-  </ul>
-</section> -->
 
 <?php include 'php/template-footer.php'?>
 
@@ -402,21 +296,6 @@ $(document).ready(function(){
     }
   });
 
-
-
-  //  $("#min").mouseenter(function(){
-  //   $("#ministiedd").toggle();
-  //  $("#bookshopdb").hide();
-
-  // });
-  // $("#mins").click(function(){
-  // $("#bookshopdb").toggle();
-  // $("#ministiedd").hide();
-  //    });
-  //    $("#span").click(function(){
-  //     $(".center").toggle();
-
-  //  });
 
    var maxTextLength = 15;
    var specialDets = document.getElementsByClassName("specialDet");
