@@ -12,8 +12,10 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
     crossorigin="anonymous"></script>
 
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/indexstyle.css">
   <link rel="stylesheet" type="text/css" href="details.css">
   <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
@@ -31,7 +33,7 @@
 
   <style>
     .emph {
-      color: rgb(230, 70, 70);
+      color: var(--redish);
     }
   </style>
 
@@ -99,7 +101,7 @@
             <div class="seachebar">
               <form class="" action="#" method="post">
                 <input type="search" name="seache" placeholder="Seach by ISBN, TItle, or Author" id="seach">
-                <input type="submit" name="seache" value="Find a Book" id="seachsubmit">
+                <button type="submit" name="seache" id="seachsubmit">Find a Book<i class="fas fa-search"></i></button>
               </form>
             </div>
 
@@ -598,6 +600,8 @@
       }
     });
 
+    var subsequent = 530;
+
     $(window).on('scroll', function() {
       if($(this).scrollTop()) {
           $(".main-nav").addClass("black");
@@ -614,15 +618,17 @@
           $(".nav-logo-img").fadeIn();
       }
 
-      if(this.scrollY > 3600) { 
+      if(this.scrollY > 3600 - subsequent) { 
         $(".black").css("border-bottom", "6px solid var(--cyan)");
+        $(".maps").slideDown();
+        subsequent = 0;
       } else { 
         $(".black").css("border-bottom", "6px solid var(--redish)"); 
       }
     });
 
     function slideToggle() {
-      var up = false;
+      var up = true;
 
       return function () {
         up = !up;
