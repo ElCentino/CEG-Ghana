@@ -184,27 +184,27 @@
               <a href="#">&#171;</a>
             </li>
             <?php
-       $ls = "SELECT * FROM book ORDER BY id ASC";
-       $Lsresult = mysqli_query($connect, $ls);
-       $lsrow = mysqli_num_rows($Lsresult);
-       $a = $lsrow/10;
-       $a = ceil($a);
-       for ($i=0; $i < $a ; $i++) {
-        ?>
+                $ls = "SELECT * FROM book ORDER BY id ASC";
+                $Lsresult = mysqli_query($connect, $ls);
+                $lsrow = mysqli_num_rows($Lsresult);
+                $a = $lsrow/10;
+                $a = ceil($a);
+                for ($i=0; $i < $a ; $i++) {
+                  ?>
 
-              <li style="margin-top: 100px;">
-                <a href="index.php?page=<?php echo $i ;?>" id="page">
-                  <?php echo $i; ?>
-                </a>
+                        <li style="margin-top: 100px;">
+                          <a href="index.php?page=<?php echo $i ;?>" id="page">
+                            <?php echo $i; ?>
+                          </a>
+                        </li>
+
+                        <?php
+                }
+
+              ?>
+              <li>
+                <a href="#">&#187;</a>
               </li>
-
-              <?php
-       }
-
-     ?>
-                <li>
-                  <a href="#">&#187;</a>
-                </li>
           </div>
         </center>
     </div>
@@ -220,14 +220,9 @@
   <div class="aboutus " id="aboutus">
     <!-- <img id="aboutimage" src="image/3.jpg" alt=""  >-->
     <div class="about anim-element">
-      <center>
-        <p>
-          <h1 class="header-blue">ABOUT US</h1>
-        </p>
+        <h1 class="header-blue">ABOUT US</h1>
         <div class="p1" style="text-align: justify;">
-          <p class="numbers">
-            <b>Challenge Enterprises of GHANA </b>
-          </p>
+        <b>Challenge Enterprises of GHANA </b>
           <p id="para5">For the past 50 plus years, Challenge Enterprises of Ghana (CEG) has been the leading name in the distribution
             of Christian literature in the country of Ghana and offers the best in Christian reading.
             <br>
@@ -251,15 +246,6 @@
           </p>
         </div>
 
-        <!--  <div class="p1">
-    <p class="numbers">2</p><span id="span2">Incididunt ut labore et dolore</span>
-    <p id="para5">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
-    </div>
-    <div class="p1">
-    <p class="numbers">3</p><span id="span2">Incididunt ut labore et dolore</span>
-    <p id="para5">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
-  </div>-->
-      </center>
     </div>
   </div>
 
@@ -618,15 +604,23 @@
           $(".nav-logo-img").fadeIn();
       }
 
-      if(this.scrollY > 3600 - subsequent) { 
-        $(".black").css("border-bottom", "6px solid var(--cyan)");
-        $(".maps").slideDown();
-        subsequent = 0;
-      } else { 
-        $(".black").css("border-bottom", "6px solid var(--redish)"); 
-      }
-    });
+        var element_position = $('.maps').offset().top;
 
+        var y_scroll_pos = window.pageYOffset;
+        var scroll_pos_test = element_position;
+
+        if(y_scroll_pos > scroll_pos_test) {
+          $(".black").css("border-bottom", "6px solid var(--cyan)");
+          $(".maps").slideDown();
+        }else {
+          $(".black").css("border-bottom", "6px solid var(--redish)"); 
+          $(".maps").slideUp();
+        }
+
+
+     
+    });
+    
     function slideToggle() {
       var up = false;
 
