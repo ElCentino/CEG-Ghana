@@ -13,7 +13,7 @@
     crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/indexstyle.css">
   <link rel="stylesheet" type="text/css" href="details.css">
   <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
@@ -72,7 +72,7 @@
         <nav class="main-nav">
           <div class="nav-logo">
             <img src="image/ecghanalogo.png" alt="" class="nav-logo-img">
-            <h1 class="nav-black-hide">CE Ghana</h1>
+            <h1 class="nav-black-hide">CE GHANA</h1>
           </div>
           <div class="menu-itmes">
               <ul>
@@ -602,7 +602,7 @@
       if($(this).scrollTop()) {
           $(".main-nav").addClass("black");
           $(".top-contact-info").slideUp();
-          $(".nav-black-hide").addClass("nav-logo").css("padding-top", "23px");
+          $(".nav-black-hide").addClass("nav-logo").css("padding-top", "28px");
           $(".nav-logo-img").fadeOut();
           $(".nav-black-hide").fadeIn();
       } else {
