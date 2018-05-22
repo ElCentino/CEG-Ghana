@@ -1,0 +1,128 @@
+
+
+
+
+      <div class="menu-bar">
+          <div class="left" id="mb">
+
+            <img src="image/ecghanalogo.png" alt="" id="logo">
+            <span id="span">
+              <i class="fas fa-bars" id="menbar"></i> EC GHANA</span>
+            <div class="image1"> </div>
+          </div>
+          <div class="center" id="mb">
+            <ul class="top-nav">
+              <li class="active-nav">
+                <a href="" style="color:cyan">Home</a>
+              </li>
+              <li>
+                <a href="#" id="min">Ministries
+                  <i class="down"></i>
+                </a>
+              </li>
+              <ul id="ministiedd" style="font-size:13px;">
+                <li>
+                  <a href="#" id="extras">Challenge Bookshops
+                    <a/>
+                </li>
+                <li>
+                  <a href="#" id="cinematoday">Cinema Today (CineVan)
+                    <a/>
+                </li>
+                <br>
+                <li>
+                  <a href="#" id="mobilebookshops">Mobile Bookshops
+                    <a/>
+                </li>
+                <br>
+                <li>
+                  <a href="#" id="localfollowup">Local Follow up
+                    <a/>
+                </li>
+                <br>
+                <li>
+                  <a href="#" id="prisonministry">Prison Ministry
+                    <a/>
+                </li>
+                <br>
+                <li>
+                  <a href="#" id="prisonchaplain">Prison Chaplain
+                    <a/>
+                </li>
+                <br>
+                <li>
+                  <a href="#" id="youngsearchersleague">Young Searchers League
+                    <a/>
+                </li>
+                <br>
+                <li>
+                  <a href="#" id="mailboxclub">Mail Box Club
+                    <a/>
+                </li>
+                <br>
+                <li>
+                  <a href="#" id="conferences">Conferences
+                    <a/>
+                </li>
+                <br>
+                <li>
+                  <a href="#" id="counselingservices">Counseling Services
+                    <a/>
+                </li>
+              </ul>
+              <li>
+                <a href="#" id="mins">Bookshop Locations
+                  <i class="down"></i>
+                </a>
+              </li>
+              <ul id="bookshopdb">
+                <li>
+                  <a href="#" id="extra">Accra
+                    <a/>
+                </li>
+                <li>
+                  <a href="#" id="Tema">Tema
+                    <a/>
+                </li>
+                <li>
+                  <a href="#" id="Abetifi">Abetifi
+                    <a/>
+                </li>
+                <li>
+                  <a href="#" id="kumasi">Kumasi
+                    <a/>
+                </li>
+                <li>
+                  <a href="#" id="sunyani">Sunyani
+                    <a/>
+                </li>
+                <li>
+                  <a href="#" id="capeCoast">Cape coast
+                    <a/>
+                </li>
+                <li>
+                  <a href="#" id="Tamale">Tamale
+                    <a/>
+                </li>
+              </ul>
+
+              <li>
+                <a href="#aboutus">About</a>
+              </li>
+              <li>
+                <a href="">Contact </a>
+              </li>
+            </ul>
+          </div>
+          <div class="right">
+            <ul>
+              <li id="account">
+                <a href="signup.php">Create Account</a>
+              </li>
+              <li id="login">
+                <a href="log-in.php">Login</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
