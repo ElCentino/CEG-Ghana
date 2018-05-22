@@ -1725,6 +1725,7 @@ nav.black {
   height: 100px;
   top: 0;
   padding: 10px 100px;
+  border-bottom: 6px var(--redish) solid;
   z-index: 11;
 }
 

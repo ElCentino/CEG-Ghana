@@ -606,11 +606,18 @@
           $(".nav-logo-img").fadeOut();
           $(".nav-black-hide").fadeIn();
       } else {
+          $(".black").css("border-bottom", "none");
           $(".main-nav").removeClass("black");
           $(".top-contact-info").slideDown();
           $(".nav-black-hide").removeClass("nav-logo");
           $(".nav-black-hide").fadeOut();
           $(".nav-logo-img").fadeIn();
+      }
+
+      if(this.scrollY > 3600) { 
+        $(".black").css("border-bottom", "6px solid var(--cyan)");
+      } else { 
+        $(".black").css("border-bottom", "6px solid var(--redish)"); 
       }
     });
 
