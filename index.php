@@ -90,7 +90,7 @@
         </nav>
       <section>
         <div class="text">
-          <p>Welcome to Challenge Enterpriese
+          <p>Welcome to Challenge Enterprise
             <br>
             <b id="centerText">Welcome</b>
           </p>
@@ -600,7 +600,7 @@
       }
     });
 
-    var subsequent = 530;
+    var subsequent = 500;
 
     $(window).on('scroll', function() {
       if($(this).scrollTop()) {
@@ -628,7 +628,7 @@
     });
 
     function slideToggle() {
-      var up = true;
+      var up = false;
 
       return function () {
         up = !up;
