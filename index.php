@@ -152,7 +152,7 @@
   <!-- start of body -->
   <section class="trending-section">
 
-    <p class="trending-header header-blue" style="font-size: 40px;">Trending Books</p>
+    <p class="trending-header header-reddish" style="font-size: 40px;">Trending Books</p>
 
     <div class="book-containers">
 
@@ -168,10 +168,10 @@
             $id = $rows['id'];
 
             echo "<div id='book-trending'>";
-              echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' id='bookimages'></a>";
-              echo "<button class='btn btn-butt rounded-button .btn-butt-sm'><i class='fa fa-shopping-cart' aria-hidden='true'></i><span>Add to Cart</span></button></a>";
-              echo "<button style='margin-bottom: 0' class='btn btn-butt rounded-button'><i class='fa fa-heart' aria-hidden='true'></i><span>Add to Wishlist</span></button>";
-              echo "<a href='app/detail.php?a=$id'><button style='margin-bottom: 0' class='btn btn-butt rounded-button btn-under'><i class='fas fa-info'></i><span>About Book<span></button></a>";
+              echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' class='book-thumbnail'></a>";
+              echo "<button class='btn btn-butt rounded-button-sm .btn-butt-sm'><i class='fa fa-shopping-cart' aria-hidden='true'></i><span>Add to Cart</span></button></a>";
+              echo "<button style='margin-bottom: 0' class='btn btn-butt rounded-button-sm'><i class='fa fa-heart' aria-hidden='true'></i><span>Add to Wishlist</span></button>";
+              echo "<a href='app/detail.php?a=$id'><button style='margin-bottom: 0' class='btn btn-butt rounded-button-sm btn-under'><i class='fas fa-info'></i><span>About Book<span></button></a>";
             echo "</div>";
         }
     ?>
@@ -263,8 +263,8 @@
 
   <div class="locaton-area">
     <div class="header-maps">
-      <h1>Our Location</h1>
-      <button style="width: 10%" class="btn btn-butt rounded-button-sm toggle-btn">Toggle Maps</button>
+      <h1 class="header-reddish-sm">Our Location</h1>
+      <a class="btn-active toggle-btn">Toggle Maps</a>
     </div>
     <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9507152381993!2d-0.21041868486156928!3d5.574305335014205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a125704f393%3A0x56b6d8b96b19f4f3!2sChallenge+Bookshop!5e0!3m2!1sen!2sgh!4v1526830655812"
       frameborder="0" style="border:0" allowfullscreen></iframe>

@@ -5,6 +5,7 @@
     --ash-light: rgb(59, 59, 70);
     --gray: rgb(168, 167, 167);
     --cyan: rgb(37, 196, 196);
+    --redish: #ee5253;
 }
 
 * {
@@ -530,7 +531,8 @@ a {
 }
 
 .sm-link {
-    color: var(--cyan);
+    font-family: 'Pacifico', cursive;
+    color: var(--redish);
 }
 
 .mid-footer h3 {

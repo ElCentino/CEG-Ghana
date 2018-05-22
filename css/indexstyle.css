@@ -6,6 +6,7 @@
   --gray: rgb(168, 167, 167);
   --cyan: rgb(37, 196, 196);
   --redish: #ee5253;
+  --redish-light: #f0686a;
 }
 
 * {
@@ -1546,7 +1547,20 @@
 
 .header-blue {
   font-size: 56px;
-  color: #26dac3;
+  color: var(--cyan);
+}
+
+.header-reddish {
+  font-family: 'Pacifico', cursive;
+  font-size: 56px;
+  color: var(--redish);
+}
+
+.header-reddish-sm {
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  line-height: 80px;
+  color: var(--redish);
 }
 
 .top-nav>li {
@@ -1675,6 +1689,11 @@
   background-color: var(--redish);
 }
 
+.book-thumbnail {
+  height: 60px;
+  border-radius: 200px;
+}
+
 .btn-butt-sm {
   width: 80%;
 }
@@ -1759,10 +1778,27 @@ nav.black ul li a {
 
 .main-nav ul li a.nav-active {
   background: var(--redish);
+  font-family: 'Pacifico', cursive;
   color: white;
   border-radius: 6px;
+  text-transform: lowercase;
 }
 
 .nav-black-hide {
   display: none;
+}
+
+.btn-active {
+  line-height: 80px;
+  color: white;
+  padding: 0px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s;
+  background: var(--redish);
+  border-radius: 6px;
+}
+
+.btn-active:hover, .nav-active:hover {
+  background: var(--redish-light);
 }

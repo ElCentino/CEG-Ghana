@@ -12,7 +12,7 @@
             <section>
                 <h3>Alerts & Offers</h3>
                 <p class="meta-footer-text">Sign up to our emails for regular updates, bespoke offers, exclusive discounts and great free content.</p>
-                <input class="AO-input input-default" type="text" placeholder="Email" /> <button type="submit" class="btn-butt rounded-button-sm AO" style="margin-top: 70px">Submit</button>
+                <input class="AO-input input-default" type="text" placeholder="Email" /> <button type="submit" class="btn-butt rounded-button-sm AO" style="margin-top: 70px; font-family: 'Pacifico', cursive;">Submit</button>
             </section>
         </footer>
         <footer class="mid-footer">
