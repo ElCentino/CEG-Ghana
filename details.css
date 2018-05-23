@@ -578,7 +578,8 @@ a {
 
 ::-webkit-scrollbar-thumb
 {
-	background-color: cyan;	
+    transition: .3s;
+	background-color: var(--redish);	
 	background-image: -webkit-linear-gradient(45deg,
 	                                          rgba(255, 255, 255, .2) 25%,
 											  transparent 25%,

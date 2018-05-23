@@ -81,7 +81,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Ministries</a></li>
-                <li><a href="#">Locations</a></li>
+                <li><a href="#location-area" class="locator-nav">Locations</a></li>
                 <li><a href="#">Library</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a class="nav-active" href="#">Login</a></li>
@@ -249,11 +249,26 @@
     </div>
   </div>
 
-  <div class="locaton-area">
+  <div id="location-area">
     <div class="header-maps">
-      <h1 class="header-reddish-sm">Our Location</h1>
-      <a class="btn-active toggle-btn">Toggle Maps</a>
+      <div class="locations"> 
+        <h1 class="header-reddish-sm">Our Location</h1>
+        <ul class="locations-area-list">
+          <li class="location-active" data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9507152381993!2d-0.21041868486156928!3d5.574305335014205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a125704f393%3A0x56b6d8b96b19f4f3!2sChallenge+Bookshop!5e0!3m2!1sen!2sgh!4v1526830655812"><a href="#location-area">Accra</a></li>
+          <li data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4704.646690061505!2d-0.0013980008343181835!3d5.638352638536481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf87555febd069%3A0x6fc8c1f2f1b0524!2sMELCOM+PLUS!5e1!3m2!1sen!2sgh!4v1523267907356"><a href="#location-area">Tema</a></li>
+          <li data-location="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4705.162999649278!2d-0.21041868479699632!3d5.574299995958565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1schallenge+bookshot+tamale!5e1!3m2!1sen!2sgh!4v1523277920632"><a href="#location-area">Tamale</a></li>
+          <li data-location="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d18781.285334133514!2d-1.6353621063833776!3d6.690840500689334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sKumasi+Main+shop+adum!5e1!3m2!1sen!2sgh!4v1523277347004"><a href="#location-area" >Kumasi</a></li>
+          <li data-location="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4705.162999649278!2d-0.21041868479699632!3d5.574299995958565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1schallenge+bookshot+tamale!5e1!3m2!1sen!2sgh!4v1523277920632"><a href="#location-area">Sunyani</a></li>
+          <li data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4708.748290079033!2d-1.2438046847987423!3d5.107475996293235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfddfe51c55742e9%3A0x5b95f64dd8981554!2sChallenge+Book+Shop!5e1!3m2!1sen!2sgh!4v1523277807362"><a href="#location-area">Cape Coast</a></li>
+          <li data-location="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4705.162999649278!2d-0.21041868479699632!3d5.574299995958565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1schallenge+bookshop+Abefiti!5e1!3m2!1sen!2sgh!4v1523277688262"><a href="#location-area">Abefiti</a></li>
+        </ul>
+      </div>
+      <div class="map-buttons">
+        <a class="btn-active toggle-btn">Toggle Maps</a>
+      </div>
+      <div class="clear-fix"></div>
     </div>
+    <div class="clear-fix"></div>
     <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9507152381993!2d-0.21041868486156928!3d5.574305335014205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a125704f393%3A0x56b6d8b96b19f4f3!2sChallenge+Bookshop!5e0!3m2!1sen!2sgh!4v1526830655812"
       frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
@@ -573,6 +588,20 @@
       }, 5000);
     });
 
+    $(".locations-area-list li, .locator-nav").on('click', function() {
+      let currentThis = $(this).attr("data-location");
+      $(this).addClass("location-active");
+      $(".locations-area-list li").not(this).removeClass("location-active");
+      setTimeout(() => {
+          $(".main-nav").slideUp();
+      }, 1000);
+
+      $(".maps").fadeOut(function() {
+        $(this).fadeIn();
+        $(".maps").attr("src", currentThis);
+      });
+    });
+
     const slideToggler = slideToggle();
 
     $(".toggle-btn").on('click',  () => $(".maps").slideToggle());
@@ -580,6 +609,7 @@
     var subsequent = 500;
 
     $(window).on('scroll', function() {
+      
       if($(this).scrollTop()) {
           $(".main-nav").addClass("black");
           $(".top-contact-info").slideUp();
@@ -602,13 +632,29 @@
 
         if(y_scroll_pos > scroll_pos_test) {
           $(".black").css("border-bottom", "6px solid var(--cyan)");
-          $(".maps").slideDown();
+          $(".main-nav").slideUp();
         }else {
           $(".black").css("border-bottom", "6px solid var(--redish)"); 
+          $(".main-nav").slideDown();
+          $(".locator-nav").removeClass("location-active");
         }
 
-
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          $(".main-nav").slideDown();
+        }
      
+    });
+
+    $(window).on('resize', function() {
+      if(window.outerWidth < 1200) {
+        $(".nav-black-hide").addClass("nav-logo").css("padding-top", "28px");
+        $(".nav-logo-img").fadeOut();
+        $(".nav-black-hide").fadeIn();
+      } else {
+        $(".nav-black-hide").removeClass("nav-logo");
+        $(".nav-black-hide").fadeOut();
+        $(".nav-logo-img").fadeIn();
+      }
     });
     
     function slideToggle() {
