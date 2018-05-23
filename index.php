@@ -575,16 +575,7 @@
 
     const slideToggler = slideToggle();
 
-    $(".toggle-btn").on('click', function () {
-
-      var currentToggle = slideToggler();
-
-      if (currentToggle === true) {
-        $(".maps").slideUp();
-      } else {
-        $(".maps").slideDown();
-      }
-    });
+    $(".toggle-btn").on('click',  () => $(".maps").slideToggle());
 
     var subsequent = 500;
 
@@ -614,7 +605,6 @@
           $(".maps").slideDown();
         }else {
           $(".black").css("border-bottom", "6px solid var(--redish)"); 
-          $(".maps").slideUp();
         }
 
 
