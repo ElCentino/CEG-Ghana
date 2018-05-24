@@ -108,33 +108,3 @@
         </footer>
     </section>
     <!-- End Of Body Details -->
-
-    <section>
-        <span id="icon-con"> </span>
-        <ul class="icon">
-            <li>
-                <a href="#">
-                    <img src="../icon/Facebook.png" alt="" id="icon">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../icon/twitter-icon.png" alt="" id="icon">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../icon/Pinterest.png" alt="" id="icon">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../icon/instagram.png" alt="" id="icon">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../icon/gmail-icon.png" alt="" id="icon">
-                </a>
-            </li>
-        </ul>

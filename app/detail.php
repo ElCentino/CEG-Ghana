@@ -222,7 +222,38 @@ include '../app/db.php';
     <?php include '../php/template-footer.php' ?>
     </section>
 
-    <script src="../js/details-interactivity.js" type="text/javascript"></script>
+        <section>
+        <span id="icon-con"> </span>
+        <ul class="icon">
+            <li>
+                <a href="#">
+                    <img src="../icon/Facebook.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/twitter-icon.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/Pinterest.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/instagram.png" alt="" id="icon">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../icon/gmail-icon.png" alt="" id="icon">
+                </a>
+            </li>
+        </ul>
+</section>
+
+    <script src="../scripts/details-interactivity.js" type="text/javascript"></script>
     <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
     <script type="text/javascript" src="../js/libraries/p5.js"></script>
     <script type="text/javascript" src="../js/libraries/p5.dom.js"></script>

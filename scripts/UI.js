@@ -51,23 +51,25 @@ $(document).ready(function() {
       
       if($(this).scrollTop()) {
           $(".main-nav").addClass("black");
-          $(".top-contact-info").slideUp();
-          $(".nav-black-hide").addClass("nav-logo").css("padding-top", "28px");
-          $(".nav-logo-img").fadeOut();
-          $(".nav-black-hide").fadeIn();
-      } else {
 
-          $(".top-contact-info").slideDown(function() {
-            $(".main-nav").removeClass("black");
-          });
+          $(".nav-logo-img").fadeOut(function() {
+            $(".nav-black-hide").addClass("nav-logo").css("padding-top", "28px");
+            
+            $(".top-contact-info").slideUp();
+            $(".nav-black-hide").fadeIn();
+          });   
+          
+      } else {
+          if(window.outerWidth > 780) {
+            $(".top-contact-info").slideDown();
+          }
+
+          $(".main-nav").removeClass("black");
           
           $(".nav-black-hide").fadeOut(function() {
             $(".nav-black-hide").removeClass("nav-logo");
             $(".nav-logo-img").fadeIn();
-            $(".black").css("border-bottom", "none");
           });
-
-          $(".black").css("border-bottom", "none");
       }
 
         var element_position = $('.maps').offset().top;
@@ -76,30 +78,32 @@ $(document).ready(function() {
         var scroll_pos_test = element_position;
 
         if(y_scroll_pos > scroll_pos_test - 300) {
-          $(".black").css("border-bottom", "6px solid var(--cyan)");
           $(".main-nav").slideUp();
         }else {
-            if($(window).scrollTop()) {
-                $(".black").css("border-bottom", "6px solid var(--redish)"); 
-            } else {
-                $(".black").css("border-bottom", "none");
-            }
+            
           $(".main-nav").slideDown();
           $(".locator-nav").removeClass("location-active");
         }
 
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-          $(".main-nav").slideDown();
+          
+          setTimeout(function() {
+            $(".main-nav").slideDown();
+          }, 2000);
         }
      
     });
 
     $(window).on('resize', function() {
+
       if(window.outerWidth < 1200) {
+
         $(".nav-black-hide").addClass("nav-logo").css("padding-top", "28px");
         $(".nav-logo-img").fadeOut();
         $(".nav-black-hide").fadeIn();
+        $(".top-contact-info").slideUp();
       } else {
+        
         $(".nav-black-hide").removeClass("nav-logo");
         $(".nav-black-hide").fadeOut();
         $(".nav-logo-img").fadeIn();
