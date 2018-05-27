@@ -126,11 +126,6 @@
   list-style: none;
 }
 
-.aboutus {
-  background: #03b1a8;
-  font-family: 'Exo', sans-serif;
-}
-
 .book_case {
   font-size: 14px;
 }
@@ -356,25 +351,6 @@
   font-size: 14px;
 }
 
-.about {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 5px;
-}
-
-.about p {
-  text-align: center;
-  font-size: 25px;
-  color: white;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  font-family: Times;
-  text-transform: capitalize;
-}
-
 .p1 {
   padding: 0px;
   width: 80%;
@@ -456,17 +432,6 @@
   margin-bottom: 10;
 }
 
-.lists {
-  text-align: left;
-  color: white;
-  margin-top: 10px;
-}
-
-.lists li {
-  margin-top: 10px;
-  font-family: Trebuchet MS;
-}
-
 #menbar {
   display: none;
 }
@@ -523,18 +488,6 @@
   color: var(--orange);
   margin-top: 20px;
   display: inline-block;
-}
-
-#aboutimage {
-  width: 100%;
-  position: absolute;
-  -webkit-filter: brightness(35%);
-  filter: brightness(35%);
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  height: 695px;
 }
 
 #bookimage:hover {
@@ -883,17 +836,6 @@
     font-size: 13px;
     text-align: center;
   }
-  #aboutimage {
-    height: 690px;
-    width: 100%;
-    position: absolute;
-    -webkit-filter: brightness(35%);
-    filter: brightness(35%);
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
-  }
   #book_container {
     margin-right: 25px;
   }
@@ -978,24 +920,7 @@
     padding-top: 10px;
     text-align: left;
   }
-  .about {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin-bottom: 0px;
-  }
-  .about p {
-    text-align: center;
-    font-size: 25px;
-    color: white;
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
-  #aboutimage {
-    height: 750px;
-  }
+
 }
 
 @media only screen and (max-width:800px) {
@@ -1057,22 +982,7 @@
     margin-left: 20px;
     margin-bottom: 60px;
   }
-  .about {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin-bottom: 0px;
-    margin-left: -30px;
-  }
-  .about p {
-    text-align: center;
-    font-size: 25px;
-    color: white;
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
+
   .p1 {
     display: inline-block;
     margin-bottom: 0px;
@@ -1236,27 +1146,7 @@
       margin-left: 20px;
       margin-bottom: 60px;
     }
-    .aboutus {
-      z-index: 0;
-      background: #03b1a8;
-    }
-    .about {
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      margin-bottom: 0px;
-      margin-left: -0px;
-      z-index: 0;
-    }
-    .about p {
-      text-align: center;
-      font-size: 25px;
-      color: white;
-      padding-top: 30px;
-      padding-bottom: 10px;
-    }
+
     #account {
       margin-left: 240px;
     }
@@ -1307,10 +1197,7 @@
       -o-object-fit: cover;
          object-fit: cover;
     }
-    #aboutimage {
-      height: 880px;
-      z-index: 0;
-    }
+  
     .books {
       margin-left: 3%;
     }
@@ -1447,25 +1334,7 @@
       display: inline-block;
       margin-bottom: 60px;
     }
-    .aboutus {
-      z-index: 0;
-      background: #03b1a8;
-    }
-    .about {
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      margin-bottom: 0px;
-      z-index: 0;
-    }
-    .about p {
-      text-align: center;
-      font-size: 18px;
-      color: white;
-      padding-top: 30px;
-    }
+    
     .numbers {
       font-size: 17px;
     }
@@ -1477,12 +1346,7 @@
       font-size: 15px;
       font-family: Times;
     }
-    .lists li {
-      margin-top: 0px;
-    }
-    #aboutimage {
-      height: 980px;
-    }
+
     #span {
       cursor: pointer;
     }
@@ -1586,11 +1450,6 @@
 ::-webkit-scrollbar-thumb {
   background-color: #F90;
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent)
-}
-
-.header-blue {
-  font-size: 56px;
-  color: var(--cyan);
 }
 
 .header-reddish {

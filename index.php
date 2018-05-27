@@ -261,41 +261,44 @@
 
   </section>
 
+  <div class="about-section">
+    <h1 class="header-blue">ABOUT US</h1>
+
+    <section class="col-5">
+
+    </section>
+
+    <section class="about-right">
+
+    <h3>Challenge Enterprises of GHANA </h3>
+    
+      <p>For the past 50 plus years, Challenge Enterprises of Ghana (CEG) has been the leading name in the distribution of
+            Christian literature in the country of Ghana and offers the best in Christian reading.
+            <br>
+            <br> Challenge distributes over 90% of the Bibles and Christian literature through 18 retail shops across the country
+            as well as through a fleet of eight "cinevans" which also function as mobile bookshops in remote villages in the
+            10 regions of Ghana. CEG offers all types and versions of the Bible and the widest variety and choice of Biblically
+            balanced literature to the general public and the Christian community in particular.
+            <br>
+            <br> In addition to books and bookstores, Challenge serves through:
+          </p>
+
+          <ul>
+                <li>a prison ministry in eight prisons</li>
+                <li>free counseling services</li>
+                <li>eight "cinevans" showing gospel films and providing a mobile bookstore in all the regions of Ghana</li>
+                <li>free Bible corrspondence courses</li>
+                <li>free tract distribution</li>
+                <li>pastors and church leaders conferences in Accra, Kumasi and Takoradi</li>
+              </ul>
+    </section>
+
+    
+  </div>
+
   <!-- end of body-->
 
   <!--  start about us page-->
-
-  <div class="aboutus " id="aboutus" style="font-family: 'Poppins', sans-serif;">
-    <!-- <img id="aboutimage" src="image/3.jpg" alt=""  >-->
-    <div class="about anim-element">
-      <h1 class="header-blue">ABOUT US</h1>
-      <div class="p1" style="text-align: justify;">
-        <b>Challenge Enterprises of GHANA </b>
-        <p id="para5">For the past 50 plus years, Challenge Enterprises of Ghana (CEG) has been the leading name in the distribution of
-          Christian literature in the country of Ghana and offers the best in Christian reading.
-          <br>
-          <br> Challenge distributes over 90% of the Bibles and Christian literature through 18 retail shops across the country
-          as well as through a fleet of eight "cinevans" which also function as mobile bookshops in remote villages in the
-          10 regions of Ghana. CEG offers all types and versions of the Bible and the widest variety and choice of Biblically
-          balanced literature to the general public and the Christian community in particular.
-          <br>
-          <br> In addition to books and bookstores, Challenge serves through:
-          <div class="lists">
-            <ul>
-              <li>a prison ministry in eight prisons</li>
-              <li>free counseling services</li>
-              <li>eight "cinevans" showing gospel films and providing a mobile bookstore
-                <br> in all the regions of Ghana</li>
-              <li>free Bible corrspondence courses</li>
-              <li>free tract distribution</li>
-              <li>pastors and church leaders conferences in Accra, Kumasi and Takoradi</li>
-            </ul>
-          </div>
-        </p>
-      </div>
-
-    </div>
-  </div>
 
   <div id="location-area">
     <div class="header-maps">
@@ -340,6 +343,8 @@
     <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9507152381993!2d-0.21041868486156928!3d5.574305335014205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a125704f393%3A0x56b6d8b96b19f4f3!2sChallenge+Bookshop!5e0!3m2!1sen!2sgh!4v1526830655812"
       frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
+
+   
 
   <div class="ministries-area">
     <header>Ministries</header>

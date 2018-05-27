@@ -55,7 +55,7 @@ $(document).ready(function() {
 
     $(".about-nav").on('click', function(e) {
       e.preventDefault();
-      let position = $("#aboutus").offset().top;
+      let position = $("#about").offset().top;
       animateToPosition(position, 1000);
     });
 
