@@ -84,8 +84,8 @@
 .top-contact-info .rightside a {
   text-decoration: none;
   color: var(--cyan);
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .top-contact-info .rightside * {
@@ -93,7 +93,12 @@
 }
 
 .top-contact-info .rightside a:hover {
-  border-bottom: 1px solid var(--orange);
+  filter: invert(100%);
+}
+
+.top-contact-info img {
+  width: 30px;
+  height: 30px;
 }
 
 .maps {
@@ -361,15 +366,28 @@ nav.black ul li a {
 
 .about-right {
   padding-left: 50%;
+  color: rgb(187, 186, 186);
+  font-size: 18px;
+}
+
+.about-right p {
   font-family: 'Poppins', sans-serif;
-  color: rgb(212, 212, 212);
-  font-size: 20px;
 }
 
 .about-right h3 {
   color: var(--milk);
   font-size: 30px;
   padding: 20px 0;
+}
+
+.about-right ul {
+  list-style-type: decimal;
+  padding: 30px;
+  font-size: 18px;
+}
+
+.about-right ul li {
+  padding: 10px;
 }
 
 .header-blue {

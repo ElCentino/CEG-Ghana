@@ -102,8 +102,11 @@
                 Our
                 <span class="sm-link">Privacy Policy</span>
             </article>
-            <article>
-                Follow us on social media
+            <article class="bottom-nav">
+                <a href="#"><span class="face_active"></span></a>
+                <a href="#"><span class="twitt_active"></span></a>
+                <a href="#"><span class="skype_active"></span></a>
+                <a href="#"><span class="insta_active"></span></a>   
             </article>
         </footer>
     </section>

@@ -599,6 +599,54 @@ a {
 											  transparent)
 }
 
+.bottom-nav * {
+    padding: 10px;
+}
+
+.face_active {
+    width: 40px;
+    height: 40px;
+    background-image: url("../image/face_active.png");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.twitt_active {
+    width: 40px;
+    height: 40px;
+    background-image: url("../image/twitt_active.png");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.skype_active {
+    width: 40px;
+    height: 40px;
+    background-image: url("../image/skype_active.png");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.insta_active {
+    width: 40px;
+    height: 40px;
+    background-image: url("../image/insta_active.png");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.face_active, .skype_active, .insta_active, .twitt_active {
+    transition: .2s ease-in-out;
+}
+
+.face_active:hover, .skype_active:hover, .insta_active:hover, .twitt_active:hover {
+    filter: invert(100%);
+}
+
 /* Responsive Code begins*/
 
 

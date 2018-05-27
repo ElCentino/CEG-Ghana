@@ -19,7 +19,7 @@
   <link rel="stylesheet" type="text/css" href="css/indexstyle.css">
   <link rel="stylesheet" type="text/css" href="css/UI.css">
   <link rel="stylesheet" type="text/css" href="css/root.css">
-  <link rel="stylesheet" type="text/css" href="details.css">
+  <link rel="stylesheet" type="text/css" href="css/details.css">
   <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -55,11 +55,11 @@
         <span>+233454234557</span>
       </div>
       <div class="rightside">
-        <span>Like us on</span>
-        <a href="#" class="sm-link">Facebook</a>
-        <a href="#" class="sm-link">Twitter</a>
-        <a href="#" class="sm-link">Google Plus</a>
-        <a href="#" class="sm-link">Instagram</a>
+        <!-- <span>Like us on</span> -->
+        <a href="#"><img src="image/face_active.png"></a>
+        <a href="#"><img src="image/twitt_active.png"></a>
+        <a href="#"><img src="image/skype_active.png"></a>
+        <a href="#"><img src="image/insta_active.png"></a>  
       </div>
     </div>
 
@@ -271,8 +271,8 @@
     <section class="about-right">
 
     <h3>Challenge Enterprises of GHANA </h3>
-    
-      <p>For the past 50 plus years, Challenge Enterprises of Ghana (CEG) has been the leading name in the distribution of
+
+      <p><span style="color: var(--cyan);">For the past 50 plus years</span>, Challenge Enterprises of Ghana (CEG) has been the leading name in the distribution of
             Christian literature in the country of Ghana and offers the best in Christian reading.
             <br>
             <br> Challenge distributes over 90% of the Bibles and Christian literature through 18 retail shops across the country
@@ -376,37 +376,6 @@
 
 
   <?php include 'php/template-footer.php'?>
-
-  <section>
-    <span id="icon-con"> </span>
-    <ul class="icon">
-      <li>
-        <a href="#">
-          <img src="icon/Facebook.png" alt="" id="icon">
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="icon/twitter-icon.png" alt="" id="icon">
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="icon/Pinterest.png" alt="" id="icon">
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="icon/instagram.png" alt="" id="icon">
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="icon/gmail-icon.png" alt="" id="icon">
-        </a>
-      </li>
-    </ul>
-  </section>
 
   <script type="text/javascript" src="scripts/interactivity.js"></script>
   <script type="text/javascript" src="scripts/UI.js"></script>
