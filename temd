@@ -126,3 +126,18 @@
 
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+        echo "<div id='book-trending'>";
+              echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' class='book-thumbnail'></a>";
+              echo "<button class='btn btn-butt rounded-button-sm .btn-butt-sm'><i class='fa fa-shopping-cart' aria-hidden='true'></i><span>Add to Cart</span></button></a>";
+              echo "<button style='margin-bottom: 0' class='btn btn-butt rounded-button-sm'><i class='fa fa-heart' aria-hidden='true'></i><span>Add to Wishlist</span></button>";
+              echo "<a href='app/detail.php?a=$id'><button style='margin-bottom: 0' class='btn btn-butt rounded-button-sm btn-under'><i class='fas fa-info'></i><span>About Book<span></button></a>";
+            echo "</div>";

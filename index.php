@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width = device-width , initial-scale= 1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l"
     crossorigin="anonymous"></script>
@@ -27,6 +27,7 @@
   <link rel="icon" type="image/png" href="image/ecghanalogo.png">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
   <script type="text/javascript" src="myjs/js.js"></script>
   <script type="text/javascript" src="js/libraries/p5.js"></script>
@@ -178,59 +179,84 @@
   <!-- start of body -->
   <section class="trending-section">
 
-    <p class="trending-header header-reddish" style="font-size: 40px;">Trending Books</p>
 
-    <div class="book-containers">
+    <div class="row">
+      <div class="col-4">
+      <p class="trending-header header-reddish" style="font-size: 40px;">Categories</p>
 
-      <?php
-        $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 15";
-        $result = mysqli_query($connect, $sql);
-        while ($rows = mysqli_fetch_array($result)) {
-            $image = $rows['image'];
-            $title = $rows['title'];
-            $sbn = $rows['sbn'];
-            $author = $rows['author'];
-            $binding = $rows['binding'];
-            $id = $rows['id'];
+        <article class="container-content categories-section">
+          <ul>
+            <li>Art</li>
+            <li>Poetry</li>
+            <li>Religious</li>
+            <li>Satire</li>
+            <li>Romance</li>
+            <li>Children</li>
+            <li>Romance</li>
+            <li>Mystery</li>
+            <li>Mystery</li>
+            <li>Inspirational</li>
+            <li>Self Help</li>
+            <li>Science Ficton</li>
+            <li>Travel</li>
+            <li>History</li>
+            <li>Journals</li>
+            <li>Prayer books</li>
+            <li>Series</li>
+            <li>Trilogy</li>
+            <li>Biographies</li>
+          </ul>
+        </article>
+      </div>
 
-            echo "<div id='book-trending'>";
-              echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' class='book-thumbnail'></a>";
-              echo "<button class='btn btn-butt rounded-button-sm .btn-butt-sm'><i class='fa fa-shopping-cart' aria-hidden='true'></i><span>Add to Cart</span></button></a>";
-              echo "<button style='margin-bottom: 0' class='btn btn-butt rounded-button-sm'><i class='fa fa-heart' aria-hidden='true'></i><span>Add to Wishlist</span></button>";
-              echo "<a href='app/detail.php?a=$id'><button style='margin-bottom: 0' class='btn btn-butt rounded-button-sm btn-under'><i class='fas fa-info'></i><span>About Book<span></button></a>";
-            echo "</div>";
-        }
-    ?>
+      <div class="col-8">
 
-        <center>
-          <div class="pagination">
-            <li>
-              <a href="#">&#171;</a>
-            </li>
-            <?php
-                $ls = "SELECT * FROM book ORDER BY id ASC";
-                $Lsresult = mysqli_query($connect, $ls);
-                $lsrow = mysqli_num_rows($Lsresult);
-                $a = $lsrow/10;
-                $a = ceil($a);
-                for ($i=0; $i < $a ; $i++) {
-                  ?>
 
-              <li style="margin-top: 100px;">
-                <a href="index.php?page=<?php echo $i ;?>" id="page">
-                  <?php echo $i; ?>
-                </a>
-              </li>
+              <p class="trending-header header-reddish" style="font-size: 40px;">Trending Books</p>
 
-              <?php
-                }
+              <div class="book-containers">
+                  <?php
+                      $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 5";
+                      $result = mysqli_query($connect, $sql);
+                      while ($rows = mysqli_fetch_array($result)) {
+                          $image = $rows['image'];
+                          $title = $rows['title'];
+                          $sbn = $rows['sbn'];
+                          $author = $rows['author'];
+                          $binding = $rows['binding'];
+                          $id = $rows['id'];
 
-              ?>
-                <li>
-                  <a href="#">&#187;</a>
-                </li>
-          </div>
-        </center>
+                          echo "<div id='book-trending'>";
+                          echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' class='book-thumbnail'></a>";
+                          echo "</div>";
+                      }
+                    ?>
+              </div>
+
+              <p class="trending-header header-reddish" style="font-size: 40px;">Featured Books</p>
+
+              <div class="book-containers">
+                  <?php
+                      $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 5, 5";
+                      $result = mysqli_query($connect, $sql);
+                      while ($rows = mysqli_fetch_array($result)) {
+                          $image = $rows['image'];
+                          $title = $rows['title'];
+                          $sbn = $rows['sbn'];
+                          $author = $rows['author'];
+                          $binding = $rows['binding'];
+                          $id = $rows['id'];
+
+                          echo "<div id='book-trending'>";
+                          echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' class='book-thumbnail'></a>";
+                          echo "</div>";
+                      }
+                    ?>
+              </div>
+
+              <p class="trending-header header-reddish" style="font-size: 35px;">Top Seller</p>
+    </div>
+
     </div>
 
 
@@ -241,7 +267,7 @@
 
   <!--  start about us page-->
 
-  <div class="aboutus " id="aboutus">
+  <div class="aboutus " id="aboutus" style="font-family: 'Poppins', sans-serif;">
     <!-- <img id="aboutimage" src="image/3.jpg" alt=""  >-->
     <div class="about anim-element">
       <h1 class="header-blue">ABOUT US</h1>
@@ -277,11 +303,7 @@
     <div class="header-maps">
       <div class="locations">
         <h1 class="header-reddish-sm">Our Location</h1>
-        <div class="blocks">
-          <section class="sec1"></section>
-          <section class="sec2"></section>
-          <section class="sec3"></section>
-        </div>
+
         <ul class="locations-area-list">
           <li class="location-active" data-location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9507152381993!2d-0.21041868486156928!3d5.574305335014205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a125704f393%3A0x56b6d8b96b19f4f3!2sChallenge+Bookshop!5e0!3m2!1sen!2sgh!4v1526830655812">
             <a href="#location-area">Accra</a>
@@ -307,6 +329,11 @@
         </ul>
       </div>
       <div class="map-buttons">
+        <div class="blocks">
+          <section class="sec1"></section>
+          <section class="sec2"></section>
+          <section class="sec3"></section>
+        </div>
         <a class="btn-active toggle-btn">Toggle Maps</a>
       </div>
       <div class="clear-fix"></div>
@@ -319,36 +346,36 @@
 
   <?php include 'php/template-footer.php'?>
 
-      <section>
-        <span id="icon-con"> </span>
-        <ul class="icon">
-            <li>
-                <a href="#">
-                    <img src="icon/Facebook.png" alt="" id="icon">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="icon/twitter-icon.png" alt="" id="icon">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="icon/Pinterest.png" alt="" id="icon">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="icon/instagram.png" alt="" id="icon">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="icon/gmail-icon.png" alt="" id="icon">
-                </a>
-            </li>
-        </ul>
-</section>
+  <section>
+    <span id="icon-con"> </span>
+    <ul class="icon">
+      <li>
+        <a href="#">
+          <img src="icon/Facebook.png" alt="" id="icon">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="icon/twitter-icon.png" alt="" id="icon">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="icon/Pinterest.png" alt="" id="icon">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="icon/instagram.png" alt="" id="icon">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="icon/gmail-icon.png" alt="" id="icon">
+        </a>
+      </li>
+    </ul>
+  </section>
 
   <script type="text/javascript" src="scripts/interactivity.js"></script>
   <script type="text/javascript" src="scripts/UI.js"></script>
