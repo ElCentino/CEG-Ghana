@@ -40,8 +40,12 @@ $(document).ready(function () {
                 return dataBracket.toLowerCase() == text.bracket.toLowerCase();
             });
 
-            $(".ministries-header").html(article[0].title);
-            $(".ministries-body").html(article[0].contents);
+            $(".ministries-section").fadeOut(function() {
+                $(this).fadeIn();
+                $(".ministries-header").html(article[0].title);
+                $(".ministries-body").html(article[0].contents);
+            });
+            
         };
 
         xhr.send();

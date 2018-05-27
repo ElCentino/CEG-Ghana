@@ -23,6 +23,11 @@ $(document).ready(function() {
 
     }, 5000);
 
+    $(".ministries-area ul li").on('click', function(e) {
+      $(this).addClass("side-active");
+      $(".ministries-area ul li").not(this).removeClass("side-active");
+    });
+
     $(".locations-area-list li, .locator-nav").on('click', function(e) {
       e.preventDefault();
       let currentThis = $(this).attr("data-location");
@@ -55,7 +60,7 @@ $(document).ready(function() {
 
     $(".about-nav").on('click', function(e) {
       e.preventDefault();
-      let position = $("#about").offset().top;
+      let position = $(".about-section").offset().top;
       animateToPosition(position, 1000);
     });
 
@@ -78,6 +83,21 @@ $(document).ready(function() {
     var subsequent = 500;
 
     $(window).on('scroll', function() {
+
+      if(window.outerWidth < 768) {
+
+        $(".categories").slideUp();
+
+
+        if(window.scrollY + window.innerHeight > $(".ministries-area").offset().top) {
+
+          $(".ministries-area ul").slideUp();
+        }
+
+      } else {
+        $(".ministries-area ul").slideDown();
+        $(".categories").slideDown();
+      }
       
       if($(this).scrollTop()) {
           $(".main-nav").addClass("black");
@@ -122,6 +142,11 @@ $(document).ready(function() {
           }, 2000);
         }
      
+    });
+
+    $(window).on('scroll', function() {
+
+      
     });
 
     $(window).on('resize', function() {

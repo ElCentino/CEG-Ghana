@@ -423,6 +423,7 @@ nav.black ul li a {
   color: var(--milk);
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
+  transition: .3s ease-in-out;
 } 
 
 .ministries-side-nav ul li:hover {
@@ -452,6 +453,7 @@ nav.black ul li a {
   color: rgb(75, 75, 75);
   font-family: 'Poppins', sans-serif;
   overflow-y: auto;
+  transition: .3s ease-in-out;
 }
 
 @media (max-width: 1200px) {
@@ -497,5 +499,14 @@ nav.black ul li a {
 
   [class*="col-"] {
       width: 100%;
+  }
+
+  .about-right {
+    padding-left: 10%;
+    font-size: 15px;
+  }
+
+  .ministries-body, .container-content {
+    padding: 15px 8px;
   }
 }

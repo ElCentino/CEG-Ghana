@@ -182,10 +182,10 @@
 
     <div class="row">
       <div class="col-4">
-      <p class="trending-header header-reddish" style="font-size: 40px;">Categories</p>
+      <p class="trending-header header-reddish category-header" style="font-size: 40px;">Categories</p>
 
         <article class="container-content categories-section">
-          <ul>
+          <ul class="categories">
             <li>Art</li>
             <li>Poetry</li>
             <li>Religious</li>
@@ -354,7 +354,7 @@
         <li class="side-active" data-bracket="CBS">Challenge Bookshops</li>
         <li data-bracket="CTY">Cinema Today (CineVan)</li>
         <li data-bracket="MBS">Mobile Bookshops</li>
-        <li data-bracket="LFU">Local Follow up</li>
+        <li data-bracket="LFU">Local Follow Up</li>
         <li data-bracket="PMY">Prison Ministry</li>
         <li data-bracket="PCN">Prison Chaplain</li>
         <li data-bracket="YSL">Young Searchers League</li>
@@ -364,7 +364,7 @@
       </ul>
     </section>
 
-    <section class="col-9 container-content">
+    <section class="col-9 container-content ministries-section">
 
       <h3 class="ministries-header"></h3>
       
