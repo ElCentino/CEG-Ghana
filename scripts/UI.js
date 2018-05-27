@@ -2,27 +2,34 @@ $(document).ready(function() {
 
     const imageBrightness = 20;
 
-      const images = ['image/ce1.jpg', 'image/ce2.jpg', 'image/ce3.jpg', 'image/ce4.jpg'];
-      let currentImageIndex = 3;
+    const body = $("html, body");
 
-      $(".img-fader").css("filter", `brightness(${imageBrightness}%)`);
+    const images = ['image/ce1.jpg', 'image/ce2.jpg', 'image/ce3.jpg', 'image/ce4.jpg'];
+    let currentImageIndex = 3;
 
-      const slider = setInterval(function () {
+    $(".img-fader").css("filter", `brightness(${imageBrightness}%)`);
 
-        if (currentImageIndex >= images.length) {
-          currentImageIndex = 0;
-        }
+    const slider = setInterval(function () {
 
-        $(".img-fader").fadeOut('1500', function () {
-          $(this).fadeIn('slow');
-          $(this).attr("src", images[currentImageIndex++]);
-          $(this).css("filter", `brightness(${imageBrightness}%)`);
-        });
+      if (currentImageIndex >= images.length) {
+        currentImageIndex = 0;
+      }
 
-      }, 5000);
+      $(".img-fader").fadeOut('1500', function () {
+        $(this).fadeIn('slow');
+        $(this).attr("src", images[currentImageIndex++]);
+        $(this).css("filter", `brightness(${imageBrightness}%)`);
+      });
 
-    $(".locations-area-list li, .locator-nav").on('click', function() {
+    }, 5000);
+
+    $(".locations-area-list li, .locator-nav").on('click', function(e) {
+      e.preventDefault();
       let currentThis = $(this).attr("data-location");
+      let position = $("#location-area").offset().top;
+
+      animateToPosition(position, 1000);
+
       $(this).addClass("location-active");
       $(".locations-area-list li").not(this).removeClass("location-active");
       setTimeout(() => {
@@ -33,6 +40,29 @@ $(document).ready(function() {
         $(this).fadeIn();
         $(".maps").attr("src", currentThis);
       });
+    });
+
+    $(".library-nav").on('click', function(e) {
+      e.preventDefault();
+      let position = $("#trending").offset().top;
+      animateToPosition(position, 1000);
+    });
+
+    $(".home-nav").on('click', function(e) {
+      e.preventDefault();
+      animateToPosition(0, 1000);
+    });
+
+    $(".about-nav").on('click', function(e) {
+      e.preventDefault();
+      let position = $("#aboutus").offset().top;
+      animateToPosition(position, 1000);
+    });
+
+    $(".ministries-nav").on('click', function(e) {
+      e.preventDefault();
+      let position = $(".ministries-area").offset().top;
+      animateToPosition(position, 1000);
     });
 
     const slideToggler = slideToggle();
@@ -118,4 +148,9 @@ $(document).ready(function() {
         return up;
       }
     }
+
+    function animateToPosition(pos, speed) {
+      body.stop().animate({scrollTop: pos}, speed, 'swing');
+    }
+
 });

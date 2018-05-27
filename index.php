@@ -88,19 +88,19 @@
         <div class="menu-itmes">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="#" class="home-nav">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#" class="about-nav">About</a>
             </li>
             <li>
-              <a href="#">Ministries</a>
+              <a href="#" class="ministries-nav">Ministries</a>
             </li>
             <li>
-              <a href="#location-area" class="locator-nav">Locations</a>
+              <a href="#" class="locator-nav">Locations</a>
             </li>
             <li>
-              <a href="#">Library</a>
+              <a href="#trending" class="library-nav">Library</a>
             </li>
             <li>
               <a href="#">Contact Us</a>
@@ -177,7 +177,7 @@
   <!-- end of top menu -->
 
   <!-- start of body -->
-  <section class="trending-section">
+  <section id="trending" class="trending-section">
 
 
     <div class="row">
@@ -253,8 +253,6 @@
                       }
                     ?>
               </div>
-
-              <p class="trending-header header-reddish" style="font-size: 35px;">Top Seller</p>
     </div>
 
     </div>
@@ -341,6 +339,34 @@
     <div class="clear-fix"></div>
     <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9507152381993!2d-0.21041868486156928!3d5.574305335014205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a125704f393%3A0x56b6d8b96b19f4f3!2sChallenge+Bookshop!5e0!3m2!1sen!2sgh!4v1526830655812"
       frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+  <div class="ministries-area">
+    <header>Ministries</header>
+
+    <section class="col-3 ministries-side-nav">
+      <ul>
+        <li class="side-active" data-bracket="CBS">Challenge Bookshops</li>
+        <li data-bracket="CTY">Cinema Today (CineVan)</li>
+        <li data-bracket="MBS">Mobile Bookshops</li>
+        <li data-bracket="LFU">Local Follow up</li>
+        <li data-bracket="PMY">Prison Ministry</li>
+        <li data-bracket="PCN">Prison Chaplain</li>
+        <li data-bracket="YSL">Young Searchers League</li>
+        <li data-bracket="MBC">Mail Box Club</li>
+        <li data-bracket="CFS">Conferences</li>
+        <li data-bracket="CSS">Counseling Services</li>
+      </ul>
+    </section>
+
+    <section class="col-9 container-content">
+
+      <h3 class="ministries-header"></h3>
+      
+      <article class="ministries-body">
+
+      </article>
+    </section>
   </div>
 
 

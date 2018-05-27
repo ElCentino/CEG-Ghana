@@ -162,6 +162,7 @@
 .book-containers img {
   width: 100%;
   height: 250px;
+  filter: brightness(80%);
 }
 
 #book-trending {
@@ -330,6 +331,65 @@ nav.black ul li a {
 .btn-active:hover,
 .nav-active:hover {
   background: var(--redish-light);
+}
+
+
+.ministries-area {
+
+}
+
+.ministries-area header {
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--ash-light);
+}
+
+.ministries-side-nav {
+  background-color: var(--ash-light);
+  height: auto;
+}
+
+.ministries-side-nav ul {
+  list-style-type: none;
+} 
+
+.ministries-side-nav ul li {
+  padding: 15px 10px;
+  color: var(--milk);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+} 
+
+.ministries-side-nav ul li:hover {
+  color: var(--redish);
+  cursor: pointer;
+}
+
+.ministries-side-nav .side-active {
+  color: var(--cyan);
+}
+
+.ministries-side-nav ul li:not(:last-child) {
+  border-bottom: 3px solid var(--ash);
+}
+
+.ministries-header {
+  padding: 20px;
+  color: rgb(75, 75, 75);
+  font-family: 'Poppins', sans-serif;
+}
+
+.ministries-body {
+  height: auto;
+  padding: 30px 20px;
+  text-align: justify;
+  color: rgb(75, 75, 75);
+  font-family: 'Poppins', sans-serif;
+  overflow-y: auto;
 }
 
 @media (max-width: 1200px) {
