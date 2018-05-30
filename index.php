@@ -77,8 +77,8 @@
     <div class="container" style="margin-top: 20vh">
       <nav class="main-nav">
         <div class="nav-logo">
-          <img src="image/ecghanalogo.png" alt="" class="nav-logo-img">
-          <h1 class="nav-black-hide">CE GHANA</h1>
+          <a href="index.php"><img src="image/ecghanalogo.png" alt="" class="nav-logo-img"></a>
+          <h1><a href="index.php" class="nav-black-hide">CE GHANA</a></h1>
         </div>
         <div class="blocks">
           <section class="sec1"></section>
@@ -181,11 +181,12 @@
 
 
     <div class="row">
-      <div class="col-4">
+      <div class="col-3">
       <p class="trending-header header-reddish category-header" style="font-size: 40px;">Categories</p>
 
         <article class="container-content categories-section">
           <ul class="categories">
+            <li>All</li>
             <li>Art</li>
             <li>Poetry</li>
             <li>Religious</li>
@@ -209,7 +210,7 @@
         </article>
       </div>
 
-      <div class="col-8">
+      <div class="col-9">
 
 
               <p class="trending-header header-reddish" style="font-size: 40px;">Trending Books</p>
@@ -261,7 +262,7 @@
 
   </section>
 
-  <div class="about-section">
+  <div id="about-section" class="about-section">
     <h1 class="header-blue">ABOUT US</h1>
 
     <section class="col-5">
@@ -371,6 +372,17 @@
       <article class="ministries-body">
 
       </article>
+      
+      <section class="ministries-buttons">
+        <button class="prev-button col-6">
+          Prev
+        </button>
+        
+        <button class="next-button col-6">
+          Next
+        </button>
+      </section>
+      
     </section>
   </div>
 

@@ -83,23 +83,9 @@ $(document).ready(function() {
     var subsequent = 500;
 
     $(window).on('scroll', function() {
-
-      if(window.outerWidth < 768) {
-
-        $(".categories").slideUp();
-
-
-        if(window.scrollY + window.innerHeight > $(".ministries-area").offset().top) {
-
-          $(".ministries-area ul").slideUp();
-        }
-
-      } else {
-        $(".ministries-area ul").slideDown();
-        $(".categories").slideDown();
-      }
       
       if($(this).scrollTop()) {
+
           $(".main-nav").addClass("black");
 
           $(".nav-logo-img").fadeOut(function() {
@@ -110,16 +96,18 @@ $(document).ready(function() {
           });   
           
       } else {
+        
           if(window.outerWidth > 780) {
+
             $(".top-contact-info").slideDown();
+
+            $(".nav-black-hide").fadeOut(function() {
+              $(".nav-black-hide").removeClass("nav-logo");
+              $(".nav-logo-img").fadeIn();
+            });
           }
 
           $(".main-nav").removeClass("black");
-          
-          $(".nav-black-hide").fadeOut(function() {
-            $(".nav-black-hide").removeClass("nav-logo");
-            $(".nav-logo-img").fadeIn();
-          });
       }
 
         var element_position = $('.maps').offset().top;
@@ -127,7 +115,7 @@ $(document).ready(function() {
         var y_scroll_pos = window.pageYOffset;
         var scroll_pos_test = element_position;
 
-        if(y_scroll_pos > scroll_pos_test - 300) {
+        if(y_scroll_pos > scroll_pos_test - 300 && window.outerWidth > 768) {
           $(".main-nav").slideUp();
         }else {
             
@@ -149,7 +137,30 @@ $(document).ready(function() {
       
     });
 
+    $(".ministries-area header").on('click', function() {
+
+      if(window.outerWidth < 768) {
+        $(".ministries-area ul").slideToggle();
+      }
+    });
+
     $(window).on('resize', function() {
+
+      if(window.outerWidth < 768) {
+
+        $(".categories").slideUp();
+
+
+        if(window.scrollY + window.innerHeight > $(".ministries-area").offset().top) {
+
+          $(".ministries-area ul").slideUp();
+        }
+
+      } else {
+
+        $(".ministries-area ul").slideDown();
+        $(".categories").slideDown();
+      }
 
       if(window.outerWidth < 1200) {
 
