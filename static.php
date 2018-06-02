@@ -13,6 +13,7 @@
 
                 $title = ucfirst($_GET['title']);
 
+
               ?>      
                <title><?php echo $title ?> - CE Ghana</title>
         
@@ -26,7 +27,15 @@
 
             .help-container {
                 width: 100%;
-                padding: 100px;
+                padding: 150px;
+            }
+
+            @media (max-width: 768px) {
+
+                .help-container {
+                    padding: 0px;
+                    margin-top: 40px;
+                }
             }
 
             
@@ -46,7 +55,7 @@
 
     <body> 
 
-        <?php include 'php/template-header.php' ?>
+        <?php include 'template-header.php' ?>
 
         <div class="help-container">
 
@@ -74,7 +83,7 @@
             }
         ?>
 
-        <?php include 'php/template-footer.php' ?>
+        <?php include 'template-footer.php' ?>
     </body>
 
 </html>

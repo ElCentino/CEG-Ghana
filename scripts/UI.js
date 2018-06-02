@@ -28,7 +28,7 @@ $(document).ready(function() {
       $(".ministries-area ul li").not(this).removeClass("side-active");
     });
 
-    $(".locations-area-list li, .locator-nav").on('click', function(e) {
+    $(".locations-small-menu ul li, .locations-area-list li, .locator-nav").on('click', function(e) {
       e.preventDefault();
       let currentThis = $(this).attr("data-location");
       let position = $("#location-area").offset().top;
@@ -36,7 +36,7 @@ $(document).ready(function() {
       animateToPosition(position, 1000);
 
       $(this).addClass("location-active");
-      $(".locations-area-list li").not(this).removeClass("location-active");
+      $(".locations-small-menu ul li, .locations-area-list li").not(this).removeClass("location-active");
       setTimeout(() => {
           $(".main-nav").slideUp();
       }, 1000);
@@ -180,7 +180,11 @@ $(document).ready(function() {
 
     $(".menu-blocks").on('click', function() {
 
-      $(".small-menu").slideToggle();
+      $(".top-nav-small-menu").slideToggle();
+    });
+
+    $(".location-blocks").on('click', function() {
+      $(".locations-small-menu").slideToggle();
     });
     
     function slideToggle() {

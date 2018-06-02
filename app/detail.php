@@ -44,7 +44,7 @@ include '../app/db.php';
 
 <body>
 
-    <?php include '../php/template-header.php' ?>
+    <?php include '../template-header.php' ?>
 
     <!-- Body Details -->
     <section>
@@ -223,7 +223,7 @@ include '../app/db.php';
 
     <section>
         
-    <?php include '../php/template-footer.php' ?>
+    <?php include '../template-footer.php' ?>
     </section>
 
         <section>

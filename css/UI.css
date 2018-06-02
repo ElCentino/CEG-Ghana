@@ -392,7 +392,7 @@ nav.black ul li a {
 }
 
 .about-right ul {
-  list-style-type: decimal;
+  list-style-type: square;
   padding: 30px;
   font-size: inherit;
 }
@@ -552,8 +552,17 @@ nav.black ul li a {
   }
 
   .about-right {
-    padding-left: 10%;
+    padding-left: 2%;
     font-size: 15px;
+  }
+
+  .about-right h3 {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .header-blue {
+    font-size: 30px;
   }
 
   .ministries-body, .container-content {

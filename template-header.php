@@ -1,7 +1,7 @@
 <div>
 <div class="top">
 
-         <a href="../" class="arrow-left"><i class="fas fa-arrow-left"></i></a>
+         <a href="index.php" class="arrow-left"><i class="fas fa-arrow-left"></i></a>
 
         <nav class="top-nav">
             <ul>

@@ -1,6 +1,18 @@
 <div>
 
+    <style>
+        p {
+            text-align: justify;
+            line-height: 20px;
+            font-size: 14px;
+            font-family: "Poppins", sans-serif;
+            color: var(--gray);
+            padding: 20px;
+        }
+    </style>
 
+    <h1 class="sm-link" style="font-size: 50px;">Rental Agreement</h1>
+    
     <p>
         I understand that I have entered into a Textbook Rental Agreement with The College Store at Hobart and William Smith Colleges.
         I have read, understand, and agree to the terms and conditions as described below. I am at least 18 years of age

@@ -5,12 +5,11 @@
     <style>
 
         figure header {
-            color: white;
+            color: var(--ash);
             font-size: 18px;
             font-family: 'Poppins', sans-serif;
-            padding: 22px 20px;
-            background: var(--ash);
-            border-bottom: 4px var(--redish) solid;
+            padding: 32px 30px;
+            border-bottom: 3px var(--cyan) solid;
         }
 
         figure:last-child header {
@@ -18,11 +17,10 @@
         }
 
         figure figcaption {      
-            padding: 30px;
+            padding: 50px;
             color: white;
             text-align: justify;
-            background: var(--ash-light);
-            border-bottom: 4px var(--ash-light) solid;
+            background: #607D8B;
         }
 
     </style>
@@ -45,6 +43,8 @@
 
     <div class="faq">
         <h1 class="sm-link" style="font-size: 50px;">FAQ</h1>
+
+        <h3 class="sm-link" style="font-size: 30px;">Location</h3>
 
         <figure>
             <header>Where are we located at ?</header>
