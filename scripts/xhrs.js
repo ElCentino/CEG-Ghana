@@ -9,8 +9,6 @@ $(document).ready(function () {
         keys.push(key.getAttribute("data-bracket"));
     }
 
-    console.log(keys);
-
     function currentRequestObject(index) {
         
         let currentRequest = index;
@@ -104,9 +102,17 @@ $(document).ready(function () {
 
     $(".next-button").on('click', function() {
         nextRequest.call(this);
+
+        scrollToMinistries();
     });
 
     $(".prev-button").on('click', function() {
         prevRequest.call(this);
+
+        scrollToMinistries();
     });
+
+    function scrollToMinistries() {
+        $("body, html").stop().animate({scrollTop: $(".ministries-area").offset().top}, 1000, 'swing');
+    }
 });

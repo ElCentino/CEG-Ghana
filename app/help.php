@@ -23,7 +23,7 @@
         <?php include '../php/template-header.php' ?>
 
         <div class="help-container">
-
+            
         </div>
 
         <?php include '../php/template-footer.php' ?>

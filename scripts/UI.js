@@ -131,12 +131,7 @@ $(document).ready(function() {
         }
      
     });
-
-    $(window).on('scroll', function() {
-
-      
-    });
-
+    
     $(".ministries-area header").on('click', function() {
 
       if(window.outerWidth < 768) {

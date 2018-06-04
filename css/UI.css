@@ -454,6 +454,7 @@ nav.black ul li a {
 .ministries-body {
   height: auto;
   padding: 10px 20px;
+  font-size: 14px;
   text-align: justify;
   color: rgb(75, 75, 75);
   font-family: 'Poppins', sans-serif;

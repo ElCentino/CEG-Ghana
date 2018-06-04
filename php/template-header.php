@@ -18,9 +18,7 @@
         </nav>
     </div>
 
-<div class="search-area">
-        <p class="header-mid">Search for Books </p>
-        <input type="text" name="search" placeholder="Books....." />
-        <input class="rounded-button-sm" type="submit" role="button" value="Search" />
+<div id="root"> 
+
 </div>
 </div>
