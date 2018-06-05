@@ -103,7 +103,7 @@
               <a href="#trending" class="library-nav">Library</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="app/contact.php">Contact Us</a>
             </li>
             <li>
               <a class="nav-active" href="#">Login</a>
