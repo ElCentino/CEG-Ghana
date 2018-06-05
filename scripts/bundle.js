@@ -20240,8 +20240,13 @@ var Application = exports.Application = function (_Component) {
 
                 var searchResults = [];
 
+                const query = 'search=' + value.replace(/^"|"$/g, '') + '&length=5';
+
                 var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'https://ce-ghana.herokuapp.com/api/library?structure=' + value.replace(/^"|"$/g, '') + '&length=5');
+
+                xhr.open('POST', '../app/search.php');
+
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
                 xhr.onloadend = function () {
 
@@ -20285,7 +20290,7 @@ var Application = exports.Application = function (_Component) {
                     reject("Error from Client-side");
                 };
 
-                xhr.send();
+                xhr.send(query);
             });
         }
     }, {

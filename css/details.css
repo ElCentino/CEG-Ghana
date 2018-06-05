@@ -760,6 +760,16 @@ a {
     .cart-button {
         margin: 0;
     }
+
+    .result-image {
+        width: 200px;
+        height: 300px;
+        padding: 30px;
+    }
+
+    .lefter:not(.result-image) {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 590px) {
