@@ -1,32 +1,77 @@
-<html>
-    <head>
-        <title>Help - CE Ghana</title>
-        <link rel="stylesheet" type="text/css" href="../css/details.css" />
+<div>
 
-        <style>
+ <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 
-            * {
-                box-sizing: border-box;
-            }
+    <style>
 
-            .help-container {
-                width: 100%;
-                height: 400px;
-                padding: 200px;
-            }
-        </style>
+        figure header {
+            color: white;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            padding: 22px 20px;
+            background: var(--ash);
+            border-bottom: 4px var(--redish) solid;
+        }
 
-    </head>
+        figure:last-child header {
+            border-bottom: none;
+        }
 
-    <body> 
+        figure figcaption {      
+            padding: 30px;
+            color: white;
+            text-align: justify;
+            background: var(--ash-light);
+            border-bottom: 4px var(--ash-light) solid;
+        }
 
-        <?php include '../php/template-header.php' ?>
+    </style>
 
-        <div class="help-container">
-            
-        </div>
+    <script>
 
-        <?php include '../php/template-footer.php' ?>
-    </body>
+        $("document").ready(function() {
 
-</html>
+             $("figure figcaption").hide();
+
+             $("figure").click(function() {
+
+                 $("figure figcaption").slideUp();
+                 
+                 $(this).children("figcaption").slideToggle();
+             });
+        });
+
+    </script>
+
+    <div class="faq">
+        <h1 class="sm-link" style="font-size: 50px;">FAQ</h1>
+
+        <figure>
+            <header>Where are we located at ?</header>
+            <figcaption>
+                <p>We have offices all over Ghana, our head office is at Accra located at Opposite ATTC, Royalt Castle Road, P. O. Box 5723</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <header>Where are we located at ?</header>
+            <figcaption>
+                <p>We have offices all over Ghana, our head office is at Accra located at Opposite ATTC, Royalt Castle Road, P. O. Box 5723</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <header>Where are we located at ?</header>
+            <figcaption>
+                <p>We have offices all over Ghana, our head office is at Accra located at Opposite ATTC, Royalt Castle Road, P. O. Box 5723</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <header>Where are we located at ?</header>
+            <figcaption>
+                <p>We have offices all over Ghana, our head office is at Accra located at Opposite ATTC, Royalt Castle Road, P. O. Box 5723</p>
+            </figcaption>
+        </figure>
+    </div>
+</div>

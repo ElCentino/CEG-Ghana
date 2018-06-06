@@ -80,12 +80,12 @@
           <a href="index.php"><img src="image/ecghanalogo.png" alt="" class="nav-logo-img"></a>
           <h1><a href="index.php" class="nav-black-hide">CE GHANA</a></h1>
         </div>
-        <div class="blocks">
+        <div class="blocks menu-blocks">
           <section class="sec1"></section>
           <section class="sec2"></section>
           <section class="sec3"></section>
         </div>
-        <div class="menu-itmes">
+        <div class="menu-items">
           <ul>
             <li>
               <a href="#" class="home-nav">Home</a>
@@ -103,7 +103,7 @@
               <a href="#trending" class="library-nav">Library</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="static.php?page=contact&title=Contact Us">Contact Us</a>
             </li>
             <li>
               <a class="nav-active" href="#">Login</a>
@@ -111,6 +111,32 @@
           </ul>
         </div>
       </nav>
+
+      <div class="small-menu">
+          <ul>
+            <li>
+              <a href="#" class="home-nav">Home</a>
+            </li>
+            <li>
+              <a href="#" class="about-nav">About</a>
+            </li>
+            <li>
+              <a href="#" class="ministries-nav">Ministries</a>
+            </li>
+            <li>
+              <a href="#" class="locator-nav">Locations</a>
+            </li>
+            <li>
+              <a href="#trending" class="library-nav">Library</a>
+            </li>
+            <li>
+              <a href="static.php?page=contact&title=Contact Us">Contact Us</a>
+            </li>
+            <li>
+              <a class="nav-active" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
       <section>
         <div class="text">
           <p>Welcome to Challenge Enterprise

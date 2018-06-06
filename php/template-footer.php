@@ -23,19 +23,19 @@
                                 <a href="#about-section">About Us </a>
                             </li>
                             <li>
-                                <a href="#">Contact us </a>
+                                <a href="static.php?page=contact&title=Contact Us">Contact us </a>
                             </li>
                             <li>
-                                <a href="#">Newsroom</a>
+                                <a href="static.php?page=">Newsroom</a>
                             </li>
                             <li>
-                                <a href="#">Custom Rental Store</a>
+                                <a href="static.php?page=">Custom Rental Store</a>
                             </li>
                             <li>
-                                <a href="#">Affiliates</a>
+                                <a href="static.php?page=">Affiliates</a>
                             </li>
                             <li>
-                                <a href="#">Customer care</a>
+                                <a href="static.php?page=">Customer care</a>
                             </li>
         
         
@@ -44,22 +44,22 @@
                         <ul>
                             <h3>Support</h3>
                             <li>
-                                <a href="#">Rental Agreement</a>
+                                <a href="static.php?page=rental&title=Rental Agreement">Rental Agreement</a>
                             </li>
                             <li>
-                                <a href="app/help.php">Help</a>
+                                <a href="static.php?page=help&title=Help Us">Help</a>
                             </li>
                             <li>
-                                <a href="#">How to Return</a>
+                                <a href="static.php?page=">How to Return</a>
                             </li>
                             <li>
-                                <a href="#">Extending Rentals</a>
+                                <a href="static.php?page=">Extending Rentals</a>
                             </li>
                             <li>
-                                <a href="#">Shipping Details</a>
+                                <a href="static.php?page=">Shipping Details</a>
                             </li>
                             <li>
-                                <a href="#">Coupons</a>
+                                <a href="static.php?page=">Coupons</a>
                             </li>
         
                         </ul>
@@ -68,22 +68,22 @@
                         <ul>
                             <h3>What's Hot</h3>
                             <li>
-                                <a href="#">Popular Textbooks </a>
+                                <a href="static.php?page=">Popular Textbooks </a>
                             </li>
                             <li>
-                                <a href="#">Top Rented Textbooks</a>
+                                <a href="static.php?page=">Top Rented Textbooks</a>
                             </li>
                             <li>
-                                <a href="#">Rent Textbooks</a>
+                                <a href="static.php?page=">Rent Textbooks</a>
                             </li>
                             <li>
-                                <a href="#">All Categories</a>
+                                <a href="static.php?page=">All Categories</a>
                             </li>
                             <li>
-                                <a href="#">Top Searches</a>
+                                <a href="static.php?page=">Top Searches</a>
                             </li>
                             <li>
-                                <a href="#">Customer Quotes</a>
+                                <a href="static.php?page=">Customer Quotes</a>
                             </li>
         
                         </ul>

@@ -88,12 +88,17 @@ $(document).ready(function() {
 
           $(".main-nav").addClass("black");
 
+          $(".small-menu").removeClass("small-menu-notTop");
+          $(".small-menu").addClass("small-menu-scrollTop");
+
           $(".nav-logo-img").fadeOut(function() {
             $(".nav-black-hide").addClass("nav-logo").css("padding-top", "28px");
             
             $(".top-contact-info").slideUp();
             $(".nav-black-hide").fadeIn();
           });   
+
+          $(".small-menu").slideUp();
           
       } else {
         
@@ -108,6 +113,8 @@ $(document).ready(function() {
           }
 
           $(".main-nav").removeClass("black");
+          $(".small-menu").removeClass("small-menu-scrollTop");
+          $(".small-menu").addClass("small-menu-notTop");
       }
 
         var element_position = $('.maps').offset().top;
@@ -169,6 +176,11 @@ $(document).ready(function() {
         $(".nav-black-hide").fadeOut();
         $(".nav-logo-img").fadeIn();
       }
+    });
+
+    $(".menu-blocks").on('click', function() {
+
+      $(".small-menu").slideToggle();
     });
     
     function slideToggle() {
