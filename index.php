@@ -233,6 +233,33 @@
             <li>Biographies</li>
           </ul>
         </article>
+
+        <p class="trending-header header-reddish genres-header" style="font-size: 40px;">Genres</p>
+
+        <article class="container-content genres-section">
+          <ul class="categories">
+            <li>All</li>
+            <li>Art</li>
+            <li>Poetry</li>
+            <li>Religious</li>
+            <li>Satire</li>
+            <li>Romance</li>
+            <li>Children</li>
+            <li>Romance</li>
+            <li>Mystery</li>
+            <li>Mystery</li>
+            <li>Inspirational</li>
+            <li>Self Help</li>
+            <li>Science Ficton</li>
+            <li>Travel</li>
+            <li>History</li>
+            <li>Journals</li>
+            <li>Prayer books</li>
+            <li>Series</li>
+            <li>Trilogy</li>
+            <li>Biographies</li>
+          </ul>
+        </article>
       </div>
 
       <div class="col-9">
@@ -250,11 +277,18 @@
                           $sbn = $rows['sbn'];
                           $author = $rows['author'];
                           $binding = $rows['binding'];
+                          $price = $rows['Price'];
                           $id = $rows['id'];
 
-                          echo "<div id='book-trending'>";
-                          echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' class='book-thumbnail'></a>";
-                          echo "</div>";
+   
+                            echo "<div id='book-trending'>";
+                              echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' class='book-thumbnail'></a>";
+                              echo "<h4 class='book-title'>$title</h4>";
+                              echo "<h5 class='book-author'>$author</h5>";
+                              echo "<h5 class='book-price'>&#8373; $price</h5>";
+                            echo "</div>";
+
+
                       }
                     ?>
               </div>
@@ -271,10 +305,14 @@
                           $sbn = $rows['sbn'];
                           $author = $rows['author'];
                           $binding = $rows['binding'];
+                          $price = $rows['Price'];
                           $id = $rows['id'];
 
                           echo "<div id='book-trending'>";
-                          echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' class='book-thumbnail'></a>";
+                            echo "<a href='app/detail.php?a=$id'><img src='image/$image' alt='book' class='book-thumbnail'></a>";
+                            echo "<h4 class='book-title'>$title</h4>";
+                            echo "<h5 class='book-author'>$author</h5>";
+                            echo "<h5 class='book-price'>&#8373; $price</h5>";
                           echo "</div>";
                       }
                     ?>
@@ -444,6 +482,16 @@
   <script type="text/javascript" src="scripts/interactivity.js"></script>
   <script type="text/javascript" src="scripts/UI.js"></script>
   <script type="text/javascript" src="scripts/xhrs.js"></script>
+
+  <script type="text/javascript">
+
+    const titles = document.querySelectorAll(".book-title, .book-author");
+
+    for(let title of titles) {
+      title.innerHTML = title.innerHTML.substring(0, 20);
+    }
+
+  </script>
 
 </body>
 
