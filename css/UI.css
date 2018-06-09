@@ -510,6 +510,55 @@ nav.black ul li a {
   display: none;
 }
 
+/*
+
+  Search Engine Panel Configurations
+
+*/
+
+.result-panel-main {
+  position: relative;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.results-main {
+  color: white;
+  border-radius: 10px;
+  background: var(--ash);
+  transition: 0.3s ease-in-out;
+}
+
+.results-main > li {
+  max-height: 100px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  text-align: left;
+  transition: 0.3s ease-in-out;
+  border-bottom: 5px solid var(--redish);
+  display: block;
+}
+
+.results-main > li:last-child {
+  border: none;
+}
+
+.book-image-thumbnail {
+  width: 60px;
+  height: 80px;
+}
+
+.book-search-title {
+  width: 90%;
+  padding: 0;
+  margin: 0;
+  float: right;
+  vertical-align: middle;
+}
+
 @media (max-width: 1200px) {
   .main-nav ul li a,
   .locations-area-list li a,

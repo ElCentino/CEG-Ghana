@@ -138,24 +138,13 @@
         </div>
       <section>
         <div class="text">
-          <p>You Are Welcome To Challenge Enterprise
+          <p>Welcome To Challenge Enterprise
             <br>
             <b id="centerText">Welcome</b>
           </p>
         </div>
 
-        <center style="margin-top: 5vh">
-          <div class="seache">
-            <div class="seachebar">
-              <form class="" action="#" method="post">
-                <input type="search" name="seache" placeholder="Seach by ISBN, TItle, or Author" id="seach">
-                <button type="submit" name="seache" id="seachsubmit">Find a Book
-                  <i class="fas fa-search"></i>
-                </button>
-              </form>
-            </div>
-
-          </div>
+        <center style="margin-top: 5vh" id="search-container">
 
         </center>
       </section>
@@ -269,7 +258,7 @@
 
               <div class="book-containers">
                   <?php
-                      $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 5";
+                      $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 10";
                       $result = mysqli_query($connect, $sql);
                       while ($rows = mysqli_fetch_array($result)) {
                           $image = $rows['image'];
@@ -297,7 +286,7 @@
 
               <div class="book-containers">
                   <?php
-                      $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 5, 5";
+                      $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 10, 10";
                       $result = mysqli_query($connect, $sql);
                       while ($rows = mysqli_fetch_array($result)) {
                           $image = $rows['image'];
@@ -482,6 +471,7 @@
   <script type="text/javascript" src="scripts/interactivity.js"></script>
   <script type="text/javascript" src="scripts/UI.js"></script>
   <script type="text/javascript" src="scripts/xhrs.js"></script>
+  <script type="text/javascript" src="scripts/search-engine-front-page.js"></script>
 
   <script type="text/javascript">
 
