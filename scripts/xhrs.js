@@ -113,6 +113,6 @@ $(document).ready(function () {
     });
 
     function scrollToMinistries() {
-        $("body, html").stop().animate({scrollTop: $(".ministries-area").offset().top}, 1000, 'swing');
+        $("body, html").stop().animate({scrollTop: $(".ministries-header").offset().top - 100}, 1000, 'swing');
     }
 });

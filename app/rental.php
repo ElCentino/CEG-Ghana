@@ -1,7 +1,7 @@
 <div>
 
     <style>
-        p {
+        .text-details {
             text-align: justify;
             line-height: 20px;
             font-size: 14px;
@@ -13,7 +13,7 @@
 
     <h1 class="sm-link" style="font-size: 50px;">Rental Agreement</h1>
     
-    <p>
+    <p class="text-details">
         I understand that I have entered into a Textbook Rental Agreement with The College Store at Hobart and William Smith Colleges.
         I have read, understand, and agree to the terms and conditions as described below. I am at least 18 years of age
         and have entered into this Textbook Rental Agreement with The College Store of my own free will. I understand that

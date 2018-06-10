@@ -1,0 +1,33 @@
+{
+  "name": "ceg-ghana",
+  "version": "1.0.0",
+  "description": "Re-evaluation of the original cegghana website [PROPOSALS]",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elcentino/CEG-Ghana.git"
+  },
+  "author": "El",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elcentino/CEG-Ghana/issues"
+  },
+  "homepage": "https://github.com/elcentino/CEG-Ghana#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "json-loader": "^0.5.7",
+    "webpack": "^3.1.0"
+  },
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}

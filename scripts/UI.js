@@ -29,7 +29,11 @@ $(document).ready(function() {
     });
 
     $(".locations-small-menu ul li, .locations-area-list li, .locator-nav").on('click', function(e) {
+
       e.preventDefault();
+
+      $(".locations-small-menu").fadeOut();
+
       let currentThis = $(this).attr("data-location");
       let position = $("#location-area").offset().top;
 
@@ -48,6 +52,7 @@ $(document).ready(function() {
     });
 
     $(".library-nav").on('click', function(e) {
+
       e.preventDefault();
       let position = $("#trending").offset().top;
       animateToPosition(position, 1000);
@@ -123,7 +128,7 @@ $(document).ready(function() {
         var scroll_pos_test = element_position;
 
         if(y_scroll_pos > scroll_pos_test - 300 && window.outerWidth > 768) {
-          $(".main-nav").slideUp();
+          //$(".main-nav").slideUp();
         }else {
             
           $(".main-nav").slideDown();
@@ -197,7 +202,7 @@ $(document).ready(function() {
     }
 
     function animateToPosition(pos, speed) {
-      body.stop().animate({scrollTop: pos}, speed, 'swing');
+      body.stop().animate({scrollTop: pos - 100}, speed, 'swing');
     }
 
 });
