@@ -1,37 +1,37 @@
 
 <div>
 <style>
-            .container input[type=text], textarea {
-                width: 100%;
-                padding: 12px; 
-                border: 1px solid #ccc; 
-                border-radius: 4px; 
-                box-sizing: border-box;
-                margin-top: 6px; 
-                margin-bottom: 16px; 
-                resize: vertical 
-            }
+        .container input[type=text], textarea {
+            width: 100%;
+            padding: 12px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            box-sizing: border-box;
+            margin-top: 6px; 
+            margin-bottom: 16px; 
+            resize: vertical 
+        }
 
-            .container input[type=submit] {
-                background-color: var(--cyan);
-                font-family: pacifico, cursive;
-                color: black;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-
-
-            .container input[type=submit]:hover {
-                background-color: var(--redish);
-            }
+        .container input[type=submit] {
+            background-color: var(--cyan);
+            font-family: pacifico, cursive;
+            color: black;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
 
-            .container {
-                border-radius: 5px;
-                padding: 20px;
-            }
+        .container input[type=submit]:hover {
+            background-color: var(--redish);
+        }
+
+
+        .container {
+            border-radius: 5px;
+            padding: 20px;
+        }
         </style>
 
         <h1 class="sm-link" style="font-size: 50px;">Contact Us</h1>

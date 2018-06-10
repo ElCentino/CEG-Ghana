@@ -5,6 +5,8 @@ $(document).ready(function () {
 
     const bracketKeys = document.querySelectorAll(".ministries-side-nav ul li");
 
+    const body = $("html, body");
+
     for(key of bracketKeys) {
         keys.push(key.getAttribute("data-bracket"));
     }
@@ -41,13 +43,25 @@ $(document).ready(function () {
 
     const prevRequest = function() {
 
+        var pattern = requestIndex.previousRequestIndex();
         var request = makeRequest.bind(this);
-        request(keys[requestIndex.previousRequestIndex()]);
+
+        
+        $(`[data-bracket=${pattern}]`).addClass("side-active");
+        $(".ministries-area ul li").not(`[data-bracket=${pattern}]`).removeClass("side-active");
+
+
+        request(keys[pattern]);
     };
 
     const nextRequest = function() {
+        var pattern = requestIndex.nextRequestIndex();
         var request = makeRequest.bind(this);
-        request(keys[requestIndex.nextRequestIndex()]);
+
+        $(`[data-bracket=${pattern}]`).addClass("side-active");
+        $(".ministries-area ul li").not(`[data-bracket=${pattern}]`).removeClass("side-active");
+
+        request(keys[pattern]);
     };
 
     const makeRequest = function(key, keys) {
@@ -79,8 +93,7 @@ $(document).ready(function () {
                 $(this).fadeIn();
                 $(".ministries-header").html(article[0].title);
                 $(".ministries-body").html(article[0].contents);
-            });
-            
+            });          
         };
 
         xhr.send();
@@ -112,7 +125,30 @@ $(document).ready(function () {
         scrollToMinistries();
     });
 
+    $(".linkable-about").on('click', function() {
+
+        var key = $(this).attr("data-bracket");
+        var pos = $(".ministries-side-nav").offset().top;
+
+        animateToPosition(pos, 1000, function() {
+
+            $(`[data-bracket=${key}]`).addClass("side-active");
+            $(".ministries-area ul li").not(`[data-bracket=${key}]`).removeClass("side-active");
+
+            var request = makeRequest.bind(this);
+            request(key);
+        });    
+      });
+
     function scrollToMinistries() {
         $("body, html").stop().animate({scrollTop: $(".ministries-header").offset().top - 100}, 1000, 'swing');
+    }
+
+    function animateToPosition(pos, speed, callback) {
+        body.stop().animate({scrollTop: pos - 180}, speed, 'swing', function() {
+            if(typeof callback !== 'undefined') {
+                callback();
+            }
+        });
     }
 });

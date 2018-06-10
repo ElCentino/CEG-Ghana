@@ -138,7 +138,7 @@
         </div>
       <section>
         <div class="text">
-          <p>Welcome To Challenge Enterprise
+          <p>You Are Welcome To Challenge Enterprise
             <br>
             <b id="centerText">Welcome</b>
           </p>
@@ -329,7 +329,7 @@
             Christian literature in the country of Ghana and offers the best in Christian reading.
             <br>
             <br> Challenge distributes over 90% of the Bibles and Christian literature through 18 retail shops across the country
-            as well as through a fleet of eight "cinevans" which also function as mobile bookshops in remote villages in the
+            as well as through a fleet of eight <span class="linkable-about" data-bracket="CTY" style="">cinevans</span> which also function as mobile bookshops in remote villages in the
             10 regions of Ghana. CEG offers all types and versions of the Bible and the widest variety and choice of Biblically
             balanced literature to the general public and the Christian community in particular.
             <br>
@@ -337,8 +337,8 @@
           </p>
 
           <ul>
-                <li>A prison ministry in eight prisons</li>
-                <li>Free counseling services</li>
+                <li>A <span class="linkable-about" data-bracket="PMY">Prison Ministry</span> in eight prisons</li>
+                <li>Free <span class="linkable-about" data-bracket="CSS">Counseling</span services</li>
                 <li>Eight 'cinevans' showing gospel films and providing a mobile bookstore in all the regions of Ghana</li>
                 <li>Free Bible corrspondence courses</li>
                 <li>Free tract distribution</li>

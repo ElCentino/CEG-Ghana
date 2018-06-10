@@ -510,6 +510,11 @@ nav.black ul li a {
   display: none;
 }
 
+.linkable-about {
+  color: var(--redish);
+  cursor: pointer;
+  font-size: 15px;
+}
 /*
 
   Search Engine Panel Configurations
@@ -602,11 +607,11 @@ nav.black ul li a {
   }
 
   .small-menu-scrollTop {
-    top: 100px;
+    top: 0;
   }
 
   .small-menu-notTop {
-    top: 170px;
+    top: 0;
   }
 
   .small-menu ul li {
@@ -615,7 +620,7 @@ nav.black ul li a {
     padding: 12px 10px;
     font-weight: lighter;
     font-size: 30px;
-    border-bottom: 3px solid var(--ash);
+    border-bottom: 3px solid var(--redish);
   }
 
   .small-menu ul li:last-child {
