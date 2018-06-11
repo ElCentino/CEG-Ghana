@@ -20232,9 +20232,14 @@ var Search = exports.Search = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this));
 
+        _this.buttonTitleStates = {
+            resultsFound: 'More Results',
+            default: 'Find a book'
+        };
+
         _this.state = {
             books: [],
-            buttonTitle: 'Find a book'
+            buttonTitle: _this.buttonTitleStates.default
         };
         return _this;
     }
@@ -20310,14 +20315,24 @@ var Search = exports.Search = function (_Component) {
 
             this.getData(value).then(function (result) {
 
-                _this2.setState({
-                    books: result,
-                    buttonTitle: 'More Results'
-                });
+                if (result.length <= 0) {
+
+                    _this2.setState({
+                        books: [],
+                        buttonTitle: _this2.buttonTitleStates.default
+                    });
+                } else {
+
+                    _this2.setState({
+                        books: result,
+                        buttonTitle: _this2.buttonTitleStates.resultsFound
+                    });
+                }
             }).catch(function (reason) {
+
                 _this2.setState({
                     books: reason,
-                    buttonTitle: 'Find a book'
+                    buttonTitle: _this2.buttonTitleStates.default
                 });
             });
         }
@@ -20333,7 +20348,7 @@ var Search = exports.Search = function (_Component) {
                     { className: 'seachebar' },
                     _react2.default.createElement(
                         'form',
-                        { className: '', action: '#', method: 'post' },
+                        { className: '', action: '#', method: 'post', autoComplete: 'off' },
                         _react2.default.createElement(_searchbar.SearchBar, { collectInput: this.collectInput.bind(this) }),
                         _react2.default.createElement(_button.Button, { buttonTitle: this.state.buttonTitle }),
                         _react2.default.createElement(_resultPanel.ResultPanel, { results: this.state.books })
@@ -20378,7 +20393,15 @@ var SearchBar = exports.SearchBar = function (_Component) {
     function SearchBar() {
         _classCallCheck(this, SearchBar);
 
-        return _possibleConstructorReturn(this, (SearchBar.__proto__ || Object.getPrototypeOf(SearchBar)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (SearchBar.__proto__ || Object.getPrototypeOf(SearchBar)).call(this));
+
+        _this.searchStyles = {
+            color: 'rgb(141, 141, 141)',
+            fontWeight: 'bold',
+            fontSize: 20 + 'px',
+            fontFamily: 'Poppins'
+        };
+        return _this;
     }
 
     _createClass(SearchBar, [{
@@ -20390,7 +20413,7 @@ var SearchBar = exports.SearchBar = function (_Component) {
         key: 'render',
         value: function render() {
 
-            return _react2.default.createElement('input', { ref: 'textbox', type: 'search', name: 'seache', placeholder: 'Search by ISBN, Title, or Author', id: 'seach', onChange: this.collectInput.bind(this) });
+            return _react2.default.createElement('input', { style: this.searchStyles, ref: 'textbox', type: 'search', name: 'seache', placeholder: 'Search by ISBN, Title, or Author', id: 'seach', onChange: this.collectInput.bind(this) });
         }
     }]);
 
@@ -20429,7 +20452,12 @@ var Button = exports.Button = function (_Component) {
     function Button() {
         _classCallCheck(this, Button);
 
-        return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this));
+
+        _this.buttonStyles = {
+            marginLeft: 10 + 'px'
+        };
+        return _this;
     }
 
     _createClass(Button, [{
@@ -20440,7 +20468,7 @@ var Button = exports.Button = function (_Component) {
                 'button',
                 { type: 'submit', name: 'seache', id: 'seachsubmit' },
                 this.props.buttonTitle,
-                _react2.default.createElement('i', { className: 'fas fa-search' })
+                _react2.default.createElement('i', { className: 'fas fa-search', style: this.buttonStyles })
             );
         }
     }]);

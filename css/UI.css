@@ -202,9 +202,9 @@
 }
 
 .book-price {
-  color: var(--redish);
+  color: gray;
   font-size: 22px;
-  font-family: 'Pacifico', cursive;
+  
 }
 
 .book-containers img:hover {
@@ -632,10 +632,6 @@ nav.black ul li a {
     display: none;
   } */
 
-  [class*="col-"] {
-      width: 100%;
-  }
-
   .about-right {
     padding-left: 2%;
     font-size: 15px;
@@ -681,5 +677,12 @@ nav.black ul li a {
 
   .ministries-side-nav {
     border: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  [class*="col-"] {
+    width: 100%;
   }
 }

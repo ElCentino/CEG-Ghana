@@ -2,16 +2,21 @@ import React from 'react'
 import { Component } from 'react'
 import { SearchBar } from './searchbar'
 import { Button } from './button'
-import { ResultPanel } from './resultPanel';
+import { ResultPanel } from './resultPanel'
 
 export class Search extends Component {
 
     constructor() {
         super();
 
+        this.buttonTitleStates = {
+            resultsFound: 'More Results',
+            default: 'Find a book'
+        }
+
         this.state = {
             books: [],
-            buttonTitle : 'Find a book'
+            buttonTitle : this.buttonTitleStates.default
         }
     }
 
@@ -61,17 +66,28 @@ export class Search extends Component {
     collectInput(value) {
         
         this.getData(value).then(result => {
-            
-            this.setState({
-                books: result,
-                buttonTitle : 'More Results'
-            });
+
+            if(result.length <= 0) {
+
+                this.setState({
+                    books: [],
+                    buttonTitle: this.buttonTitleStates.default
+                });
+
+            } else {
+
+                this.setState({
+                    books: result,
+                    buttonTitle : this.buttonTitleStates.resultsFound
+                });
+            }
            
         }).catch(reason => {
+
             this.setState({
                 books: reason,
-                buttonTitle: 'Find a book'
-            })
+                buttonTitle: this.buttonTitleStates.default
+            });
         });
     }
 
@@ -80,10 +96,10 @@ export class Search extends Component {
         return (
             <div className="seache">
                 <div className="seachebar">
-                    <form className="" action="#" method="post">
-                        <SearchBar collectInput={this.collectInput.bind(this)}/>
-                        <Button buttonTitle={this.state.buttonTitle}/>
-                        <ResultPanel results={this.state.books}/>
+                    <form className="" action="#" method="post" autoComplete="off">
+                        <SearchBar collectInput={this.collectInput.bind(this)} />
+                        <Button buttonTitle={this.state.buttonTitle} />
+                        <ResultPanel results={this.state.books} />
                     </form>
                 </div>
             </div>
