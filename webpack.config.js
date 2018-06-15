@@ -4,7 +4,7 @@ module.exports = {
 
     entry : './src/main-page/index.js',
     output : {
-        path : path.join(__dirname, "scripts"),
+        path : path.join(__dirname, "scripts", "build", "react build"),
         filename: "search-engine-front-page.js"
     },
 

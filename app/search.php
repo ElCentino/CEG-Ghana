@@ -2,10 +2,10 @@
 
 <?php 
 
-    if(isset($_POST['search']) && isset($_POST['length'])) {
+    if(isset($_GET['search']) && isset($_GET['length'])) {
 
-        $search_text = $_POST['search'];
-        $limit = $_POST['length'];
+        $search_text = $_GET['search'];
+        $limit = $_GET['length'];
     
         $query = "SELECT id, title, image, binding, author, Price FROM book WHERE title LIKE '%$search_text%' OR author LIKE '%$search_text%' LIMIT $limit";
     

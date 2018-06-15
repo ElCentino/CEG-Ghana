@@ -4,7 +4,7 @@
   "description": "Re-evaluation of the original cegghana website [PROPOSALS]",
   "main": "app.js",
   "scripts": {
-    "start": "webpack",
+    "start": "grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,10 +23,16 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "grunt": "^1.0.3",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-webpack": "^3.1.2",
     "json-loader": "^0.5.7",
-    "webpack": "^3.1.0"
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "grunt-contrib-uglify": "^3.3.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   }

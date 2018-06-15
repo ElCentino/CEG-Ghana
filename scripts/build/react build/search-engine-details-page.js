@@ -65,21 +65,6 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(13);
-} else {
-  module.exports = __webpack_require__(14);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -269,6 +254,21 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(13);
+} else {
+  module.exports = __webpack_require__(14);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -326,7 +326,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -489,7 +489,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 6 */
@@ -558,7 +558,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 7 */
@@ -625,7 +625,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 8 */
@@ -829,21 +829,21 @@ module.exports = containsNode;
 "use strict";
 
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(16);
 
-var _Search = __webpack_require__(25);
+var _application = __webpack_require__(25);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Window.React = _react2.default;
+window.React = _react2.default;
 
-var target = document.getElementById('search-container');
+var target = document.getElementById("root");
 
-(0, _reactDom.render)(_react2.default.createElement(_Search.Search, null), target);
+(0, _reactDom.render)(_react2.default.createElement(_application.Application, null), target);
 
 /***/ }),
 /* 13 */
@@ -2354,7 +2354,7 @@ module.exports = react;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 15 */
@@ -2419,7 +2419,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(20);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 17 */
@@ -2438,7 +2438,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(2),ca=__webpack_require__(0),m=__webpack_require__(8),p=__webpack_require__(4),v=__webpack_require__(3),da=__webpack_require__(9),ea=__webpack_require__(10),fa=__webpack_require__(11),ha=__webpack_require__(5);
+var aa=__webpack_require__(2),ca=__webpack_require__(1),m=__webpack_require__(8),p=__webpack_require__(4),v=__webpack_require__(3),da=__webpack_require__(9),ea=__webpack_require__(10),fa=__webpack_require__(11),ha=__webpack_require__(5);
 function A(a){for(var b=arguments.length-1,c="https://reactjs.org/docs/error-decoder.html?invariant="+a,d=0;d<b;d++)c+="&args[]="+encodeURIComponent(arguments[d+1]);aa(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}ca?void 0:A("227");
 function ia(a,b,c,d,e,f,g,h,k){this._hasCaughtError=!1;this._caughtError=null;var n=Array.prototype.slice.call(arguments,3);try{b.apply(c,n)}catch(r){this._caughtError=r,this._hasCaughtError=!0}}
 var B={_caughtError:null,_hasCaughtError:!1,_rethrowError:null,_hasRethrowError:!1,invokeGuardedCallback:function(a,b,c,d,e,f,g,h,k){ia.apply(B,arguments)},invokeGuardedCallbackAndCatchFirstError:function(a,b,c,d,e,f,g,h,k){B.invokeGuardedCallback.apply(this,arguments);if(B.hasCaughtError()){var n=B.clearCaughtError();B._hasRethrowError||(B._hasRethrowError=!0,B._rethrowError=n)}},rethrowCaughtError:function(){return ka.apply(B,arguments)},hasCaughtError:function(){return B._hasCaughtError},clearCaughtError:function(){if(B._hasCaughtError){var a=
@@ -2745,7 +2745,7 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 var invariant = __webpack_require__(2);
-var React = __webpack_require__(0);
+var React = __webpack_require__(1);
 var warning = __webpack_require__(6);
 var ExecutionEnvironment = __webpack_require__(8);
 var _assign = __webpack_require__(4);
@@ -20034,7 +20034,7 @@ module.exports = reactDom;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 21 */
@@ -20202,21 +20202,15 @@ module.exports = camelize;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Search = undefined;
+exports.Application = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
+var _react = __webpack_require__(1);
 
 var _searchbar = __webpack_require__(26);
 
-var _button = __webpack_require__(27);
-
-var _resultPanel = __webpack_require__(28);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _resultpane = __webpack_require__(27);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -20224,39 +20218,33 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Search = exports.Search = function (_Component) {
-    _inherits(Search, _Component);
+var Application = exports.Application = function (_Component) {
+    _inherits(Application, _Component);
 
-    function Search() {
-        _classCallCheck(this, Search);
+    function Application() {
+        _classCallCheck(this, Application);
 
-        var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this));
-
-        _this.buttonTitleStates = {
-            resultsFound: 'More Results',
-            default: 'Find a book'
-        };
+        var _this = _possibleConstructorReturn(this, (Application.__proto__ || Object.getPrototypeOf(Application)).call(this));
 
         _this.state = {
-            books: [],
-            buttonTitle: _this.buttonTitleStates.default
+            books: []
         };
         return _this;
     }
 
-    _createClass(Search, [{
+    _createClass(Application, [{
         key: 'getData',
         value: function getData(value) {
 
             return new Promise(function (resolve, reject) {
 
-                var query = 'search=' + value.replace(/^"|"$/g, '') + '&length=5';
-
                 var searchResults = [];
 
+                const query = 'search=' + value.replace(/^"|"$/g, '') + '&length=5';
+
                 var xhr = new XMLHttpRequest();
-                xhr.open('POST', 'app/search.php', true);
-                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+                xhr.open('GET', `../app/search.php?${query}`, true);
 
                 xhr.onloadend = function () {
 
@@ -20272,7 +20260,7 @@ var Search = exports.Search = function (_Component) {
                     var _iteratorError = undefined;
 
                     try {
-                        for (var _iterator = filteredBooks[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                        for (var _iterator = books[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                             var result = _step.value;
 
                             searchResults.push(result);
@@ -20293,72 +20281,58 @@ var Search = exports.Search = function (_Component) {
                     }
 
                     resolve(searchResults);
-
-                    if (value.length <= 0) {
-
-                        reject([]);
-                    }
                 };
-
-                xhr.send(query);
 
                 xhr.onerror = function () {
 
-                    reject([]);
+                    reject("Error from Client-side");
                 };
+
+                xhr.send();
             });
         }
     }, {
-        key: 'collectInput',
-        value: function collectInput(value) {
+        key: 'searchBarOnChange',
+        value: function searchBarOnChange(value) {
             var _this2 = this;
 
             this.getData(value).then(function (result) {
 
-                if (result.length <= 0) {
+                if (value.length <= 0) {
 
-                    _this2.setState({
-                        books: [],
-                        buttonTitle: _this2.buttonTitleStates.default
+                    $(".result-pane").fadeOut(function () {
+
+                        _this2.setState({
+                            books: []
+                        });
                     });
                 } else {
 
-                    _this2.setState({
-                        books: result,
-                        buttonTitle: _this2.buttonTitleStates.resultsFound
+                    $(".result-pane").fadeIn(function () {
+
+                        _this2.setState({
+                            books: result
+                        });
                     });
                 }
-            }).catch(function (reason) {
-
-                _this2.setState({
-                    books: reason,
-                    buttonTitle: _this2.buttonTitleStates.default
-                });
+            }, function (reason) {
+                console.log(reason);
             });
         }
     }, {
         key: 'render',
         value: function render() {
 
-            return _react2.default.createElement(
+            return React.createElement(
                 'div',
-                { className: 'seache' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'seachebar' },
-                    _react2.default.createElement(
-                        'form',
-                        { className: '', action: '#', method: 'post', autoComplete: 'off' },
-                        _react2.default.createElement(_searchbar.SearchBar, { collectInput: this.collectInput.bind(this) }),
-                        _react2.default.createElement(_button.Button, { buttonTitle: this.state.buttonTitle }),
-                        _react2.default.createElement(_resultPanel.ResultPanel, { results: this.state.books })
-                    )
-                )
+                null,
+                React.createElement(_searchbar.Searchbar, { valueInputted: this.searchBarOnChange.bind(this) }),
+                React.createElement(_resultpane.ResultPane, { results: this.state.books })
             );
         }
     }]);
 
-    return Search;
+    return Application;
 }(_react.Component);
 
 /***/ }),
@@ -20371,15 +20345,11 @@ var Search = exports.Search = function (_Component) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.SearchBar = undefined;
+exports.Searchbar = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _react = __webpack_require__(1);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -20387,37 +20357,40 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SearchBar = exports.SearchBar = function (_Component) {
-    _inherits(SearchBar, _Component);
+var Searchbar = exports.Searchbar = function (_Component) {
+    _inherits(Searchbar, _Component);
 
-    function SearchBar() {
-        _classCallCheck(this, SearchBar);
+    function Searchbar() {
+        _classCallCheck(this, Searchbar);
 
-        var _this = _possibleConstructorReturn(this, (SearchBar.__proto__ || Object.getPrototypeOf(SearchBar)).call(this));
-
-        _this.searchStyles = {
-            color: 'rgb(141, 141, 141)',
-            fontWeight: 'bold',
-            fontSize: 20 + 'px',
-            fontFamily: 'Poppins'
-        };
-        return _this;
+        return _possibleConstructorReturn(this, (Searchbar.__proto__ || Object.getPrototypeOf(Searchbar)).apply(this, arguments));
     }
 
-    _createClass(SearchBar, [{
-        key: 'collectInput',
-        value: function collectInput() {
-            this.props.collectInput(this.refs.textbox.value);
+    _createClass(Searchbar, [{
+        key: "valueInputted",
+        value: function valueInputted() {
+
+            this.props.valueInputted(this.refs.searchinput.value);
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
 
-            return _react2.default.createElement('input', { style: this.searchStyles, ref: 'textbox', type: 'search', name: 'seache', placeholder: 'Search by ISBN, Title, or Author', id: 'seach', onChange: this.collectInput.bind(this) });
+            return React.createElement(
+                "div",
+                { className: "search-area" },
+                React.createElement(
+                    "p",
+                    { className: "header-mid" },
+                    "Search for Books "
+                ),
+                React.createElement("input", { ref: "searchinput", type: "text", name: "search", placeholder: "Books.....", onChange: this.valueInputted.bind(this) }),
+                React.createElement("input", { className: "rounded-button-sm", type: "submit", role: "button", value: "Search" })
+            );
         }
     }]);
 
-    return SearchBar;
+    return Searchbar;
 }(_react.Component);
 
 /***/ }),
@@ -20430,51 +20403,33 @@ var SearchBar = exports.SearchBar = function (_Component) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Button = undefined;
+exports.ResultPane = undefined;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _result = __webpack_require__(28);
 
-var _react = __webpack_require__(0);
+var getBooks = function getBooks(props) {
 
-var _react2 = _interopRequireDefault(_react);
+    var books = props.results.map(function (result) {
+        return React.createElement(_result.Result, { key: result.id, id: result.id, title: result.title, image: result.image, author: result.author, price: result.Price, binding: result.binding });
+    });
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+    console.log(props.results);
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+    return books;
+};
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+var ResultPane = exports.ResultPane = function ResultPane(props) {
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Button = exports.Button = function (_Component) {
-    _inherits(Button, _Component);
-
-    function Button() {
-        _classCallCheck(this, Button);
-
-        var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this));
-
-        _this.buttonStyles = {
-            marginLeft: 10 + 'px'
-        };
-        return _this;
-    }
-
-    _createClass(Button, [{
-        key: 'render',
-        value: function render() {
-
-            return _react2.default.createElement(
-                'button',
-                { type: 'submit', name: 'seache', id: 'seachsubmit' },
-                this.props.buttonTitle,
-                _react2.default.createElement('i', { className: 'fas fa-search', style: this.buttonStyles })
-            );
-        }
-    }]);
-
-    return Button;
-}(_react.Component);
+    return React.createElement(
+        "article",
+        { className: "result-pane" },
+        React.createElement(
+            "ul",
+            { className: "results" },
+            getBooks(props)
+        )
+    );
+};
 
 /***/ }),
 /* 28 */
@@ -20486,114 +20441,67 @@ var Button = exports.Button = function (_Component) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.ResultPanel = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _result = __webpack_require__(29);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var ResultPanel = exports.ResultPanel = function (_Component) {
-    _inherits(ResultPanel, _Component);
-
-    function ResultPanel() {
-        _classCallCheck(this, ResultPanel);
-
-        return _possibleConstructorReturn(this, (ResultPanel.__proto__ || Object.getPrototypeOf(ResultPanel)).apply(this, arguments));
-    }
-
-    _createClass(ResultPanel, [{
-        key: 'render',
-        value: function render() {
-
-            var results = this.props.results.map(function (book) {
-                return _react2.default.createElement(_result.Results, { key: book.id, results: book });
-            });
-
-            return _react2.default.createElement(
-                'div',
-                { className: 'result-panel-main' },
-                _react2.default.createElement(
-                    'ul',
-                    { className: 'results-main' },
-                    results
-                )
-            );
-        }
-    }]);
-
-    return ResultPanel;
-}(_react.Component);
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Results = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Results = exports.Results = function (_Component) {
-    _inherits(Results, _Component);
-
-    function Results() {
-        _classCallCheck(this, Results);
-
-        return _possibleConstructorReturn(this, (Results.__proto__ || Object.getPrototypeOf(Results)).apply(this, arguments));
-    }
-
-    _createClass(Results, [{
-        key: 'render',
-        value: function render() {
-
-            return _react2.default.createElement(
-                'li',
+var Result = exports.Result = function Result(props) {
+    return React.createElement(
+        "li",
+        { className: "result-item" },
+        React.createElement(
+            "a",
+            { href: "detail.php?a=" + props.id },
+            React.createElement("img", { src: "../image/" + props.image, className: "result-image lefter" })
+        ),
+        React.createElement(
+            "ul",
+            { className: "lefter" },
+            React.createElement(
+                "li",
                 null,
-                _react2.default.createElement(
-                    'a',
-                    { href: 'app/detail.php?a=' + this.props.results.id },
-                    _react2.default.createElement('img', { className: 'book-image-thumbnail', src: 'image/' + this.props.results.image }),
-                    _react2.default.createElement(
-                        'span',
-                        { className: 'book-search-title' },
-                        this.props.results.title
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Results;
-}(_react.Component);
+                React.createElement(
+                    "span",
+                    { className: "result-title" },
+                    "Title : "
+                ),
+                props.title
+            ),
+            React.createElement(
+                "li",
+                null,
+                React.createElement(
+                    "span",
+                    { className: "result-title" },
+                    "Author : "
+                ),
+                props.author
+            ),
+            React.createElement(
+                "li",
+                null,
+                React.createElement(
+                    "span",
+                    { className: "result-title" },
+                    "Binding : "
+                ),
+                props.binding
+            ),
+            React.createElement(
+                "li",
+                null,
+                React.createElement(
+                    "span",
+                    { className: "result-title" },
+                    "Price : "
+                ),
+                props.price
+            )
+        ),
+        React.createElement(
+            "span",
+            { type: "submit", className: "lefter buy-but" },
+            React.createElement("i", { className: "fas fa-shopping-cart cart-icon" })
+        ),
+        React.createElement("div", { className: "clear-fix" })
+    );
+};
 
 /***/ })
 /******/ ]);

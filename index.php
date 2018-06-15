@@ -286,7 +286,7 @@
 
               <div class="book-containers">
                   <?php
-                      $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 10, 10";
+                      $sql = "SELECT * FROM book ORDER BY id DESC LIMIT 10, 5";
                       $result = mysqli_query($connect, $sql);
                       while ($rows = mysqli_fetch_array($result)) {
                           $image = $rows['image'];
@@ -337,8 +337,8 @@
           </p>
 
           <ul>
-                <li>A <span class="linkable-about" data-bracket="PMY">Prison Ministry</span> in eight prisons</li>
-                <li>Free <span class="linkable-about" data-bracket="CSS">Counseling</span services</li>
+                <li>A <span class="linkable-about" data-bracket="PMY">prison ministry</span> in eight prisons</li>
+                <li>Free <span class="linkable-about" data-bracket="CSS">counseling</span services</li>
                 <li>Eight 'cinevans' showing gospel films and providing a mobile bookstore in all the regions of Ghana</li>
                 <li>Free Bible corrspondence courses</li>
                 <li>Free tract distribution</li>
@@ -471,7 +471,7 @@
   <script type="text/javascript" src="scripts/interactivity.js"></script>
   <script type="text/javascript" src="scripts/UI.js"></script>
   <script type="text/javascript" src="scripts/xhrs.js"></script>
-  <script type="text/javascript" src="scripts/search-engine-front-page.js"></script>
+  <script type="text/javascript" src="scripts/build/minified build/search-engine-front-page.min.js"></script>
 
   <script type="text/javascript">
 

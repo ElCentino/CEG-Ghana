@@ -262,7 +262,7 @@ include '../app/db.php';
     <script type="text/javascript" src="../js/libraries/p5.js"></script>
     <script type="text/javascript" src="../js/libraries/p5.dom.js"></script>
     <script type="text/javascript" src="../js/processor.js"></script>
-    <script src="../scripts/bundle.js" type="text/javascript"></script>
+    <script src="../scripts/build/minified build/search-engine-details-page.min.js" type="text/javascript"></script>
 </body>
 
 </html>

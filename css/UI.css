@@ -221,7 +221,7 @@
 }
 
 .book-thumbnail {
-  height: 60px;
+  height: 80px;
 }
 
 .btn-butt-sm {
@@ -513,7 +513,6 @@ nav.black ul li a {
 .linkable-about {
   color: var(--redish);
   cursor: pointer;
-  font-size: 15px;
 }
 /*
 
@@ -537,14 +536,18 @@ nav.black ul li a {
 
 .results-main > li {
   max-height: 100px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   padding: 10px;
   padding-bottom: 0px;
   padding-left: 10px;
   text-align: left;
   transition: 0.3s ease-in-out;
-  border-bottom: 5px solid var(--redish);
+  border-bottom: 5px solid var(--ash-light);
   display: block;
+}
+
+.results-main > li:hover {
+  background-color: var(--ash-light);
 }
 
 .results-main > li:last-child {

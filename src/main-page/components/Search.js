@@ -10,8 +10,9 @@ export class Search extends Component {
         super();
 
         this.buttonTitleStates = {
-            resultsFound: 'More Results',
-            default: 'Find a book'
+            resultsFound: 'More Resultss',
+            default: 'Find a book',
+            empty: 'No Books Found'
         }
 
         this.state = {
@@ -29,8 +30,7 @@ export class Search extends Component {
             let searchResults = [];
 
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'app/search.php', true);
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.open('GET', `app/search.php?${query}`, true);
 
             xhr.onloadend = () => {
 
@@ -46,14 +46,15 @@ export class Search extends Component {
                 }
 
                 resolve(searchResults);
-
-                if(value.length <= 0) {
-
-                    reject([]);
+                
+                if(filteredBooks.length <= 0 && value.length > 0) {
+                    this.setState({
+                        buttonTitle: this.buttonTitleStates.empty
+                    });
                 }
             };
 
-            xhr.send(query);
+            xhr.send();
 
             xhr.onerror = () => {
 
